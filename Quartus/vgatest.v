@@ -6,7 +6,6 @@ module vgatestbench;
     wire [7:0] red;
     wire [7:0] green;
     wire [7:0] blue;
-    wire [9:0] dummy;
     
     initial
     begin
@@ -33,8 +32,7 @@ module vgatestbench;
                           .video_on(video_on),
                           .p_tick(p_tick),
                           .x(),
-                          .y(),
-                        .dummy(dummy)
+                          .y()
                           );
 								  
     // RGB Buffer

@@ -1,8 +1,8 @@
-module vgasync(clk, reset, hsync, vsync, video_on, p_tick, x, y, dummy);
+module vgasync(clk, reset, hsync, vsync, video_on, p_tick, x, y);
 
 	input wire clk, reset;
 	output wire hsync, vsync, video_on, p_tick;
-	output wire [9:0] x, y, dummy;
+	output wire [9:0] x, y;
 	
 	// Constant declarations for VGA sync parameters
 	localparam H_DISPLAY = 640; // Horizontal Display Area
@@ -22,14 +22,14 @@ module vgasync(clk, reset, hsync, vsync, video_on, p_tick, x, y, dummy);
 	localparam END_V_SYNC_PULSE = V_DISPLAY + V_FRONT_PORCH + V_SYNC_PULSE - 1;
 
 	// A Mod-2 Counter to generate 25MHz pixel tick from 50Mhz clock
-	// reg pixel_reg;
-	// wire pixel_next, pixel_tick;
+	reg pixel_reg = 0;
+	wire pixel_next, pixel_tick;
 
-	// always@(posedge clk)
-	// 	pixel_reg <= pixel_next;
+	always@(posedge clk)
+		pixel_reg <= pixel_next;
 
-	// assign pixel_next = ~pixel_reg; // Next state will be the complement of current
-	// assign pixel_tick = (pixel_reg == 0); // Assert pixel tick half of the time
+	assign pixel_next = ~pixel_reg; // Next state will be the complement of current
+	assign pixel_tick = (pixel_reg == 0); // Assert pixel tick half of the time
 	
 	// Registers to keep track of the current pixel location
 	reg [9:0] h_count_reg, h_count_next, v_count_reg, v_count_next;
@@ -37,8 +37,8 @@ module vgasync(clk, reset, hsync, vsync, video_on, p_tick, x, y, dummy);
 		begin
 			h_count_reg = 0;
 			h_count_next = 0;
-			v_count_reg = 489;
-			v_count_next = 489;
+			v_count_reg = 0;
+			v_count_next = 0;
 		end
 
 	// Registers to keep track of VSYNC and HSYNC Signal States
@@ -85,8 +85,7 @@ module vgasync(clk, reset, hsync, vsync, video_on, p_tick, x, y, dummy);
 	assign vsync = vsync_reg;
 	assign x = h_count_reg;
 	assign y = v_count_reg;
-	//assign p_tick = pixel_tick;
-	assign p_tick = clk;
-	assign dummy = v_count_reg;
+	assign p_tick = pixel_tick;
+	//assign p_tick = clk;
 
 endmodule
