@@ -1,12 +1,19 @@
-module FPGAPOSMachine(clk, reset, sw, hsync, vsync, vga_clock, red, green, blue);
+module FPGAPOSMachine(clk, reset, sw, hsync, vsync, vga_clock, red, green, blue, blank, sync);
 
 	input clk, reset;
 	input [7:0] sw;
 	output hsync, vsync, vga_clock;
 	output [7:0] red, green, blue;
+	output reg blank, sync;
+	
+	initial begin
+	blank <= 0;
+	sync <= 0;
+	end
+	
 
 	wire video_on;
-	reg [9:0] x, y;
+	wire [9:0] x, y;
 
 	vgasync vgasync(.clk(clk), .reset(reset), .hsync(hsync), .vsync(vsync), .video_on(video_on), .p_tick(vga_clock), .x(x), .y(y));
 
@@ -17,6 +24,7 @@ module FPGAPOSMachine(clk, reset, sw, hsync, vsync, vga_clock, red, green, blue)
 
 	// RGB Buffer
     always @(posedge vga_clock, posedge reset)
+	 begin
         if (reset)
             begin
                 red_reg <= 0;
@@ -29,7 +37,7 @@ module FPGAPOSMachine(clk, reset, sw, hsync, vsync, vga_clock, red, green, blue)
                 green_reg <= sw;
                 blue_reg <= sw;
             end
-
+	end
     // Output
     assign red = video_on ? red_reg : 8'b0;
     assign green = video_on ? green_reg : 8'b0;

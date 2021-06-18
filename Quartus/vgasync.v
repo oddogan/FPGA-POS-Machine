@@ -10,8 +10,8 @@ module vgasync(clk, reset, hsync, vsync, video_on, p_tick, x, y);
 	localparam H_FRONT_PORCH = 16; // Horizontal Front Porch
 	localparam H_SYNC_PULSE = 96; // Horizontal Sync Pulse
 	localparam H_MAX = H_DISPLAY + H_BACK_PORCH + H_FRONT_PORCH + H_SYNC_PULSE - 1;
-	localparam START_H_SYNC_PULSE = H_DISPLAY + H_FRONT_PORCH;
-	localparam END_H_SYNC_PULSE = H_DISPLAY + H_FRONT_PORCH + H_SYNC_PULSE - 1;
+	localparam START_H_SYNC_PULSE = H_DISPLAY + H_FRONT_PORCH - 1;
+	localparam END_H_SYNC_PULSE = H_DISPLAY + H_FRONT_PORCH + H_SYNC_PULSE - 2;
 
 	localparam V_DISPLAY = 480; // Horizontal Display Area
 	localparam V_BACK_PORCH = 33; // Horizontal Back Porch
@@ -46,7 +46,7 @@ module vgasync(clk, reset, hsync, vsync, video_on, p_tick, x, y);
 	wire vsync_next, hsync_next;
 
 	// Infer the registers
-	always @(posedge clk, posedge reset)
+	always @(posedge pixel_tick, posedge reset)
 		if(reset)
 			begin
 				v_count_reg <= 0;
@@ -65,8 +65,8 @@ module vgasync(clk, reset, hsync, vsync, video_on, p_tick, x, y);
 	// Next-State logic of the HSYNC and VSYNC Counters
 	always @*
 		begin
-			h_count_next = (clk ? ((h_count_reg == H_MAX) ? 0 : h_count_reg + 1) : h_count_next);
-			v_count_next = (clk && h_count_reg == H_MAX) ? (v_count_reg == V_MAX ? 0 : v_count_reg + 1) : v_count_next;
+			h_count_next = (pixel_tick ? ((h_count_reg == H_MAX) ? 0 : h_count_reg + 1) : h_count_next);
+			v_count_next = (pixel_tick && h_count_reg == H_MAX) ? (v_count_reg == V_MAX ? 0 : v_count_reg + 1) : v_count_next;
 		end
 
 	/* HSYNC and VSYNC are active LOW signals */
