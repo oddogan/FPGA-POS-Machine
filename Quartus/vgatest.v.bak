@@ -1,0 +1,35 @@
+module vgatest(clk, reset, sw, hsync, vsync, rgb);
+
+    input wire clk, reset;
+    input wire [7:0] sw;
+    output wire hsync, vsync;
+    output wire [7:0] rgb;
+
+    // Register for 8-bit RGB
+    reg [7:0] rgb_reg;
+
+    // Video status output from vga_sync to tell when to route out RGB signal
+    wire video_out;
+
+    // Instantiate vga_sync
+    vga_sync vga_sync_dut(.clk(clk), 
+                          .reset(reset)
+                          .hsync(hsync)
+                          .vsync(vsync)
+                          .video_on(video_on),
+                          .p_tick(),
+                          .x(),
+                          .y()
+                          );
+
+    // RGB Buffer
+    always @(posedge clk, posedge reset)
+        if (reset)
+            rgb_reg <= 0;
+        else
+            rgb_reg <= sw;
+
+    // Output
+    assign rgb = video_on ? rgb_reg : 8'b0;
+
+endmodule

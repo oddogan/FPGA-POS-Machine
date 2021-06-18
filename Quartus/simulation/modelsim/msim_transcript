@@ -1,0 +1,329 @@
+# Reading pref.tcl
+# do FPGAPOSMachine_run_msim_rtl_verilog.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work rtl_work 
+# Copying C:/intelFPGA_lite/20.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vlog -vlog01compat -work work +incdir+C:/Users/onatd/Desktop/Projects/FPGA\ POS\ Machine/Quartus {C:/Users/onatd/Desktop/Projects/FPGA POS Machine/Quartus/FPGAPOSMachine.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 10:23:02 on Jun 18,2021
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/onatd/Desktop/Projects/FPGA POS Machine/Quartus" C:/Users/onatd/Desktop/Projects/FPGA POS Machine/Quartus/FPGAPOSMachine.v 
+# -- Compiling module FPGAPOSMachine
+# 
+# Top level modules:
+# 	FPGAPOSMachine
+# End time: 10:23:02 on Jun 18,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+vlog -reportprogress 300 -work work {C:/Users/onatd/Desktop/Projects/FPGA POS Machine/Quartus/clkgenerator.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 10:23:21 on Jun 18,2021
+# vlog -reportprogress 300 -work work C:/Users/onatd/Desktop/Projects/FPGA POS Machine/Quartus/clkgenerator.v 
+# -- Compiling module clkgenerator
+# 
+# Top level modules:
+# 	clkgenerator
+# End time: 10:23:21 on Jun 18,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work {C:/Users/onatd/Desktop/Projects/FPGA POS Machine/Quartus/vgasync.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 10:23:21 on Jun 18,2021
+# vlog -reportprogress 300 -work work C:/Users/onatd/Desktop/Projects/FPGA POS Machine/Quartus/vgasync.v 
+# -- Compiling module vgasync
+# 
+# Top level modules:
+# 	vgasync
+# End time: 10:23:21 on Jun 18,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work {C:/Users/onatd/Desktop/Projects/FPGA POS Machine/Quartus/vgatest.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 10:23:21 on Jun 18,2021
+# vlog -reportprogress 300 -work work C:/Users/onatd/Desktop/Projects/FPGA POS Machine/Quartus/vgatest.v 
+# -- Compiling module vgatestbench
+# ** Error: (vlog-13069) C:/Users/onatd/Desktop/Projects/FPGA POS Machine/Quartus/vgatest.v(44): near "<=": syntax error, unexpected <=.
+# ** Error: C:/Users/onatd/Desktop/Projects/FPGA POS Machine/Quartus/vgatest.v(44): (vlog-13205) Syntax error found in the scope following 'greem_reg'. Is there a missing '::'?
+# End time: 10:23:21 on Jun 18,2021, Elapsed time: 0:00:00
+# Errors: 2, Warnings: 0
+vlog -reportprogress 300 -work work {C:/Users/onatd/Desktop/Projects/FPGA POS Machine/Quartus/vgatest.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 10:23:30 on Jun 18,2021
+# vlog -reportprogress 300 -work work C:/Users/onatd/Desktop/Projects/FPGA POS Machine/Quartus/vgatest.v 
+# -- Compiling module vgatestbench
+# ** Error: (vlog-13069) C:/Users/onatd/Desktop/Projects/FPGA POS Machine/Quartus/vgatest.v(44): near "<=": syntax error, unexpected <=.
+# ** Error: C:/Users/onatd/Desktop/Projects/FPGA POS Machine/Quartus/vgatest.v(44): (vlog-13205) Syntax error found in the scope following 'greem_reg'. Is there a missing '::'?
+# End time: 10:23:30 on Jun 18,2021, Elapsed time: 0:00:00
+# Errors: 2, Warnings: 0
+vlog -reportprogress 300 -work work {C:/Users/onatd/Desktop/Projects/FPGA POS Machine/Quartus/vgatest.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 10:23:49 on Jun 18,2021
+# vlog -reportprogress 300 -work work C:/Users/onatd/Desktop/Projects/FPGA POS Machine/Quartus/vgatest.v 
+# -- Compiling module vgatestbench
+# ** Error: (vlog-13069) C:/Users/onatd/Desktop/Projects/FPGA POS Machine/Quartus/vgatest.v(44): near "<=": syntax error, unexpected <=.
+# ** Error: C:/Users/onatd/Desktop/Projects/FPGA POS Machine/Quartus/vgatest.v(44): (vlog-13205) Syntax error found in the scope following 'green_reg'. Is there a missing '::'?
+# End time: 10:23:50 on Jun 18,2021, Elapsed time: 0:00:01
+# Errors: 2, Warnings: 0
+vlog -reportprogress 300 -work work {C:/Users/onatd/Desktop/Projects/FPGA POS Machine/Quartus/vgatest.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 10:24:27 on Jun 18,2021
+# vlog -reportprogress 300 -work work C:/Users/onatd/Desktop/Projects/FPGA POS Machine/Quartus/vgatest.v 
+# -- Compiling module vgatestbench
+# 
+# Top level modules:
+# 	vgatestbench
+# End time: 10:24:27 on Jun 18,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vsim work.vgatestbench
+# vsim work.vgatestbench 
+# Start time: 10:24:30 on Jun 18,2021
+# Loading work.vgatestbench
+# Loading work.clkgenerator
+# Loading work.vgasync
+add wave -position insertpoint  \
+sim:/vgatestbench/reset \
+sim:/vgatestbench/sw \
+sim:/vgatestbench/hsync \
+sim:/vgatestbench/vsync \
+sim:/vgatestbench/p_tick \
+sim:/vgatestbench/clk \
+sim:/vgatestbench/red \
+sim:/vgatestbench/green \
+sim:/vgatestbench/blue \
+sim:/vgatestbench/dummy \
+sim:/vgatestbench/red_reg \
+sim:/vgatestbench/green_reg \
+sim:/vgatestbench/blue_reg \
+sim:/vgatestbench/video_on
+run
+run
+run
+run
+vlog -work work {C:/Users/onatd/Desktop/Projects/FPGA POS Machine/Quartus/vgasync.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 10:30:43 on Jun 18,2021
+# vlog -reportprogress 300 -work work C:/Users/onatd/Desktop/Projects/FPGA POS Machine/Quartus/vgasync.v 
+# -- Compiling module vgasync
+# 
+# Top level modules:
+# 	vgasync
+# End time: 10:30:43 on Jun 18,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -work work {C:/Users/onatd/Desktop/Projects/FPGA POS Machine/Quartus/vgatest.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 10:30:45 on Jun 18,2021
+# vlog -reportprogress 300 -work work C:/Users/onatd/Desktop/Projects/FPGA POS Machine/Quartus/vgatest.v 
+# -- Compiling module vgatestbench
+# 
+# Top level modules:
+# 	vgatestbench
+# End time: 10:30:45 on Jun 18,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+restart
+# Loading work.vgatestbench
+# Loading work.vgasync
+run
+run
+run
+run
+vlog -work work {C:/Users/onatd/Desktop/Projects/FPGA POS Machine/Quartus/vgasync.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 10:32:23 on Jun 18,2021
+# vlog -reportprogress 300 -work work C:/Users/onatd/Desktop/Projects/FPGA POS Machine/Quartus/vgasync.v 
+# -- Compiling module vgasync
+# 
+# Top level modules:
+# 	vgasync
+# End time: 10:32:23 on Jun 18,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -work work {C:/Users/onatd/Desktop/Projects/FPGA POS Machine/Quartus/vgatest.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 10:32:24 on Jun 18,2021
+# vlog -reportprogress 300 -work work C:/Users/onatd/Desktop/Projects/FPGA POS Machine/Quartus/vgatest.v 
+# -- Compiling module vgatestbench
+# 
+# Top level modules:
+# 	vgatestbench
+# End time: 10:32:24 on Jun 18,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+restart
+# Loading work.vgatestbench
+# Loading work.vgasync
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+restart
+run
+run
+vlog -work work {C:/Users/onatd/Desktop/Projects/FPGA POS Machine/Quartus/vgasync.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 10:33:31 on Jun 18,2021
+# vlog -reportprogress 300 -work work C:/Users/onatd/Desktop/Projects/FPGA POS Machine/Quartus/vgasync.v 
+# -- Compiling module vgasync
+# 
+# Top level modules:
+# 	vgasync
+# End time: 10:33:32 on Jun 18,2021, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+vlog -work work {C:/Users/onatd/Desktop/Projects/FPGA POS Machine/Quartus/vgatest.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 10:33:32 on Jun 18,2021
+# vlog -reportprogress 300 -work work C:/Users/onatd/Desktop/Projects/FPGA POS Machine/Quartus/vgatest.v 
+# -- Compiling module vgatestbench
+# 
+# Top level modules:
+# 	vgatestbench
+# End time: 10:33:32 on Jun 18,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+restart
+# Loading work.vgatestbench
+# Loading work.vgasync
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+vlog -work work {C:/Users/onatd/Desktop/Projects/FPGA POS Machine/Quartus/vgasync.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 10:35:20 on Jun 18,2021
+# vlog -reportprogress 300 -work work C:/Users/onatd/Desktop/Projects/FPGA POS Machine/Quartus/vgasync.v 
+# -- Compiling module vgasync
+# 
+# Top level modules:
+# 	vgasync
+# End time: 10:35:20 on Jun 18,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -work work {C:/Users/onatd/Desktop/Projects/FPGA POS Machine/Quartus/vgatest.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 10:35:20 on Jun 18,2021
+# vlog -reportprogress 300 -work work C:/Users/onatd/Desktop/Projects/FPGA POS Machine/Quartus/vgatest.v 
+# -- Compiling module vgatestbench
+# 
+# Top level modules:
+# 	vgatestbench
+# End time: 10:35:20 on Jun 18,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+restart
+# Loading work.vgatestbench
+# Loading work.vgasync
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+# End time: 10:36:01 on Jun 18,2021, Elapsed time: 0:11:31
+# Errors: 0, Warnings: 0

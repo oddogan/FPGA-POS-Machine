@@ -1,0 +1,5 @@
+|FPGAPOSMachine
+i => ~NO_FANOUT~
+o << <GND>
+
+

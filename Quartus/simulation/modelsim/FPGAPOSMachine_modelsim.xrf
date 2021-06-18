@@ -1,0 +1,11 @@
+vendor_name = ModelSim
+source_file = 1, C:/Users/onatd/Desktop/Projects/FPGA POS Machine/Quartus/FPGAPOSMachine.v
+source_file = 1, C:/Users/onatd/Desktop/Projects/FPGA POS Machine/Quartus/mux.v
+source_file = 1, C:/Users/onatd/Desktop/Projects/FPGA POS Machine/Quartus/vgasync.v
+source_file = 1, C:/Users/onatd/Desktop/Projects/FPGA POS Machine/Quartus/vgatest.v
+source_file = 1, C:/Users/onatd/Desktop/Projects/FPGA POS Machine/Quartus/clkgenerator.v
+source_file = 1, C:/Users/onatd/Desktop/Projects/FPGA POS Machine/Quartus/db/FPGAPOSMachine.cbx.xml
+design_name = FPGAPOSMachine
+instance = comp, \o~output , o~output, FPGAPOSMachine, 1
+instance = comp, \i~input , i~input, FPGAPOSMachine, 1
+instance = comp, \~QUARTUS_CREATED_GND~I , ~QUARTUS_CREATED_GND~I, FPGAPOSMachine, 1
