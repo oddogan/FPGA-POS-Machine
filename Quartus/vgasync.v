@@ -45,6 +45,13 @@ module vgasync(clk, reset, hsync, vsync, video_on, p_tick, x, y);
 	reg vsync_reg, hsync_reg;
 	wire vsync_next, hsync_next;
 
+	// Next-State logic of the HSYNC and VSYNC Counters
+	always @*
+		begin
+			h_count_next = (pixel_tick ? ((h_count_reg == H_MAX) ? 0 : h_count_reg + 1) : h_count_reg);
+			v_count_next = (pixel_tick && h_count_reg == H_MAX) ? (v_count_reg == V_MAX ? 0 : v_count_reg + 1) : v_count_reg;
+		end
+
 	// Infer the registers
 	always @(posedge pixel_tick, posedge reset)
 		if(reset)
@@ -61,13 +68,6 @@ module vgasync(clk, reset, hsync, vsync, video_on, p_tick, x, y);
 				vsync_reg <= vsync_next;
 				hsync_reg <= hsync_next;
 			end
-	
-	// Next-State logic of the HSYNC and VSYNC Counters
-	always @*
-		begin
-			h_count_next = (pixel_tick ? ((h_count_reg == H_MAX) ? 0 : h_count_reg + 1) : h_count_next);
-			v_count_next = (pixel_tick && h_count_reg == H_MAX) ? (v_count_reg == V_MAX ? 0 : v_count_reg + 1) : v_count_next;
-		end
 
 	/* HSYNC and VSYNC are active LOW signals */
 	
