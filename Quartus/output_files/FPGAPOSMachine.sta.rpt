@@ -1,13 +1,13 @@
-TimeQuest Timing Analyzer report for FPGAPOSMachine
-Sat Jun 19 17:17:15 2021
-Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
+Timing Analyzer report for FPGAPOSMachine
+Sat Jun 19 17:57:13 2021
+Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
 ---------------------
 ; Table of Contents ;
 ---------------------
   1. Legal Notice
-  2. TimeQuest Timing Analyzer Summary
+  2. Timing Analyzer Summary
   3. Parallel Compilation
   4. Clocks
   5. Slow 1100mV 85C Model Fmax Summary
@@ -17,92 +17,79 @@ Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
   9. Slow 1100mV 85C Model Recovery Summary
  10. Slow 1100mV 85C Model Removal Summary
  11. Slow 1100mV 85C Model Minimum Pulse Width Summary
- 12. Setup Times
- 13. Hold Times
- 14. Clock to Output Times
- 15. Minimum Clock to Output Times
- 16. Slow 1100mV 85C Model Metastability Report
- 17. Slow 1100mV 0C Model Fmax Summary
- 18. Slow 1100mV 0C Model Setup Summary
- 19. Slow 1100mV 0C Model Hold Summary
- 20. Slow 1100mV 0C Model Recovery Summary
- 21. Slow 1100mV 0C Model Removal Summary
- 22. Slow 1100mV 0C Model Minimum Pulse Width Summary
- 23. Setup Times
- 24. Hold Times
- 25. Clock to Output Times
- 26. Minimum Clock to Output Times
- 27. Slow 1100mV 0C Model Metastability Report
- 28. Fast 1100mV 85C Model Setup Summary
- 29. Fast 1100mV 85C Model Hold Summary
- 30. Fast 1100mV 85C Model Recovery Summary
- 31. Fast 1100mV 85C Model Removal Summary
- 32. Fast 1100mV 85C Model Minimum Pulse Width Summary
- 33. Setup Times
- 34. Hold Times
- 35. Clock to Output Times
- 36. Minimum Clock to Output Times
- 37. Fast 1100mV 85C Model Metastability Report
- 38. Fast 1100mV 0C Model Setup Summary
- 39. Fast 1100mV 0C Model Hold Summary
- 40. Fast 1100mV 0C Model Recovery Summary
- 41. Fast 1100mV 0C Model Removal Summary
- 42. Fast 1100mV 0C Model Minimum Pulse Width Summary
- 43. Setup Times
- 44. Hold Times
- 45. Clock to Output Times
- 46. Minimum Clock to Output Times
- 47. Fast 1100mV 0C Model Metastability Report
- 48. Multicorner Timing Analysis Summary
- 49. Setup Times
- 50. Hold Times
- 51. Clock to Output Times
- 52. Minimum Clock to Output Times
- 53. Board Trace Model Assignments
- 54. Input Transition Times
- 55. Signal Integrity Metrics (Slow 1100mv 0c Model)
- 56. Signal Integrity Metrics (Slow 1100mv 85c Model)
- 57. Signal Integrity Metrics (Fast 1100mv 0c Model)
- 58. Signal Integrity Metrics (Fast 1100mv 85c Model)
- 59. Setup Transfers
- 60. Hold Transfers
- 61. Report TCCS
- 62. Report RSKM
- 63. Unconstrained Paths
- 64. TimeQuest Timing Analyzer Messages
+ 12. Slow 1100mV 85C Model Metastability Summary
+ 13. Slow 1100mV 0C Model Fmax Summary
+ 14. Slow 1100mV 0C Model Setup Summary
+ 15. Slow 1100mV 0C Model Hold Summary
+ 16. Slow 1100mV 0C Model Recovery Summary
+ 17. Slow 1100mV 0C Model Removal Summary
+ 18. Slow 1100mV 0C Model Minimum Pulse Width Summary
+ 19. Slow 1100mV 0C Model Metastability Summary
+ 20. Fast 1100mV 85C Model Setup Summary
+ 21. Fast 1100mV 85C Model Hold Summary
+ 22. Fast 1100mV 85C Model Recovery Summary
+ 23. Fast 1100mV 85C Model Removal Summary
+ 24. Fast 1100mV 85C Model Minimum Pulse Width Summary
+ 25. Fast 1100mV 85C Model Metastability Summary
+ 26. Fast 1100mV 0C Model Setup Summary
+ 27. Fast 1100mV 0C Model Hold Summary
+ 28. Fast 1100mV 0C Model Recovery Summary
+ 29. Fast 1100mV 0C Model Removal Summary
+ 30. Fast 1100mV 0C Model Minimum Pulse Width Summary
+ 31. Fast 1100mV 0C Model Metastability Summary
+ 32. Multicorner Timing Analysis Summary
+ 33. Board Trace Model Assignments
+ 34. Input Transition Times
+ 35. Signal Integrity Metrics (Slow 1100mv 0c Model)
+ 36. Signal Integrity Metrics (Slow 1100mv 85c Model)
+ 37. Signal Integrity Metrics (Fast 1100mv 0c Model)
+ 38. Signal Integrity Metrics (Fast 1100mv 85c Model)
+ 39. Setup Transfers
+ 40. Hold Transfers
+ 41. Report TCCS
+ 42. Report RSKM
+ 43. Unconstrained Paths Summary
+ 44. Clock Status Summary
+ 45. Unconstrained Input Ports
+ 46. Unconstrained Output Ports
+ 47. Unconstrained Input Ports
+ 48. Unconstrained Output Ports
+ 49. Timing Analyzer Messages
 
 
 
 ----------------
 ; Legal Notice ;
 ----------------
-Copyright (C) 1991-2013 Altera Corporation
-Your use of Altera Corporation's design tools, logic functions 
-and other software and tools, and its AMPP partner logic 
+Copyright (C) 2020  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
 functions, and any output files from any of the foregoing 
 (including device programming or simulation files), and any 
 associated documentation or information are expressly subject 
-to the terms and conditions of the Altera Program License 
-Subscription Agreement, Altera MegaCore Function License 
-Agreement, or other applicable license agreement, including, 
-without limitation, that your use is for the sole purpose of 
-programming logic devices manufactured by Altera and sold by 
-Altera or its authorized distributors.  Please refer to the 
-applicable agreement for further details.
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
 
 
 
-+-------------------------------------------------------------------------+
-; TimeQuest Timing Analyzer Summary                                       ;
-+--------------------+----------------------------------------------------+
-; Quartus II Version ; Version 13.1.0 Build 162 10/23/2013 SJ Web Edition ;
-; Revision Name      ; FPGAPOSMachine                                     ;
-; Device Family      ; Cyclone V                                          ;
-; Device Name        ; 5CSEMA5F31C6                                       ;
-; Timing Models      ; Preliminary                                        ;
-; Delay Model        ; Combined                                           ;
-; Rise/Fall Delays   ; Enabled                                            ;
-+--------------------+----------------------------------------------------+
++-----------------------------------------------------------------------------+
+; Timing Analyzer Summary                                                     ;
++-----------------------+-----------------------------------------------------+
+; Quartus Prime Version ; Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
+; Timing Analyzer       ; Legacy Timing Analyzer                              ;
+; Revision Name         ; FPGAPOSMachine                                      ;
+; Device Family         ; Cyclone V                                           ;
+; Device Name           ; 5CSEMA5F31C6                                        ;
+; Timing Models         ; Final                                               ;
+; Delay Model           ; Combined                                            ;
+; Rise/Fall Delays      ; Enabled                                             ;
++-----------------------+-----------------------------------------------------+
 
 
 +------------------------------------------+
@@ -110,16 +97,19 @@ applicable agreement for further details.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
-; Number detected on machine ; 12          ;
-; Maximum allowed            ; 6           ;
+; Number detected on machine ; 16          ;
+; Maximum allowed            ; 16          ;
 ;                            ;             ;
-; Average used               ; 1.00        ;
-; Maximum used               ; 6           ;
+; Average used               ; 1.14        ;
+; Maximum used               ; 16          ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processors 2-6         ; < 0.1%      ;
-;     Processors 7-12        ;   0.0%      ;
+;     Processor 2            ;   1.9%      ;
+;     Processor 3            ;   1.8%      ;
+;     Processor 4            ;   1.8%      ;
+;     Processor 5            ;   1.6%      ;
+;     Processors 6-16        ;   0.6%      ;
 +----------------------------+-------------+
 
 
@@ -138,7 +128,7 @@ applicable agreement for further details.
 +------------+-----------------+---------------------------+------+
 ; Fmax       ; Restricted Fmax ; Clock Name                ; Note ;
 +------------+-----------------+---------------------------+------+
-; 309.89 MHz ; 309.89 MHz      ; vgasync:vgasync|pixel_reg ;      ;
+; 236.07 MHz ; 236.07 MHz      ; vgasync:vgasync|pixel_reg ;      ;
 +------------+-----------------+---------------------------+------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
@@ -154,19 +144,19 @@ HTML report is unavailable in plain text report export.
 +---------------------------+--------+---------------+
 ; Clock                     ; Slack  ; End Point TNS ;
 +---------------------------+--------+---------------+
-; vgasync:vgasync|pixel_reg ; -2.227 ; -47.371       ;
-; clk                       ; 0.075  ; 0.000         ;
+; clk                       ; -3.991 ; -3.991        ;
+; vgasync:vgasync|pixel_reg ; -2.332 ; -61.332       ;
 +---------------------------+--------+---------------+
 
 
-+----------------------------------------------------+
-; Slow 1100mV 85C Model Hold Summary                 ;
-+---------------------------+--------+---------------+
-; Clock                     ; Slack  ; End Point TNS ;
-+---------------------------+--------+---------------+
-; clk                       ; -1.821 ; -1.821        ;
-; vgasync:vgasync|pixel_reg ; -0.269 ; -2.690        ;
-+---------------------------+--------+---------------+
++---------------------------------------------------+
+; Slow 1100mV 85C Model Hold Summary                ;
++---------------------------+-------+---------------+
+; Clock                     ; Slack ; End Point TNS ;
++---------------------------+-------+---------------+
+; vgasync:vgasync|pixel_reg ; 0.498 ; 0.000         ;
+; clk                       ; 1.476 ; 0.000         ;
++---------------------------+-------+---------------+
 
 
 ------------------------------------------
@@ -186,86 +176,14 @@ No paths to report.
 +---------------------------+--------+---------------+
 ; Clock                     ; Slack  ; End Point TNS ;
 +---------------------------+--------+---------------+
-; clk                       ; -0.867 ; -1.499        ;
-; vgasync:vgasync|pixel_reg ; -0.394 ; -18.944       ;
+; clk                       ; -0.906 ; -1.579        ;
+; vgasync:vgasync|pixel_reg ; -0.394 ; -19.367       ;
 +---------------------------+--------+---------------+
 
 
-+------------------------------------------------------------------------------------------------+
-; Setup Times                                                                                    ;
-+-----------+---------------------------+-------+-------+------------+---------------------------+
-; Data Port ; Clock Port                ; Rise  ; Fall  ; Clock Edge ; Clock Reference           ;
-+-----------+---------------------------+-------+-------+------------+---------------------------+
-; sw[*]     ; vgasync:vgasync|pixel_reg ; 5.775 ; 6.656 ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  sw[0]    ; vgasync:vgasync|pixel_reg ; 5.455 ; 6.158 ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  sw[1]    ; vgasync:vgasync|pixel_reg ; 5.575 ; 6.344 ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  sw[2]    ; vgasync:vgasync|pixel_reg ; 5.772 ; 6.656 ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  sw[3]    ; vgasync:vgasync|pixel_reg ; 5.565 ; 6.266 ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  sw[4]    ; vgasync:vgasync|pixel_reg ; 5.775 ; 6.528 ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  sw[5]    ; vgasync:vgasync|pixel_reg ; 5.396 ; 6.174 ; Fall       ; vgasync:vgasync|pixel_reg ;
-+-----------+---------------------------+-------+-------+------------+---------------------------+
-
-
-+--------------------------------------------------------------------------------------------------+
-; Hold Times                                                                                       ;
-+-----------+---------------------------+--------+--------+------------+---------------------------+
-; Data Port ; Clock Port                ; Rise   ; Fall   ; Clock Edge ; Clock Reference           ;
-+-----------+---------------------------+--------+--------+------------+---------------------------+
-; sw[*]     ; vgasync:vgasync|pixel_reg ; -4.217 ; -4.906 ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  sw[0]    ; vgasync:vgasync|pixel_reg ; -4.292 ; -4.920 ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  sw[1]    ; vgasync:vgasync|pixel_reg ; -4.400 ; -5.087 ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  sw[2]    ; vgasync:vgasync|pixel_reg ; -4.552 ; -5.300 ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  sw[3]    ; vgasync:vgasync|pixel_reg ; -4.386 ; -5.019 ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  sw[4]    ; vgasync:vgasync|pixel_reg ; -4.580 ; -5.245 ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  sw[5]    ; vgasync:vgasync|pixel_reg ; -4.217 ; -4.906 ; Fall       ; vgasync:vgasync|pixel_reg ;
-+-----------+---------------------------+--------+--------+------------+---------------------------+
-
-
-+------------------------------------------------------------------------------------------------+
-; Clock to Output Times                                                                          ;
-+-----------+---------------------------+-------+-------+------------+---------------------------+
-; Data Port ; Clock Port                ; Rise  ; Fall  ; Clock Edge ; Clock Reference           ;
-+-----------+---------------------------+-------+-------+------------+---------------------------+
-; vga_clock ; vgasync:vgasync|pixel_reg ;       ; 4.167 ; Rise       ; vgasync:vgasync|pixel_reg ;
-; blue[*]   ; vgasync:vgasync|pixel_reg ; 7.387 ; 7.276 ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  blue[6]  ; vgasync:vgasync|pixel_reg ; 7.261 ; 7.188 ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  blue[7]  ; vgasync:vgasync|pixel_reg ; 7.387 ; 7.276 ; Fall       ; vgasync:vgasync|pixel_reg ;
-; green[*]  ; vgasync:vgasync|pixel_reg ; 7.929 ; 8.207 ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  green[6] ; vgasync:vgasync|pixel_reg ; 7.638 ; 7.511 ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  green[7] ; vgasync:vgasync|pixel_reg ; 7.929 ; 8.207 ; Fall       ; vgasync:vgasync|pixel_reg ;
-; hsync     ; vgasync:vgasync|pixel_reg ; 5.457 ; 5.672 ; Fall       ; vgasync:vgasync|pixel_reg ;
-; red[*]    ; vgasync:vgasync|pixel_reg ; 7.665 ; 7.622 ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  red[6]   ; vgasync:vgasync|pixel_reg ; 7.497 ; 7.622 ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  red[7]   ; vgasync:vgasync|pixel_reg ; 7.665 ; 7.621 ; Fall       ; vgasync:vgasync|pixel_reg ;
-; vga_clock ; vgasync:vgasync|pixel_reg ; 4.423 ;       ; Fall       ; vgasync:vgasync|pixel_reg ;
-; vsync     ; vgasync:vgasync|pixel_reg ; 5.312 ; 5.566 ; Fall       ; vgasync:vgasync|pixel_reg ;
-+-----------+---------------------------+-------+-------+------------+---------------------------+
-
-
-+------------------------------------------------------------------------------------------------+
-; Minimum Clock to Output Times                                                                  ;
-+-----------+---------------------------+-------+-------+------------+---------------------------+
-; Data Port ; Clock Port                ; Rise  ; Fall  ; Clock Edge ; Clock Reference           ;
-+-----------+---------------------------+-------+-------+------------+---------------------------+
-; vga_clock ; vgasync:vgasync|pixel_reg ;       ; 3.911 ; Rise       ; vgasync:vgasync|pixel_reg ;
-; blue[*]   ; vgasync:vgasync|pixel_reg ; 4.817 ; 4.861 ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  blue[6]  ; vgasync:vgasync|pixel_reg ; 4.817 ; 4.861 ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  blue[7]  ; vgasync:vgasync|pixel_reg ; 4.949 ; 5.051 ; Fall       ; vgasync:vgasync|pixel_reg ;
-; green[*]  ; vgasync:vgasync|pixel_reg ; 5.173 ; 5.185 ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  green[6] ; vgasync:vgasync|pixel_reg ; 5.173 ; 5.185 ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  green[7] ; vgasync:vgasync|pixel_reg ; 5.549 ; 5.719 ; Fall       ; vgasync:vgasync|pixel_reg ;
-; hsync     ; vgasync:vgasync|pixel_reg ; 4.792 ; 4.947 ; Fall       ; vgasync:vgasync|pixel_reg ;
-; red[*]    ; vgasync:vgasync|pixel_reg ; 5.183 ; 5.322 ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  red[6]   ; vgasync:vgasync|pixel_reg ; 5.534 ; 5.654 ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  red[7]   ; vgasync:vgasync|pixel_reg ; 5.183 ; 5.322 ; Fall       ; vgasync:vgasync|pixel_reg ;
-; vga_clock ; vgasync:vgasync|pixel_reg ; 4.097 ;       ; Fall       ; vgasync:vgasync|pixel_reg ;
-; vsync     ; vgasync:vgasync|pixel_reg ; 4.645 ; 4.823 ; Fall       ; vgasync:vgasync|pixel_reg ;
-+-----------+---------------------------+-------+-------+------------+---------------------------+
-
-
-----------------------------------------------
-; Slow 1100mV 85C Model Metastability Report ;
-----------------------------------------------
+-----------------------------------------------
+; Slow 1100mV 85C Model Metastability Summary ;
+-----------------------------------------------
 No synchronizer chains to report.
 
 
@@ -274,7 +192,7 @@ No synchronizer chains to report.
 +------------+-----------------+---------------------------+------+
 ; Fmax       ; Restricted Fmax ; Clock Name                ; Note ;
 +------------+-----------------+---------------------------+------+
-; 308.17 MHz ; 308.17 MHz      ; vgasync:vgasync|pixel_reg ;      ;
+; 254.32 MHz ; 254.32 MHz      ; vgasync:vgasync|pixel_reg ;      ;
 +------------+-----------------+---------------------------+------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
@@ -284,19 +202,19 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +---------------------------+--------+---------------+
 ; Clock                     ; Slack  ; End Point TNS ;
 +---------------------------+--------+---------------+
-; vgasync:vgasync|pixel_reg ; -2.245 ; -46.437       ;
-; clk                       ; -0.254 ; -0.254        ;
+; clk                       ; -3.890 ; -3.890        ;
+; vgasync:vgasync|pixel_reg ; -2.279 ; -59.778       ;
 +---------------------------+--------+---------------+
 
 
-+----------------------------------------------------+
-; Slow 1100mV 0C Model Hold Summary                  ;
-+---------------------------+--------+---------------+
-; Clock                     ; Slack  ; End Point TNS ;
-+---------------------------+--------+---------------+
-; clk                       ; -1.414 ; -1.414        ;
-; vgasync:vgasync|pixel_reg ; -0.197 ; -1.964        ;
-+---------------------------+--------+---------------+
++---------------------------------------------------+
+; Slow 1100mV 0C Model Hold Summary                 ;
++---------------------------+-------+---------------+
+; Clock                     ; Slack ; End Point TNS ;
++---------------------------+-------+---------------+
+; vgasync:vgasync|pixel_reg ; 0.534 ; 0.000         ;
+; clk                       ; 1.520 ; 0.000         ;
++---------------------------+-------+---------------+
 
 
 -----------------------------------------
@@ -316,86 +234,14 @@ No paths to report.
 +---------------------------+--------+---------------+
 ; Clock                     ; Slack  ; End Point TNS ;
 +---------------------------+--------+---------------+
-; clk                       ; -0.884 ; -1.557        ;
-; vgasync:vgasync|pixel_reg ; -0.394 ; -17.433       ;
+; clk                       ; -0.928 ; -1.648        ;
+; vgasync:vgasync|pixel_reg ; -0.394 ; -17.657       ;
 +---------------------------+--------+---------------+
 
 
-+------------------------------------------------------------------------------------------------+
-; Setup Times                                                                                    ;
-+-----------+---------------------------+-------+-------+------------+---------------------------+
-; Data Port ; Clock Port                ; Rise  ; Fall  ; Clock Edge ; Clock Reference           ;
-+-----------+---------------------------+-------+-------+------------+---------------------------+
-; sw[*]     ; vgasync:vgasync|pixel_reg ; 5.482 ; 6.432 ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  sw[0]    ; vgasync:vgasync|pixel_reg ; 5.137 ; 5.920 ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  sw[1]    ; vgasync:vgasync|pixel_reg ; 5.301 ; 6.116 ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  sw[2]    ; vgasync:vgasync|pixel_reg ; 5.482 ; 6.432 ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  sw[3]    ; vgasync:vgasync|pixel_reg ; 5.225 ; 6.012 ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  sw[4]    ; vgasync:vgasync|pixel_reg ; 5.469 ; 6.299 ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  sw[5]    ; vgasync:vgasync|pixel_reg ; 5.087 ; 5.944 ; Fall       ; vgasync:vgasync|pixel_reg ;
-+-----------+---------------------------+-------+-------+------------+---------------------------+
-
-
-+--------------------------------------------------------------------------------------------------+
-; Hold Times                                                                                       ;
-+-----------+---------------------------+--------+--------+------------+---------------------------+
-; Data Port ; Clock Port                ; Rise   ; Fall   ; Clock Edge ; Clock Reference           ;
-+-----------+---------------------------+--------+--------+------------+---------------------------+
-; sw[*]     ; vgasync:vgasync|pixel_reg ; -3.985 ; -4.679 ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  sw[0]    ; vgasync:vgasync|pixel_reg ; -4.050 ; -4.692 ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  sw[1]    ; vgasync:vgasync|pixel_reg ; -4.203 ; -4.868 ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  sw[2]    ; vgasync:vgasync|pixel_reg ; -4.335 ; -5.077 ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  sw[3]    ; vgasync:vgasync|pixel_reg ; -4.123 ; -4.775 ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  sw[4]    ; vgasync:vgasync|pixel_reg ; -4.348 ; -5.015 ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  sw[5]    ; vgasync:vgasync|pixel_reg ; -3.985 ; -4.679 ; Fall       ; vgasync:vgasync|pixel_reg ;
-+-----------+---------------------------+--------+--------+------------+---------------------------+
-
-
-+------------------------------------------------------------------------------------------------+
-; Clock to Output Times                                                                          ;
-+-----------+---------------------------+-------+-------+------------+---------------------------+
-; Data Port ; Clock Port                ; Rise  ; Fall  ; Clock Edge ; Clock Reference           ;
-+-----------+---------------------------+-------+-------+------------+---------------------------+
-; vga_clock ; vgasync:vgasync|pixel_reg ;       ; 3.971 ; Rise       ; vgasync:vgasync|pixel_reg ;
-; blue[*]   ; vgasync:vgasync|pixel_reg ; 7.076 ; 6.965 ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  blue[6]  ; vgasync:vgasync|pixel_reg ; 6.949 ; 6.881 ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  blue[7]  ; vgasync:vgasync|pixel_reg ; 7.076 ; 6.965 ; Fall       ; vgasync:vgasync|pixel_reg ;
-; green[*]  ; vgasync:vgasync|pixel_reg ; 7.642 ; 7.982 ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  green[6] ; vgasync:vgasync|pixel_reg ; 7.308 ; 7.200 ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  green[7] ; vgasync:vgasync|pixel_reg ; 7.642 ; 7.982 ; Fall       ; vgasync:vgasync|pixel_reg ;
-; hsync     ; vgasync:vgasync|pixel_reg ; 5.111 ; 5.388 ; Fall       ; vgasync:vgasync|pixel_reg ;
-; red[*]    ; vgasync:vgasync|pixel_reg ; 7.367 ; 7.350 ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  red[6]   ; vgasync:vgasync|pixel_reg ; 7.169 ; 7.350 ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  red[7]   ; vgasync:vgasync|pixel_reg ; 7.367 ; 7.325 ; Fall       ; vgasync:vgasync|pixel_reg ;
-; vga_clock ; vgasync:vgasync|pixel_reg ; 4.276 ;       ; Fall       ; vgasync:vgasync|pixel_reg ;
-; vsync     ; vgasync:vgasync|pixel_reg ; 5.036 ; 5.318 ; Fall       ; vgasync:vgasync|pixel_reg ;
-+-----------+---------------------------+-------+-------+------------+---------------------------+
-
-
-+------------------------------------------------------------------------------------------------+
-; Minimum Clock to Output Times                                                                  ;
-+-----------+---------------------------+-------+-------+------------+---------------------------+
-; Data Port ; Clock Port                ; Rise  ; Fall  ; Clock Edge ; Clock Reference           ;
-+-----------+---------------------------+-------+-------+------------+---------------------------+
-; vga_clock ; vgasync:vgasync|pixel_reg ;       ; 3.722 ; Rise       ; vgasync:vgasync|pixel_reg ;
-; blue[*]   ; vgasync:vgasync|pixel_reg ; 4.613 ; 4.687 ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  blue[6]  ; vgasync:vgasync|pixel_reg ; 4.613 ; 4.687 ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  blue[7]  ; vgasync:vgasync|pixel_reg ; 4.740 ; 4.879 ; Fall       ; vgasync:vgasync|pixel_reg ;
-; green[*]  ; vgasync:vgasync|pixel_reg ; 4.951 ; 4.999 ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  green[6] ; vgasync:vgasync|pixel_reg ; 4.951 ; 4.999 ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  green[7] ; vgasync:vgasync|pixel_reg ; 5.305 ; 5.545 ; Fall       ; vgasync:vgasync|pixel_reg ;
-; hsync     ; vgasync:vgasync|pixel_reg ; 4.515 ; 4.740 ; Fall       ; vgasync:vgasync|pixel_reg ;
-; red[*]    ; vgasync:vgasync|pixel_reg ; 4.989 ; 5.175 ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  red[6]   ; vgasync:vgasync|pixel_reg ; 5.291 ; 5.464 ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  red[7]   ; vgasync:vgasync|pixel_reg ; 4.989 ; 5.175 ; Fall       ; vgasync:vgasync|pixel_reg ;
-; vga_clock ; vgasync:vgasync|pixel_reg ; 3.967 ;       ; Fall       ; vgasync:vgasync|pixel_reg ;
-; vsync     ; vgasync:vgasync|pixel_reg ; 4.434 ; 4.661 ; Fall       ; vgasync:vgasync|pixel_reg ;
-+-----------+---------------------------+-------+-------+------------+---------------------------+
-
-
----------------------------------------------
-; Slow 1100mV 0C Model Metastability Report ;
----------------------------------------------
+----------------------------------------------
+; Slow 1100mV 0C Model Metastability Summary ;
+----------------------------------------------
 No synchronizer chains to report.
 
 
@@ -404,19 +250,19 @@ No synchronizer chains to report.
 +---------------------------+--------+---------------+
 ; Clock                     ; Slack  ; End Point TNS ;
 +---------------------------+--------+---------------+
-; vgasync:vgasync|pixel_reg ; -1.044 ; -18.602       ;
-; clk                       ; -0.433 ; -0.433        ;
+; clk                       ; -3.089 ; -3.089        ;
+; vgasync:vgasync|pixel_reg ; -0.957 ; -24.549       ;
 +---------------------------+--------+---------------+
 
 
-+----------------------------------------------------+
-; Fast 1100mV 85C Model Hold Summary                 ;
-+---------------------------+--------+---------------+
-; Clock                     ; Slack  ; End Point TNS ;
-+---------------------------+--------+---------------+
-; clk                       ; -0.654 ; -0.654        ;
-; vgasync:vgasync|pixel_reg ; -0.111 ; -1.110        ;
-+---------------------------+--------+---------------+
++---------------------------------------------------+
+; Fast 1100mV 85C Model Hold Summary                ;
++---------------------------+-------+---------------+
+; Clock                     ; Slack ; End Point TNS ;
++---------------------------+-------+---------------+
+; vgasync:vgasync|pixel_reg ; 0.284 ; 0.000         ;
+; clk                       ; 1.497 ; 0.000         ;
++---------------------------+-------+---------------+
 
 
 ------------------------------------------
@@ -436,86 +282,14 @@ No paths to report.
 +---------------------------+--------+---------------+
 ; Clock                     ; Slack  ; End Point TNS ;
 +---------------------------+--------+---------------+
-; clk                       ; -0.762 ; -1.176        ;
-; vgasync:vgasync|pixel_reg ; 0.039  ; 0.000         ;
+; clk                       ; -0.842 ; -1.335        ;
+; vgasync:vgasync|pixel_reg ; 0.116  ; 0.000         ;
 +---------------------------+--------+---------------+
 
 
-+------------------------------------------------------------------------------------------------+
-; Setup Times                                                                                    ;
-+-----------+---------------------------+-------+-------+------------+---------------------------+
-; Data Port ; Clock Port                ; Rise  ; Fall  ; Clock Edge ; Clock Reference           ;
-+-----------+---------------------------+-------+-------+------------+---------------------------+
-; sw[*]     ; vgasync:vgasync|pixel_reg ; 3.304 ; 4.362 ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  sw[0]    ; vgasync:vgasync|pixel_reg ; 3.099 ; 4.040 ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  sw[1]    ; vgasync:vgasync|pixel_reg ; 3.144 ; 4.114 ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  sw[2]    ; vgasync:vgasync|pixel_reg ; 3.295 ; 4.362 ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  sw[3]    ; vgasync:vgasync|pixel_reg ; 3.135 ; 4.074 ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  sw[4]    ; vgasync:vgasync|pixel_reg ; 3.304 ; 4.282 ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  sw[5]    ; vgasync:vgasync|pixel_reg ; 3.035 ; 4.010 ; Fall       ; vgasync:vgasync|pixel_reg ;
-+-----------+---------------------------+-------+-------+------------+---------------------------+
-
-
-+--------------------------------------------------------------------------------------------------+
-; Hold Times                                                                                       ;
-+-----------+---------------------------+--------+--------+------------+---------------------------+
-; Data Port ; Clock Port                ; Rise   ; Fall   ; Clock Edge ; Clock Reference           ;
-+-----------+---------------------------+--------+--------+------------+---------------------------+
-; sw[*]     ; vgasync:vgasync|pixel_reg ; -2.421 ; -3.325 ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  sw[0]    ; vgasync:vgasync|pixel_reg ; -2.492 ; -3.369 ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  sw[1]    ; vgasync:vgasync|pixel_reg ; -2.531 ; -3.436 ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  sw[2]    ; vgasync:vgasync|pixel_reg ; -2.652 ; -3.612 ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  sw[3]    ; vgasync:vgasync|pixel_reg ; -2.520 ; -3.399 ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  sw[4]    ; vgasync:vgasync|pixel_reg ; -2.677 ; -3.582 ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  sw[5]    ; vgasync:vgasync|pixel_reg ; -2.421 ; -3.325 ; Fall       ; vgasync:vgasync|pixel_reg ;
-+-----------+---------------------------+--------+--------+------------+---------------------------+
-
-
-+------------------------------------------------------------------------------------------------+
-; Clock to Output Times                                                                          ;
-+-----------+---------------------------+-------+-------+------------+---------------------------+
-; Data Port ; Clock Port                ; Rise  ; Fall  ; Clock Edge ; Clock Reference           ;
-+-----------+---------------------------+-------+-------+------------+---------------------------+
-; vga_clock ; vgasync:vgasync|pixel_reg ;       ; 2.628 ; Rise       ; vgasync:vgasync|pixel_reg ;
-; blue[*]   ; vgasync:vgasync|pixel_reg ; 4.480 ; 4.441 ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  blue[6]  ; vgasync:vgasync|pixel_reg ; 4.423 ; 4.404 ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  blue[7]  ; vgasync:vgasync|pixel_reg ; 4.480 ; 4.441 ; Fall       ; vgasync:vgasync|pixel_reg ;
-; green[*]  ; vgasync:vgasync|pixel_reg ; 4.781 ; 5.030 ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  green[6] ; vgasync:vgasync|pixel_reg ; 4.621 ; 4.619 ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  green[7] ; vgasync:vgasync|pixel_reg ; 4.781 ; 5.030 ; Fall       ; vgasync:vgasync|pixel_reg ;
-; hsync     ; vgasync:vgasync|pixel_reg ; 3.366 ; 3.619 ; Fall       ; vgasync:vgasync|pixel_reg ;
-; red[*]    ; vgasync:vgasync|pixel_reg ; 4.682 ; 4.724 ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  red[6]   ; vgasync:vgasync|pixel_reg ; 4.563 ; 4.719 ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  red[7]   ; vgasync:vgasync|pixel_reg ; 4.682 ; 4.724 ; Fall       ; vgasync:vgasync|pixel_reg ;
-; vga_clock ; vgasync:vgasync|pixel_reg ; 2.920 ;       ; Fall       ; vgasync:vgasync|pixel_reg ;
-; vsync     ; vgasync:vgasync|pixel_reg ; 3.302 ; 3.612 ; Fall       ; vgasync:vgasync|pixel_reg ;
-+-----------+---------------------------+-------+-------+------------+---------------------------+
-
-
-+------------------------------------------------------------------------------------------------+
-; Minimum Clock to Output Times                                                                  ;
-+-----------+---------------------------+-------+-------+------------+---------------------------+
-; Data Port ; Clock Port                ; Rise  ; Fall  ; Clock Edge ; Clock Reference           ;
-+-----------+---------------------------+-------+-------+------------+---------------------------+
-; vga_clock ; vgasync:vgasync|pixel_reg ;       ; 2.504 ; Rise       ; vgasync:vgasync|pixel_reg ;
-; blue[*]   ; vgasync:vgasync|pixel_reg ; 2.991 ; 3.117 ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  blue[6]  ; vgasync:vgasync|pixel_reg ; 2.991 ; 3.117 ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  blue[7]  ; vgasync:vgasync|pixel_reg ; 3.057 ; 3.208 ; Fall       ; vgasync:vgasync|pixel_reg ;
-; green[*]  ; vgasync:vgasync|pixel_reg ; 3.181 ; 3.338 ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  green[6] ; vgasync:vgasync|pixel_reg ; 3.181 ; 3.338 ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  green[7] ; vgasync:vgasync|pixel_reg ; 3.482 ; 3.713 ; Fall       ; vgasync:vgasync|pixel_reg ;
-; hsync     ; vgasync:vgasync|pixel_reg ; 3.009 ; 3.213 ; Fall       ; vgasync:vgasync|pixel_reg ;
-; red[*]    ; vgasync:vgasync|pixel_reg ; 3.228 ; 3.436 ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  red[6]   ; vgasync:vgasync|pixel_reg ; 3.461 ; 3.648 ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  red[7]   ; vgasync:vgasync|pixel_reg ; 3.228 ; 3.436 ; Fall       ; vgasync:vgasync|pixel_reg ;
-; vga_clock ; vgasync:vgasync|pixel_reg ; 2.739 ;       ; Fall       ; vgasync:vgasync|pixel_reg ;
-; vsync     ; vgasync:vgasync|pixel_reg ; 2.946 ; 3.193 ; Fall       ; vgasync:vgasync|pixel_reg ;
-+-----------+---------------------------+-------+-------+------------+---------------------------+
-
-
-----------------------------------------------
-; Fast 1100mV 85C Model Metastability Report ;
-----------------------------------------------
+-----------------------------------------------
+; Fast 1100mV 85C Model Metastability Summary ;
+-----------------------------------------------
 No synchronizer chains to report.
 
 
@@ -524,19 +298,19 @@ No synchronizer chains to report.
 +---------------------------+--------+---------------+
 ; Clock                     ; Slack  ; End Point TNS ;
 +---------------------------+--------+---------------+
-; vgasync:vgasync|pixel_reg ; -0.914 ; -16.134       ;
-; clk                       ; -0.527 ; -0.527        ;
+; clk                       ; -2.681 ; -2.681        ;
+; vgasync:vgasync|pixel_reg ; -0.821 ; -21.491       ;
 +---------------------------+--------+---------------+
 
 
-+----------------------------------------------------+
-; Fast 1100mV 0C Model Hold Summary                  ;
-+---------------------------+--------+---------------+
-; Clock                     ; Slack  ; End Point TNS ;
-+---------------------------+--------+---------------+
-; clk                       ; -0.462 ; -0.462        ;
-; vgasync:vgasync|pixel_reg ; -0.083 ; -0.830        ;
-+---------------------------+--------+---------------+
++---------------------------------------------------+
+; Fast 1100mV 0C Model Hold Summary                 ;
++---------------------------+-------+---------------+
+; Clock                     ; Slack ; End Point TNS ;
++---------------------------+-------+---------------+
+; vgasync:vgasync|pixel_reg ; 0.257 ; 0.000         ;
+; clk                       ; 1.266 ; 0.000         ;
++---------------------------+-------+---------------+
 
 
 -----------------------------------------
@@ -556,173 +330,29 @@ No paths to report.
 +---------------------------+--------+---------------+
 ; Clock                     ; Slack  ; End Point TNS ;
 +---------------------------+--------+---------------+
-; clk                       ; -0.748 ; -1.154        ;
-; vgasync:vgasync|pixel_reg ; 0.033  ; 0.000         ;
+; clk                       ; -0.815 ; -1.289        ;
+; vgasync:vgasync|pixel_reg ; 0.133  ; 0.000         ;
 +---------------------------+--------+---------------+
 
 
-+------------------------------------------------------------------------------------------------+
-; Setup Times                                                                                    ;
-+-----------+---------------------------+-------+-------+------------+---------------------------+
-; Data Port ; Clock Port                ; Rise  ; Fall  ; Clock Edge ; Clock Reference           ;
-+-----------+---------------------------+-------+-------+------------+---------------------------+
-; sw[*]     ; vgasync:vgasync|pixel_reg ; 3.010 ; 4.054 ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  sw[0]    ; vgasync:vgasync|pixel_reg ; 2.798 ; 3.730 ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  sw[1]    ; vgasync:vgasync|pixel_reg ; 2.847 ; 3.800 ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  sw[2]    ; vgasync:vgasync|pixel_reg ; 3.010 ; 4.054 ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  sw[3]    ; vgasync:vgasync|pixel_reg ; 2.824 ; 3.769 ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  sw[4]    ; vgasync:vgasync|pixel_reg ; 2.985 ; 3.962 ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  sw[5]    ; vgasync:vgasync|pixel_reg ; 2.732 ; 3.695 ; Fall       ; vgasync:vgasync|pixel_reg ;
-+-----------+---------------------------+-------+-------+------------+---------------------------+
-
-
-+--------------------------------------------------------------------------------------------------+
-; Hold Times                                                                                       ;
-+-----------+---------------------------+--------+--------+------------+---------------------------+
-; Data Port ; Clock Port                ; Rise   ; Fall   ; Clock Edge ; Clock Reference           ;
-+-----------+---------------------------+--------+--------+------------+---------------------------+
-; sw[*]     ; vgasync:vgasync|pixel_reg ; -2.169 ; -3.029 ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  sw[0]    ; vgasync:vgasync|pixel_reg ; -2.240 ; -3.081 ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  sw[1]    ; vgasync:vgasync|pixel_reg ; -2.285 ; -3.143 ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  sw[2]    ; vgasync:vgasync|pixel_reg ; -2.417 ; -3.327 ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  sw[3]    ; vgasync:vgasync|pixel_reg ; -2.262 ; -3.117 ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  sw[4]    ; vgasync:vgasync|pixel_reg ; -2.411 ; -3.282 ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  sw[5]    ; vgasync:vgasync|pixel_reg ; -2.169 ; -3.029 ; Fall       ; vgasync:vgasync|pixel_reg ;
-+-----------+---------------------------+--------+--------+------------+---------------------------+
-
-
-+------------------------------------------------------------------------------------------------+
-; Clock to Output Times                                                                          ;
-+-----------+---------------------------+-------+-------+------------+---------------------------+
-; Data Port ; Clock Port                ; Rise  ; Fall  ; Clock Edge ; Clock Reference           ;
-+-----------+---------------------------+-------+-------+------------+---------------------------+
-; vga_clock ; vgasync:vgasync|pixel_reg ;       ; 2.481 ; Rise       ; vgasync:vgasync|pixel_reg ;
-; blue[*]   ; vgasync:vgasync|pixel_reg ; 4.112 ; 4.077 ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  blue[6]  ; vgasync:vgasync|pixel_reg ; 4.069 ; 4.046 ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  blue[7]  ; vgasync:vgasync|pixel_reg ; 4.112 ; 4.077 ; Fall       ; vgasync:vgasync|pixel_reg ;
-; green[*]  ; vgasync:vgasync|pixel_reg ; 4.427 ; 4.645 ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  green[6] ; vgasync:vgasync|pixel_reg ; 4.229 ; 4.245 ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  green[7] ; vgasync:vgasync|pixel_reg ; 4.427 ; 4.645 ; Fall       ; vgasync:vgasync|pixel_reg ;
-; hsync     ; vgasync:vgasync|pixel_reg ; 3.129 ; 3.322 ; Fall       ; vgasync:vgasync|pixel_reg ;
-; red[*]    ; vgasync:vgasync|pixel_reg ; 4.308 ; 4.351 ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  red[6]   ; vgasync:vgasync|pixel_reg ; 4.196 ; 4.348 ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  red[7]   ; vgasync:vgasync|pixel_reg ; 4.308 ; 4.351 ; Fall       ; vgasync:vgasync|pixel_reg ;
-; vga_clock ; vgasync:vgasync|pixel_reg ; 2.701 ;       ; Fall       ; vgasync:vgasync|pixel_reg ;
-; vsync     ; vgasync:vgasync|pixel_reg ; 3.049 ; 3.311 ; Fall       ; vgasync:vgasync|pixel_reg ;
-+-----------+---------------------------+-------+-------+------------+---------------------------+
-
-
-+------------------------------------------------------------------------------------------------+
-; Minimum Clock to Output Times                                                                  ;
-+-----------+---------------------------+-------+-------+------------+---------------------------+
-; Data Port ; Clock Port                ; Rise  ; Fall  ; Clock Edge ; Clock Reference           ;
-+-----------+---------------------------+-------+-------+------------+---------------------------+
-; vga_clock ; vgasync:vgasync|pixel_reg ;       ; 2.362 ; Rise       ; vgasync:vgasync|pixel_reg ;
-; blue[*]   ; vgasync:vgasync|pixel_reg ; 2.759 ; 2.860 ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  blue[6]  ; vgasync:vgasync|pixel_reg ; 2.759 ; 2.860 ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  blue[7]  ; vgasync:vgasync|pixel_reg ; 2.810 ; 2.941 ; Fall       ; vgasync:vgasync|pixel_reg ;
-; green[*]  ; vgasync:vgasync|pixel_reg ; 2.914 ; 3.059 ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  green[6] ; vgasync:vgasync|pixel_reg ; 2.914 ; 3.059 ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  green[7] ; vgasync:vgasync|pixel_reg ; 3.214 ; 3.421 ; Fall       ; vgasync:vgasync|pixel_reg ;
-; hsync     ; vgasync:vgasync|pixel_reg ; 2.804 ; 2.958 ; Fall       ; vgasync:vgasync|pixel_reg ;
-; red[*]    ; vgasync:vgasync|pixel_reg ; 2.978 ; 3.171 ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  red[6]   ; vgasync:vgasync|pixel_reg ; 3.176 ; 3.352 ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  red[7]   ; vgasync:vgasync|pixel_reg ; 2.978 ; 3.171 ; Fall       ; vgasync:vgasync|pixel_reg ;
-; vga_clock ; vgasync:vgasync|pixel_reg ; 2.539 ;       ; Fall       ; vgasync:vgasync|pixel_reg ;
-; vsync     ; vgasync:vgasync|pixel_reg ; 2.722 ; 2.944 ; Fall       ; vgasync:vgasync|pixel_reg ;
-+-----------+---------------------------+-------+-------+------------+---------------------------+
-
-
----------------------------------------------
-; Fast 1100mV 0C Model Metastability Report ;
----------------------------------------------
+----------------------------------------------
+; Fast 1100mV 0C Model Metastability Summary ;
+----------------------------------------------
 No synchronizer chains to report.
 
 
-+------------------------------------------------------------------------------------------+
-; Multicorner Timing Analysis Summary                                                      ;
-+----------------------------+---------+--------+----------+---------+---------------------+
-; Clock                      ; Setup   ; Hold   ; Recovery ; Removal ; Minimum Pulse Width ;
-+----------------------------+---------+--------+----------+---------+---------------------+
-; Worst-case Slack           ; -2.245  ; -1.821 ; N/A      ; N/A     ; -0.884              ;
-;  clk                       ; -0.527  ; -1.821 ; N/A      ; N/A     ; -0.884              ;
-;  vgasync:vgasync|pixel_reg ; -2.245  ; -0.269 ; N/A      ; N/A     ; -0.394              ;
-; Design-wide TNS            ; -47.371 ; -4.511 ; 0.0      ; 0.0     ; -20.443             ;
-;  clk                       ; -0.527  ; -1.821 ; N/A      ; N/A     ; -1.557              ;
-;  vgasync:vgasync|pixel_reg ; -47.371 ; -2.690 ; N/A      ; N/A     ; -18.944             ;
-+----------------------------+---------+--------+----------+---------+---------------------+
-
-
-+------------------------------------------------------------------------------------------------+
-; Setup Times                                                                                    ;
-+-----------+---------------------------+-------+-------+------------+---------------------------+
-; Data Port ; Clock Port                ; Rise  ; Fall  ; Clock Edge ; Clock Reference           ;
-+-----------+---------------------------+-------+-------+------------+---------------------------+
-; sw[*]     ; vgasync:vgasync|pixel_reg ; 5.775 ; 6.656 ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  sw[0]    ; vgasync:vgasync|pixel_reg ; 5.455 ; 6.158 ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  sw[1]    ; vgasync:vgasync|pixel_reg ; 5.575 ; 6.344 ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  sw[2]    ; vgasync:vgasync|pixel_reg ; 5.772 ; 6.656 ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  sw[3]    ; vgasync:vgasync|pixel_reg ; 5.565 ; 6.266 ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  sw[4]    ; vgasync:vgasync|pixel_reg ; 5.775 ; 6.528 ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  sw[5]    ; vgasync:vgasync|pixel_reg ; 5.396 ; 6.174 ; Fall       ; vgasync:vgasync|pixel_reg ;
-+-----------+---------------------------+-------+-------+------------+---------------------------+
-
-
-+--------------------------------------------------------------------------------------------------+
-; Hold Times                                                                                       ;
-+-----------+---------------------------+--------+--------+------------+---------------------------+
-; Data Port ; Clock Port                ; Rise   ; Fall   ; Clock Edge ; Clock Reference           ;
-+-----------+---------------------------+--------+--------+------------+---------------------------+
-; sw[*]     ; vgasync:vgasync|pixel_reg ; -2.169 ; -3.029 ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  sw[0]    ; vgasync:vgasync|pixel_reg ; -2.240 ; -3.081 ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  sw[1]    ; vgasync:vgasync|pixel_reg ; -2.285 ; -3.143 ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  sw[2]    ; vgasync:vgasync|pixel_reg ; -2.417 ; -3.327 ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  sw[3]    ; vgasync:vgasync|pixel_reg ; -2.262 ; -3.117 ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  sw[4]    ; vgasync:vgasync|pixel_reg ; -2.411 ; -3.282 ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  sw[5]    ; vgasync:vgasync|pixel_reg ; -2.169 ; -3.029 ; Fall       ; vgasync:vgasync|pixel_reg ;
-+-----------+---------------------------+--------+--------+------------+---------------------------+
-
-
-+------------------------------------------------------------------------------------------------+
-; Clock to Output Times                                                                          ;
-+-----------+---------------------------+-------+-------+------------+---------------------------+
-; Data Port ; Clock Port                ; Rise  ; Fall  ; Clock Edge ; Clock Reference           ;
-+-----------+---------------------------+-------+-------+------------+---------------------------+
-; vga_clock ; vgasync:vgasync|pixel_reg ;       ; 4.167 ; Rise       ; vgasync:vgasync|pixel_reg ;
-; blue[*]   ; vgasync:vgasync|pixel_reg ; 7.387 ; 7.276 ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  blue[6]  ; vgasync:vgasync|pixel_reg ; 7.261 ; 7.188 ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  blue[7]  ; vgasync:vgasync|pixel_reg ; 7.387 ; 7.276 ; Fall       ; vgasync:vgasync|pixel_reg ;
-; green[*]  ; vgasync:vgasync|pixel_reg ; 7.929 ; 8.207 ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  green[6] ; vgasync:vgasync|pixel_reg ; 7.638 ; 7.511 ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  green[7] ; vgasync:vgasync|pixel_reg ; 7.929 ; 8.207 ; Fall       ; vgasync:vgasync|pixel_reg ;
-; hsync     ; vgasync:vgasync|pixel_reg ; 5.457 ; 5.672 ; Fall       ; vgasync:vgasync|pixel_reg ;
-; red[*]    ; vgasync:vgasync|pixel_reg ; 7.665 ; 7.622 ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  red[6]   ; vgasync:vgasync|pixel_reg ; 7.497 ; 7.622 ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  red[7]   ; vgasync:vgasync|pixel_reg ; 7.665 ; 7.621 ; Fall       ; vgasync:vgasync|pixel_reg ;
-; vga_clock ; vgasync:vgasync|pixel_reg ; 4.423 ;       ; Fall       ; vgasync:vgasync|pixel_reg ;
-; vsync     ; vgasync:vgasync|pixel_reg ; 5.312 ; 5.566 ; Fall       ; vgasync:vgasync|pixel_reg ;
-+-----------+---------------------------+-------+-------+------------+---------------------------+
-
-
-+------------------------------------------------------------------------------------------------+
-; Minimum Clock to Output Times                                                                  ;
-+-----------+---------------------------+-------+-------+------------+---------------------------+
-; Data Port ; Clock Port                ; Rise  ; Fall  ; Clock Edge ; Clock Reference           ;
-+-----------+---------------------------+-------+-------+------------+---------------------------+
-; vga_clock ; vgasync:vgasync|pixel_reg ;       ; 2.362 ; Rise       ; vgasync:vgasync|pixel_reg ;
-; blue[*]   ; vgasync:vgasync|pixel_reg ; 2.759 ; 2.860 ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  blue[6]  ; vgasync:vgasync|pixel_reg ; 2.759 ; 2.860 ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  blue[7]  ; vgasync:vgasync|pixel_reg ; 2.810 ; 2.941 ; Fall       ; vgasync:vgasync|pixel_reg ;
-; green[*]  ; vgasync:vgasync|pixel_reg ; 2.914 ; 3.059 ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  green[6] ; vgasync:vgasync|pixel_reg ; 2.914 ; 3.059 ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  green[7] ; vgasync:vgasync|pixel_reg ; 3.214 ; 3.421 ; Fall       ; vgasync:vgasync|pixel_reg ;
-; hsync     ; vgasync:vgasync|pixel_reg ; 2.804 ; 2.958 ; Fall       ; vgasync:vgasync|pixel_reg ;
-; red[*]    ; vgasync:vgasync|pixel_reg ; 2.978 ; 3.171 ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  red[6]   ; vgasync:vgasync|pixel_reg ; 3.176 ; 3.352 ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  red[7]   ; vgasync:vgasync|pixel_reg ; 2.978 ; 3.171 ; Fall       ; vgasync:vgasync|pixel_reg ;
-; vga_clock ; vgasync:vgasync|pixel_reg ; 2.539 ;       ; Fall       ; vgasync:vgasync|pixel_reg ;
-; vsync     ; vgasync:vgasync|pixel_reg ; 2.722 ; 2.944 ; Fall       ; vgasync:vgasync|pixel_reg ;
-+-----------+---------------------------+-------+-------+------------+---------------------------+
++-----------------------------------------------------------------------------------------+
+; Multicorner Timing Analysis Summary                                                     ;
++----------------------------+---------+-------+----------+---------+---------------------+
+; Clock                      ; Setup   ; Hold  ; Recovery ; Removal ; Minimum Pulse Width ;
++----------------------------+---------+-------+----------+---------+---------------------+
+; Worst-case Slack           ; -3.991  ; 0.257 ; N/A      ; N/A     ; -0.928              ;
+;  clk                       ; -3.991  ; 1.266 ; N/A      ; N/A     ; -0.928              ;
+;  vgasync:vgasync|pixel_reg ; -2.332  ; 0.257 ; N/A      ; N/A     ; -0.394              ;
+; Design-wide TNS            ; -65.323 ; 0.0   ; 0.0      ; 0.0     ; -20.946             ;
+;  clk                       ; -3.991  ; 0.000 ; N/A      ; N/A     ; -1.648              ;
+;  vgasync:vgasync|pixel_reg ; -61.332 ; 0.000 ; N/A      ; N/A     ; -19.367             ;
++----------------------------+---------+-------+----------+---------+---------------------+
 
 
 +--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -767,7 +397,6 @@ No synchronizer chains to report.
 +-------+--------------+-----------------+-----------------+
 ; Pin   ; I/O Standard ; 10-90 Rise Time ; 90-10 Fall Time ;
 +-------+--------------+-----------------+-----------------+
-; reset ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
 ; sw[6] ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
 ; sw[7] ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
 ; clk   ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
@@ -934,7 +563,7 @@ No synchronizer chains to report.
 ; From Clock                ; To Clock                  ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
 +---------------------------+---------------------------+----------+----------+----------+----------+
 ; vgasync:vgasync|pixel_reg ; clk                       ; 1        ; 1        ; 0        ; 0        ;
-; vgasync:vgasync|pixel_reg ; vgasync:vgasync|pixel_reg ; 0        ; 0        ; 10       ; 508      ;
+; vgasync:vgasync|pixel_reg ; vgasync:vgasync|pixel_reg ; 0        ; 0        ; 12       ; 542      ;
 +---------------------------+---------------------------+----------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
@@ -945,7 +574,7 @@ Entries labeled "false path" only account for clock-to-clock false paths and not
 ; From Clock                ; To Clock                  ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
 +---------------------------+---------------------------+----------+----------+----------+----------+
 ; vgasync:vgasync|pixel_reg ; clk                       ; 1        ; 1        ; 0        ; 0        ;
-; vgasync:vgasync|pixel_reg ; vgasync:vgasync|pixel_reg ; 0        ; 0        ; 10       ; 508      ;
+; vgasync:vgasync|pixel_reg ; vgasync:vgasync|pixel_reg ; 0        ; 0        ; 12       ; 542      ;
 +---------------------------+---------------------------+----------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
@@ -963,7 +592,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 
 
 +------------------------------------------------+
-; Unconstrained Paths                            ;
+; Unconstrained Paths Summary                    ;
 +---------------------------------+-------+------+
 ; Property                        ; Setup ; Hold ;
 +---------------------------------+-------+------+
@@ -976,121 +605,192 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 +---------------------------------+-------+------+
 
 
-+------------------------------------+
-; TimeQuest Timing Analyzer Messages ;
-+------------------------------------+
++----------------------------------------------------------------------------+
+; Clock Status Summary                                                       ;
++---------------------------+---------------------------+------+-------------+
+; Target                    ; Clock                     ; Type ; Status      ;
++---------------------------+---------------------------+------+-------------+
+; clk                       ; clk                       ; Base ; Constrained ;
+; vgasync:vgasync|pixel_reg ; vgasync:vgasync|pixel_reg ; Base ; Constrained ;
++---------------------------+---------------------------+------+-------------+
+
+
++---------------------------------------------------------------------------------------------------+
+; Unconstrained Input Ports                                                                         ;
++------------+--------------------------------------------------------------------------------------+
+; Input Port ; Comment                                                                              ;
++------------+--------------------------------------------------------------------------------------+
+; sw[0]      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; sw[1]      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; sw[2]      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; sw[3]      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; sw[4]      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; sw[5]      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
++------------+--------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------+
+; Unconstrained Output Ports                                                                          ;
++-------------+---------------------------------------------------------------------------------------+
+; Output Port ; Comment                                                                               ;
++-------------+---------------------------------------------------------------------------------------+
+; blue[6]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; blue[7]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; green[6]    ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; green[7]    ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; hsync       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; red[6]      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; red[7]      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; vga_clock   ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; vsync       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
++-------------+---------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------+
+; Unconstrained Input Ports                                                                         ;
++------------+--------------------------------------------------------------------------------------+
+; Input Port ; Comment                                                                              ;
++------------+--------------------------------------------------------------------------------------+
+; sw[0]      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; sw[1]      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; sw[2]      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; sw[3]      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; sw[4]      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; sw[5]      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
++------------+--------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------+
+; Unconstrained Output Ports                                                                          ;
++-------------+---------------------------------------------------------------------------------------+
+; Output Port ; Comment                                                                               ;
++-------------+---------------------------------------------------------------------------------------+
+; blue[6]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; blue[7]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; green[6]    ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; green[7]    ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; hsync       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; red[6]      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; red[7]      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; vga_clock   ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; vsync       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
++-------------+---------------------------------------------------------------------------------------+
+
+
++--------------------------+
+; Timing Analyzer Messages ;
++--------------------------+
 Info: *******************************************************************
-Info: Running Quartus II 64-Bit TimeQuest Timing Analyzer
-    Info: Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
-    Info: Processing started: Sat Jun 19 17:17:09 2021
+Info: Running Quartus Prime Timing Analyzer
+    Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+    Info: Processing started: Sat Jun 19 17:57:08 2021
 Info: Command: quartus_sta FPGAPOSMachine -c FPGAPOSMachine
 Info: qsta_default_script.tcl version: #1
-Info (11104): Parallel Compilation has detected 12 hyper-threaded processors. However, the extra hyper-threaded processors will not be used by default. Parallel Compilation will use 6 of the 6 physical processors detected instead.
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 16 of the 16 processors detected
 Info (21077): Low junction temperature is 0 degrees C
 Info (21077): High junction temperature is 85 degrees C
-Critical Warning (332012): Synopsys Design Constraints File file not found: 'FPGAPOSMachine.sdc'. A Synopsys Design Constraints File is required by the TimeQuest Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
+Critical Warning (332012): Synopsys Design Constraints File file not found: 'FPGAPOSMachine.sdc'. A Synopsys Design Constraints File is required by the Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
 Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
 Info (332105): Deriving Clocks
     Info (332105): create_clock -period 1.000 -name vgasync:vgasync|pixel_reg vgasync:vgasync|pixel_reg
     Info (332105): create_clock -period 1.000 -name clk clk
 Info (332143): No user constrained clock uncertainty found in the design. Calling "derive_clock_uncertainty"
-Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in TimeQuest to see clock uncertainties.
-Info: Found TIMEQUEST_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
+Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
+Info: Found TIMING_ANALYZER_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
 Info: Analyzing Slow 1100mV 85C Model
 Critical Warning (332148): Timing requirements not met
-    Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the TimeQuest Timing Analyzer.
-Info (332146): Worst-case setup slack is -2.227
+    Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
+Info (332146): Worst-case setup slack is -3.991
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -2.227             -47.371 vgasync:vgasync|pixel_reg 
-    Info (332119):     0.075               0.000 clk 
-Info (332146): Worst-case hold slack is -1.821
+    Info (332119):    -3.991              -3.991 clk 
+    Info (332119):    -2.332             -61.332 vgasync:vgasync|pixel_reg 
+Info (332146): Worst-case hold slack is 0.498
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -1.821              -1.821 clk 
-    Info (332119):    -0.269              -2.690 vgasync:vgasync|pixel_reg 
+    Info (332119):     0.498               0.000 vgasync:vgasync|pixel_reg 
+    Info (332119):     1.476               0.000 clk 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
-Info (332146): Worst-case minimum pulse width slack is -0.867
+Info (332146): Worst-case minimum pulse width slack is -0.906
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.867              -1.499 clk 
-    Info (332119):    -0.394             -18.944 vgasync:vgasync|pixel_reg 
+    Info (332119):    -0.906              -1.579 clk 
+    Info (332119):    -0.394             -19.367 vgasync:vgasync|pixel_reg 
 Info: Analyzing Slow 1100mV 0C Model
 Info (334003): Started post-fitting delay annotation
-Warning (334000): Timing characteristics of device 5CSEMA5F31C6 are preliminary
 Info (334004): Delay annotation completed successfully
-Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in TimeQuest to see clock uncertainties.
+Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
-    Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the TimeQuest Timing Analyzer.
-Info (332146): Worst-case setup slack is -2.245
+    Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
+Info (332146): Worst-case setup slack is -3.890
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -2.245             -46.437 vgasync:vgasync|pixel_reg 
-    Info (332119):    -0.254              -0.254 clk 
-Info (332146): Worst-case hold slack is -1.414
+    Info (332119):    -3.890              -3.890 clk 
+    Info (332119):    -2.279             -59.778 vgasync:vgasync|pixel_reg 
+Info (332146): Worst-case hold slack is 0.534
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -1.414              -1.414 clk 
-    Info (332119):    -0.197              -1.964 vgasync:vgasync|pixel_reg 
+    Info (332119):     0.534               0.000 vgasync:vgasync|pixel_reg 
+    Info (332119):     1.520               0.000 clk 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
-Info (332146): Worst-case minimum pulse width slack is -0.884
+Info (332146): Worst-case minimum pulse width slack is -0.928
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.884              -1.557 clk 
-    Info (332119):    -0.394             -17.433 vgasync:vgasync|pixel_reg 
+    Info (332119):    -0.928              -1.648 clk 
+    Info (332119):    -0.394             -17.657 vgasync:vgasync|pixel_reg 
 Info: Analyzing Fast 1100mV 85C Model
 Info (334003): Started post-fitting delay annotation
-Warning (334000): Timing characteristics of device 5CSEMA5F31C6 are preliminary
 Info (334004): Delay annotation completed successfully
-Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in TimeQuest to see clock uncertainties.
+Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
-    Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the TimeQuest Timing Analyzer.
-Info (332146): Worst-case setup slack is -1.044
+    Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
+Info (332146): Worst-case setup slack is -3.089
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -1.044             -18.602 vgasync:vgasync|pixel_reg 
-    Info (332119):    -0.433              -0.433 clk 
-Info (332146): Worst-case hold slack is -0.654
+    Info (332119):    -3.089              -3.089 clk 
+    Info (332119):    -0.957             -24.549 vgasync:vgasync|pixel_reg 
+Info (332146): Worst-case hold slack is 0.284
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.654              -0.654 clk 
-    Info (332119):    -0.111              -1.110 vgasync:vgasync|pixel_reg 
+    Info (332119):     0.284               0.000 vgasync:vgasync|pixel_reg 
+    Info (332119):     1.497               0.000 clk 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
-Info (332146): Worst-case minimum pulse width slack is -0.762
+Info (332146): Worst-case minimum pulse width slack is -0.842
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.762              -1.176 clk 
-    Info (332119):     0.039               0.000 vgasync:vgasync|pixel_reg 
+    Info (332119):    -0.842              -1.335 clk 
+    Info (332119):     0.116               0.000 vgasync:vgasync|pixel_reg 
 Info: Analyzing Fast 1100mV 0C Model
-Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in TimeQuest to see clock uncertainties.
+Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
-    Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the TimeQuest Timing Analyzer.
-Info (332146): Worst-case setup slack is -0.914
+    Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
+Info (332146): Worst-case setup slack is -2.681
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.914             -16.134 vgasync:vgasync|pixel_reg 
-    Info (332119):    -0.527              -0.527 clk 
-Info (332146): Worst-case hold slack is -0.462
+    Info (332119):    -2.681              -2.681 clk 
+    Info (332119):    -0.821             -21.491 vgasync:vgasync|pixel_reg 
+Info (332146): Worst-case hold slack is 0.257
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.462              -0.462 clk 
-    Info (332119):    -0.083              -0.830 vgasync:vgasync|pixel_reg 
+    Info (332119):     0.257               0.000 vgasync:vgasync|pixel_reg 
+    Info (332119):     1.266               0.000 clk 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
-Info (332146): Worst-case minimum pulse width slack is -0.748
+Info (332146): Worst-case minimum pulse width slack is -0.815
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.748              -1.154 clk 
-    Info (332119):     0.033               0.000 vgasync:vgasync|pixel_reg 
+    Info (332119):    -0.815              -1.289 clk 
+    Info (332119):     0.133               0.000 vgasync:vgasync|pixel_reg 
 Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
-Info: Quartus II 64-Bit TimeQuest Timing Analyzer was successful. 0 errors, 7 warnings
-    Info: Peak virtual memory: 4960 megabytes
-    Info: Processing ended: Sat Jun 19 17:17:15 2021
-    Info: Elapsed time: 00:00:06
-    Info: Total CPU time (on all processors): 00:00:06
+Info: Quartus Prime Timing Analyzer was successful. 0 errors, 6 warnings
+    Info: Peak virtual memory: 5279 megabytes
+    Info: Processing ended: Sat Jun 19 17:57:13 2021
+    Info: Elapsed time: 00:00:05
+    Info: Total CPU time (on all processors): 00:00:05
 
 

@@ -2,11 +2,12 @@ import argparse
 from PIL import Image
 
 def writePixel(data, handle):
-    handle.write("{0} {1} {2},".format(data[0], data[1], data[2]))
+    handle.write("{0} {1} {2}\n".format(hex(data[0])[2:], hex(data[1])[2:], hex(data[2])[2:]))
 
 def main(path, output):
     icon = Image.open(f'{path}')
     width, height = icon.size
+    print(width, height)
 
     with open(f"{output}", "w") as file:
         for column in range(0, width):

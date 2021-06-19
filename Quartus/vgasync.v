@@ -1,6 +1,6 @@
-module vgasync(clk, reset, hsync, vsync, video_on, p_tick, x, y);
+module vgasync(clk, hsync, vsync, video_on, p_tick, x, y);
 
-	input wire clk, reset;
+	input wire clk;
 	output wire hsync, vsync, video_on, p_tick;
 	output wire [9:0] x, y;
 	
@@ -53,21 +53,13 @@ module vgasync(clk, reset, hsync, vsync, video_on, p_tick, x, y);
 		end
 
 	// Infer the registers
-	always @(posedge pixel_tick, posedge reset)
-		if(reset)
-			begin
-				v_count_reg <= 0;
-				h_count_reg <= 0;
-				vsync_reg <= 0;
-				hsync_reg <= 0;
-			end
-		else
-			begin
-				v_count_reg <= v_count_next;
-				h_count_reg <= h_count_next;
-				vsync_reg <= vsync_next;
-				hsync_reg <= hsync_next;
-			end
+	always @(posedge pixel_tick)
+		begin
+			v_count_reg <= v_count_next;
+			h_count_reg <= h_count_next;
+			vsync_reg <= vsync_next;
+			hsync_reg <= hsync_next;
+		end
 
 	/* HSYNC and VSYNC are active LOW signals */
 	

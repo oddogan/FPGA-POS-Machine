@@ -8,98 +8,99 @@ z2
 !i10e 25
 !i10f 100
 cModel Technology
-Z0 dC:/Users/onatd/Desktop/Projects/FPGA POS Machine/Quartus/simulation/modelsim
-vclkgenerator
-!s110 1624001001
-!i10b 1
-!s100 Q=GfS<Fzo0UU`GDMFgCL70
-Z1 !s11b Dg1SIo80bB@j0V0VzS_@n1
-I9:Ig<iM>^UZ88N<DIN:>31
-Z2 VDg1SIo80bB@j0V0VzS_@n1
-R0
-w1624000665
-8C:/Users/onatd/Desktop/Projects/FPGA POS Machine/Quartus/clkgenerator.v
-FC:/Users/onatd/Desktop/Projects/FPGA POS Machine/Quartus/clkgenerator.v
-!i122 1
-L0 3 16
-Z3 OV;L;2020.1;71
-r1
-!s85 0
-31
-!s108 1624001001.000000
-!s107 C:/Users/onatd/Desktop/Projects/FPGA POS Machine/Quartus/clkgenerator.v|
-!s90 -reportprogress|300|-work|work|C:/Users/onatd/Desktop/Projects/FPGA POS Machine/Quartus/clkgenerator.v|
-!i113 1
-Z4 o-work work
-Z5 tCvgOpt 0
+Z0 dC:/Users/onatd/Desktop/Projects/FPGA-POS-Machine/Quartus/simulation/modelsim
 vFPGAPOSMachine
-!s110 1624000982
+Z1 !s110 1624114649
 !i10b 1
-!s100 igh^0=@@^OYG4l@0Me:[92
-R1
-IKYXfN3H2nPP31@aTngomh2
-R2
+!s100 7l=_fWDVABg><><OdiT;e2
+Z2 !s11b Dg1SIo80bB@j0V0VzS_@n1
+I[z9Ak3Um2`PRI08RMW2YU0
+Z3 VDg1SIo80bB@j0V0VzS_@n1
 R0
-w1623840765
-8C:/Users/onatd/Desktop/Projects/FPGA POS Machine/Quartus/FPGAPOSMachine.v
-FC:/Users/onatd/Desktop/Projects/FPGA POS Machine/Quartus/FPGAPOSMachine.v
+w1624113251
+8C:/Users/onatd/Desktop/Projects/FPGA-POS-Machine/Quartus/FPGAPOSMachine.v
+FC:/Users/onatd/Desktop/Projects/FPGA-POS-Machine/Quartus/FPGAPOSMachine.v
 !i122 0
-L0 1 4
-R3
+L0 1 40
+Z4 OV;L;2020.1;71
 r1
 !s85 0
 31
-!s108 1624000982.000000
-!s107 C:/Users/onatd/Desktop/Projects/FPGA POS Machine/Quartus/FPGAPOSMachine.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/onatd/Desktop/Projects/FPGA POS Machine/Quartus|C:/Users/onatd/Desktop/Projects/FPGA POS Machine/Quartus/FPGAPOSMachine.v|
+Z5 !s108 1624114649.000000
+!s107 C:/Users/onatd/Desktop/Projects/FPGA-POS-Machine/Quartus/FPGAPOSMachine.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/onatd/Desktop/Projects/FPGA-POS-Machine/Quartus|C:/Users/onatd/Desktop/Projects/FPGA-POS-Machine/Quartus/FPGAPOSMachine.v|
 !i113 1
-o-vlog01compat -work work
-!s92 -vlog01compat -work work {+incdir+C:/Users/onatd/Desktop/Projects/FPGA POS Machine/Quartus}
-R5
+Z6 o-vlog01compat -work work
+Z7 !s92 -vlog01compat -work work +incdir+C:/Users/onatd/Desktop/Projects/FPGA-POS-Machine/Quartus
+Z8 tCvgOpt 0
 n@f@p@g@a@p@o@s@machine
+vimageloader
+Z9 !s110 1624117490
+!i10b 1
+!s100 _ck]WY_?5FEoz0K7?KfGf0
+R2
+IjecFEoKnJJAJFWb^oOjE_2
+R3
+R0
+w1624117478
+8C:/Users/onatd/Desktop/Projects/FPGA-POS-Machine/Quartus/imageloader.v
+FC:/Users/onatd/Desktop/Projects/FPGA-POS-Machine/Quartus/imageloader.v
+!i122 87
+L0 1 29
+R4
+r1
+!s85 0
+31
+Z10 !s108 1624117490.000000
+!s107 C:/Users/onatd/Desktop/Projects/FPGA-POS-Machine/Quartus/imageloader.v|
+!s90 -reportprogress|300|-work|work|C:/Users/onatd/Desktop/Projects/FPGA-POS-Machine/Quartus/imageloader.v|
+!i113 1
+Z11 o-work work
+R8
+vimageloader_tb
+R9
+!i10b 1
+!s100 j19YN^7`J??^b7ikT15YQ2
+R2
+I;=>@kmU<DmXoHlbO<6IZJ0
+R3
+R0
+w1624117486
+8C:/Users/onatd/Desktop/Projects/FPGA-POS-Machine/Quartus/imageloader_tb.v
+FC:/Users/onatd/Desktop/Projects/FPGA-POS-Machine/Quartus/imageloader_tb.v
+!i122 88
+L0 1 45
+R4
+r1
+!s85 0
+31
+R10
+!s107 C:/Users/onatd/Desktop/Projects/FPGA-POS-Machine/Quartus/imageloader_tb.v|
+!s90 -reportprogress|300|-work|work|C:/Users/onatd/Desktop/Projects/FPGA-POS-Machine/Quartus/imageloader_tb.v|
+!i113 1
+R11
+R8
 vvgasync
-Z6 !s110 1624001720
-!i10b 1
-!s100 U:1ENDOM9U:254>o0O0T92
 R1
-I9G__2CK3jVW4flh3XQbAN3
+!i10b 1
+!s100 2_e6VO2a^fkTdfdAEFFSZ3
 R2
-R0
-w1624001712
-8C:/Users/onatd/Desktop/Projects/FPGA POS Machine/Quartus/vgasync.v
-FC:/Users/onatd/Desktop/Projects/FPGA POS Machine/Quartus/vgasync.v
-!i122 10
-L0 1 92
+IlU4h3kD3HSU@I<SDzc8Lm1
 R3
+R0
+w1624113237
+8C:/Users/onatd/Desktop/Projects/FPGA-POS-Machine/Quartus/vgasync.v
+FC:/Users/onatd/Desktop/Projects/FPGA-POS-Machine/Quartus/vgasync.v
+!i122 1
+L0 1 83
+R4
 r1
 !s85 0
 31
-Z7 !s108 1624001720.000000
-!s107 C:/Users/onatd/Desktop/Projects/FPGA POS Machine/Quartus/vgasync.v|
-!s90 -reportprogress|300|-work|work|C:/Users/onatd/Desktop/Projects/FPGA POS Machine/Quartus/vgasync.v|
-!i113 1
-R4
 R5
-vvgatestbench
+!s107 C:/Users/onatd/Desktop/Projects/FPGA-POS-Machine/Quartus/vgasync.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/onatd/Desktop/Projects/FPGA-POS-Machine/Quartus|C:/Users/onatd/Desktop/Projects/FPGA-POS-Machine/Quartus/vgasync.v|
+!i113 1
 R6
-!i10b 1
-!s100 UUBfj2l3Nm?UzCV<6:D]S1
-R1
-IK]4U]UODZm5UcQWko[JQ;1
-R2
-R0
-w1624001060
-8C:/Users/onatd/Desktop/Projects/FPGA POS Machine/Quartus/vgatest.v
-FC:/Users/onatd/Desktop/Projects/FPGA POS Machine/Quartus/vgatest.v
-!i122 11
-L0 1 60
-R3
-r1
-!s85 0
-31
 R7
-!s107 C:/Users/onatd/Desktop/Projects/FPGA POS Machine/Quartus/vgatest.v|
-!s90 -reportprogress|300|-work|work|C:/Users/onatd/Desktop/Projects/FPGA POS Machine/Quartus/vgatest.v|
-!i113 1
-R4
-R5
+R8
