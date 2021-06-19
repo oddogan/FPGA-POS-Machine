@@ -1,5 +1,5 @@
 Analysis & Synthesis report for FPGAPOSMachine
-Sat Jun 19 17:56:27 2021
+Sat Jun 19 19:11:30 2021
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -13,12 +13,10 @@ Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
   5. Analysis & Synthesis Source Files Read
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
-  8. Registers Removed During Synthesis
-  9. General Register Statistics
- 10. Port Connectivity Checks: "vgasync:vgasync"
- 11. Post-Synthesis Netlist Statistics for Top Partition
- 12. Elapsed Time Per Partition
- 13. Analysis & Synthesis Messages
+  8. General Register Statistics
+  9. Post-Synthesis Netlist Statistics for Top Partition
+ 10. Elapsed Time Per Partition
+ 11. Analysis & Synthesis Messages
 
 
 
@@ -45,13 +43,13 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Sat Jun 19 17:56:27 2021       ;
+; Analysis & Synthesis Status     ; Successful - Sat Jun 19 19:11:30 2021       ;
 ; Quartus Prime Version           ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                   ; FPGAPOSMachine                              ;
 ; Top-level Entity Name           ; FPGAPOSMachine                              ;
 ; Family                          ; Cyclone V                                   ;
 ; Logic utilization (in ALMs)     ; N/A                                         ;
-; Total registers                 ; 29                                          ;
+; Total registers                 ; 71                                          ;
 ; Total pins                      ; 38                                          ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 0                                           ;
@@ -160,12 +158,19 @@ https://fpgasoftware.intel.com/eula.
 ; Number detected on machine ; 16          ;
 ; Maximum allowed            ; 16          ;
 ;                            ;             ;
-; Average used               ; 1.00        ;
+; Average used               ; 1.98        ;
 ; Maximum used               ; 16          ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processors 2-16        ;   0.0%      ;
+;     Processor 2            ;  28.6%      ;
+;     Processor 3            ;  28.6%      ;
+;     Processor 4            ;  28.6%      ;
+;     Processor 5            ;  12.3%      ;
+;     Processor 6            ;   0.0%      ;
+;     Processor 7            ;   0.0%      ;
+;     Processor 8            ;   0.0%      ;
+;     Processors 9-16        ;   0.0%      ;
 +----------------------------+-------------+
 
 
@@ -176,57 +181,48 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------+-----------------+------------------------+---------------------------------------------------------------------------+---------+
 ; FPGAPOSMachine.v                 ; yes             ; User Verilog HDL File  ; C:/Users/onatd/Desktop/Projects/FPGA-POS-Machine/Quartus/FPGAPOSMachine.v ;         ;
 ; vgasync.v                        ; yes             ; User Verilog HDL File  ; C:/Users/onatd/Desktop/Projects/FPGA-POS-Machine/Quartus/vgasync.v        ;         ;
+; imageloader.v                    ; yes             ; User Verilog HDL File  ; C:/Users/onatd/Desktop/Projects/FPGA-POS-Machine/Quartus/imageloader.v    ;         ;
+; bitmap.txt                       ; yes             ; Auto-Found File        ; C:/Users/onatd/Desktop/Projects/FPGA-POS-Machine/Quartus/bitmap.txt       ;         ;
 +----------------------------------+-----------------+------------------------+---------------------------------------------------------------------------+---------+
 
 
-+-------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary                             ;
-+---------------------------------------------+---------------------------+
-; Resource                                    ; Usage                     ;
-+---------------------------------------------+---------------------------+
-; Estimate of Logic utilization (ALMs needed) ; 23                        ;
-;                                             ;                           ;
-; Combinational ALUT usage for logic          ; 36                        ;
-;     -- 7 input functions                    ; 0                         ;
-;     -- 6 input functions                    ; 9                         ;
-;     -- 5 input functions                    ; 3                         ;
-;     -- 4 input functions                    ; 2                         ;
-;     -- <=3 input functions                  ; 22                        ;
-;                                             ;                           ;
-; Dedicated logic registers                   ; 29                        ;
-;                                             ;                           ;
-; I/O pins                                    ; 38                        ;
-;                                             ;                           ;
-; Total DSP Blocks                            ; 0                         ;
-;                                             ;                           ;
-; Maximum fan-out node                        ; vgasync:vgasync|pixel_reg ;
-; Maximum fan-out                             ; 30                        ;
-; Total fan-out                               ; 254                       ;
-; Average fan-out                             ; 1.80                      ;
-+---------------------------------------------+---------------------------+
++------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                                  ;
++---------------------------------------------+--------------------------------+
+; Resource                                    ; Usage                          ;
++---------------------------------------------+--------------------------------+
+; Estimate of Logic utilization (ALMs needed) ; 2637                           ;
+;                                             ;                                ;
+; Combinational ALUT usage for logic          ; 2862                           ;
+;     -- 7 input functions                    ; 470                            ;
+;     -- 6 input functions                    ; 1939                           ;
+;     -- 5 input functions                    ; 151                            ;
+;     -- 4 input functions                    ; 170                            ;
+;     -- <=3 input functions                  ; 132                            ;
+;                                             ;                                ;
+; Dedicated logic registers                   ; 71                             ;
+;                                             ;                                ;
+; I/O pins                                    ; 38                             ;
+;                                             ;                                ;
+; Total DSP Blocks                            ; 0                              ;
+;                                             ;                                ;
+; Maximum fan-out node                        ; vgasync:vgasync|h_count_reg[0] ;
+; Maximum fan-out                             ; 1647                           ;
+; Total fan-out                               ; 16936                          ;
+; Average fan-out                             ; 5.63                           ;
++---------------------------------------------+--------------------------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                   ;
-+----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------------------+----------------+--------------+
-; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name             ; Entity Name    ; Library Name ;
-+----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------------------+----------------+--------------+
-; |FPGAPOSMachine            ; 36 (6)              ; 29 (6)                    ; 0                 ; 0          ; 38   ; 0            ; |FPGAPOSMachine                 ; FPGAPOSMachine ; work         ;
-;    |vgasync:vgasync|       ; 30 (30)             ; 23 (23)                   ; 0                 ; 0          ; 0    ; 0            ; |FPGAPOSMachine|vgasync:vgasync ; vgasync        ; work         ;
-+----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------------------+----------------+--------------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                      ;
++----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+------------------------------------+----------------+--------------+
+; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                ; Entity Name    ; Library Name ;
++----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+------------------------------------+----------------+--------------+
+; |FPGAPOSMachine            ; 2862 (24)           ; 71 (24)                   ; 0                 ; 0          ; 38   ; 0            ; |FPGAPOSMachine                    ; FPGAPOSMachine ; work         ;
+;    |imageloader:imload|    ; 2808 (2808)         ; 24 (24)                   ; 0                 ; 0          ; 0    ; 0            ; |FPGAPOSMachine|imageloader:imload ; imageloader    ; work         ;
+;    |vgasync:vgasync|       ; 30 (30)             ; 23 (23)                   ; 0                 ; 0          ; 0    ; 0            ; |FPGAPOSMachine|vgasync:vgasync    ; vgasync        ; work         ;
++----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+------------------------------------+----------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
-
-
-+---------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                              ;
-+----------------------------------------+----------------------------------------+
-; Register name                          ; Reason for Removal                     ;
-+----------------------------------------+----------------------------------------+
-; blue_reg[0..5]                         ; Stuck at GND due to stuck port data_in ;
-; green_reg[0..5]                        ; Stuck at GND due to stuck port data_in ;
-; red_reg[0..5]                          ; Stuck at GND due to stuck port data_in ;
-; Total Number of Removed Registers = 18 ;                                        ;
-+----------------------------------------+----------------------------------------+
 
 
 +------------------------------------------------------+
@@ -234,7 +230,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 29    ;
+; Total registers                              ; 71    ;
 ; Number of registers using Synchronous Clear  ; 20    ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
@@ -244,38 +240,35 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 
 
-+----------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "vgasync:vgasync"                                                                    ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-; Port ; Type   ; Severity ; Details                                                                             ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-; x    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; y    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-
-
 +-----------------------------------------------------+
 ; Post-Synthesis Netlist Statistics for Top Partition ;
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_ff             ; 29                          ;
+; arriav_ff             ; 71                          ;
 ;     ENA SCLR          ; 20                          ;
-;     plain             ; 9                           ;
-; arriav_lcell_comb     ; 39                          ;
-;     arith             ; 20                          ;
-;         1 data inputs ; 20                          ;
-;     normal            ; 19                          ;
-;         0 data inputs ; 2                           ;
+;     plain             ; 51                          ;
+; arriav_lcell_comb     ; 2864                        ;
+;     arith             ; 56                          ;
+;         1 data inputs ; 43                          ;
+;         2 data inputs ; 13                          ;
+;     extend            ; 470                         ;
+;         7 data inputs ; 470                         ;
+;     normal            ; 2329                        ;
+;         0 data inputs ; 1                           ;
 ;         1 data inputs ; 2                           ;
-;         3 data inputs ; 1                           ;
-;         4 data inputs ; 2                           ;
-;         5 data inputs ; 3                           ;
-;         6 data inputs ; 9                           ;
+;         2 data inputs ; 10                          ;
+;         3 data inputs ; 56                          ;
+;         4 data inputs ; 170                         ;
+;         5 data inputs ; 151                         ;
+;         6 data inputs ; 1939                        ;
+;     shared            ; 9                           ;
+;         2 data inputs ; 4                           ;
+;         3 data inputs ; 5                           ;
 ; boundary_port         ; 38                          ;
 ;                       ;                             ;
-; Max LUT depth         ; 2.00                        ;
-; Average LUT depth     ; 1.50                        ;
+; Max LUT depth         ; 9.30                        ;
+; Average LUT depth     ; 7.39                        ;
 +-----------------------+-----------------------------+
 
 
@@ -284,7 +277,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:00     ;
+; Top            ; 00:00:10     ;
 +----------------+--------------+
 
 
@@ -294,7 +287,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Sat Jun 19 17:56:18 2021
+    Info: Processing started: Sat Jun 19 19:11:06 2021
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off FPGAPOSMachine -c FPGAPOSMachine
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 16 of the 16 processors detected
@@ -309,44 +302,34 @@ Info (12021): Found 1 design units, including 1 entities, in source file imagelo
 Info (12021): Found 1 design units, including 1 entities, in source file imageloader_tb.v
     Info (12023): Found entity 1: imageloader_tb File: C:/Users/onatd/Desktop/Projects/FPGA-POS-Machine/Quartus/imageloader_tb.v Line: 1
 Info (12127): Elaborating entity "FPGAPOSMachine" for the top level hierarchy
-Info (12128): Elaborating entity "vgasync" for hierarchy "vgasync:vgasync" File: C:/Users/onatd/Desktop/Projects/FPGA-POS-Machine/Quartus/FPGAPOSMachine.v Line: 17
+Info (12128): Elaborating entity "vgasync" for hierarchy "vgasync:vgasync" File: C:/Users/onatd/Desktop/Projects/FPGA-POS-Machine/Quartus/FPGAPOSMachine.v Line: 18
 Warning (10230): Verilog HDL assignment warning at vgasync.v(51): truncated value with size 32 to match size of target (10) File: C:/Users/onatd/Desktop/Projects/FPGA-POS-Machine/Quartus/vgasync.v Line: 51
 Warning (10230): Verilog HDL assignment warning at vgasync.v(52): truncated value with size 32 to match size of target (10) File: C:/Users/onatd/Desktop/Projects/FPGA-POS-Machine/Quartus/vgasync.v Line: 52
+Info (12128): Elaborating entity "imageloader" for hierarchy "imageloader:imload" File: C:/Users/onatd/Desktop/Projects/FPGA-POS-Machine/Quartus/FPGAPOSMachine.v Line: 19
+Warning (10850): Verilog HDL warning at imageloader.v(18): number of words (6912) in memory file does not match the number of elements in the address range [0:6909] File: C:/Users/onatd/Desktop/Projects/FPGA-POS-Machine/Quartus/imageloader.v Line: 18
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "red[0]" is stuck at GND File: C:/Users/onatd/Desktop/Projects/FPGA-POS-Machine/Quartus/FPGAPOSMachine.v Line: 6
-    Warning (13410): Pin "red[1]" is stuck at GND File: C:/Users/onatd/Desktop/Projects/FPGA-POS-Machine/Quartus/FPGAPOSMachine.v Line: 6
-    Warning (13410): Pin "red[2]" is stuck at GND File: C:/Users/onatd/Desktop/Projects/FPGA-POS-Machine/Quartus/FPGAPOSMachine.v Line: 6
-    Warning (13410): Pin "red[3]" is stuck at GND File: C:/Users/onatd/Desktop/Projects/FPGA-POS-Machine/Quartus/FPGAPOSMachine.v Line: 6
-    Warning (13410): Pin "red[4]" is stuck at GND File: C:/Users/onatd/Desktop/Projects/FPGA-POS-Machine/Quartus/FPGAPOSMachine.v Line: 6
-    Warning (13410): Pin "red[5]" is stuck at GND File: C:/Users/onatd/Desktop/Projects/FPGA-POS-Machine/Quartus/FPGAPOSMachine.v Line: 6
-    Warning (13410): Pin "green[0]" is stuck at GND File: C:/Users/onatd/Desktop/Projects/FPGA-POS-Machine/Quartus/FPGAPOSMachine.v Line: 6
-    Warning (13410): Pin "green[1]" is stuck at GND File: C:/Users/onatd/Desktop/Projects/FPGA-POS-Machine/Quartus/FPGAPOSMachine.v Line: 6
-    Warning (13410): Pin "green[2]" is stuck at GND File: C:/Users/onatd/Desktop/Projects/FPGA-POS-Machine/Quartus/FPGAPOSMachine.v Line: 6
-    Warning (13410): Pin "green[3]" is stuck at GND File: C:/Users/onatd/Desktop/Projects/FPGA-POS-Machine/Quartus/FPGAPOSMachine.v Line: 6
-    Warning (13410): Pin "green[4]" is stuck at GND File: C:/Users/onatd/Desktop/Projects/FPGA-POS-Machine/Quartus/FPGAPOSMachine.v Line: 6
-    Warning (13410): Pin "green[5]" is stuck at GND File: C:/Users/onatd/Desktop/Projects/FPGA-POS-Machine/Quartus/FPGAPOSMachine.v Line: 6
-    Warning (13410): Pin "blue[0]" is stuck at GND File: C:/Users/onatd/Desktop/Projects/FPGA-POS-Machine/Quartus/FPGAPOSMachine.v Line: 6
-    Warning (13410): Pin "blue[1]" is stuck at GND File: C:/Users/onatd/Desktop/Projects/FPGA-POS-Machine/Quartus/FPGAPOSMachine.v Line: 6
-    Warning (13410): Pin "blue[2]" is stuck at GND File: C:/Users/onatd/Desktop/Projects/FPGA-POS-Machine/Quartus/FPGAPOSMachine.v Line: 6
-    Warning (13410): Pin "blue[3]" is stuck at GND File: C:/Users/onatd/Desktop/Projects/FPGA-POS-Machine/Quartus/FPGAPOSMachine.v Line: 6
-    Warning (13410): Pin "blue[4]" is stuck at GND File: C:/Users/onatd/Desktop/Projects/FPGA-POS-Machine/Quartus/FPGAPOSMachine.v Line: 6
-    Warning (13410): Pin "blue[5]" is stuck at GND File: C:/Users/onatd/Desktop/Projects/FPGA-POS-Machine/Quartus/FPGAPOSMachine.v Line: 6
     Warning (13410): Pin "blank" is stuck at VCC File: C:/Users/onatd/Desktop/Projects/FPGA-POS-Machine/Quartus/FPGAPOSMachine.v Line: 7
     Warning (13410): Pin "sync" is stuck at VCC File: C:/Users/onatd/Desktop/Projects/FPGA-POS-Machine/Quartus/FPGAPOSMachine.v Line: 7
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 2 input pin(s) that do not drive logic
+Warning (21074): Design contains 8 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "sw[0]" File: C:/Users/onatd/Desktop/Projects/FPGA-POS-Machine/Quartus/FPGAPOSMachine.v Line: 4
+    Warning (15610): No output dependent on input pin "sw[1]" File: C:/Users/onatd/Desktop/Projects/FPGA-POS-Machine/Quartus/FPGAPOSMachine.v Line: 4
+    Warning (15610): No output dependent on input pin "sw[2]" File: C:/Users/onatd/Desktop/Projects/FPGA-POS-Machine/Quartus/FPGAPOSMachine.v Line: 4
+    Warning (15610): No output dependent on input pin "sw[3]" File: C:/Users/onatd/Desktop/Projects/FPGA-POS-Machine/Quartus/FPGAPOSMachine.v Line: 4
+    Warning (15610): No output dependent on input pin "sw[4]" File: C:/Users/onatd/Desktop/Projects/FPGA-POS-Machine/Quartus/FPGAPOSMachine.v Line: 4
+    Warning (15610): No output dependent on input pin "sw[5]" File: C:/Users/onatd/Desktop/Projects/FPGA-POS-Machine/Quartus/FPGAPOSMachine.v Line: 4
     Warning (15610): No output dependent on input pin "sw[6]" File: C:/Users/onatd/Desktop/Projects/FPGA-POS-Machine/Quartus/FPGAPOSMachine.v Line: 4
     Warning (15610): No output dependent on input pin "sw[7]" File: C:/Users/onatd/Desktop/Projects/FPGA-POS-Machine/Quartus/FPGAPOSMachine.v Line: 4
-Info (21057): Implemented 80 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 2924 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 9 input pins
     Info (21059): Implemented 29 output pins
-    Info (21061): Implemented 42 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 29 warnings
-    Info: Peak virtual memory: 4896 megabytes
-    Info: Processing ended: Sat Jun 19 17:56:27 2021
-    Info: Elapsed time: 00:00:09
-    Info: Total CPU time (on all processors): 00:00:21
+    Info (21061): Implemented 2886 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 18 warnings
+    Info: Peak virtual memory: 4929 megabytes
+    Info: Processing ended: Sat Jun 19 19:11:30 2021
+    Info: Elapsed time: 00:00:24
+    Info: Total CPU time (on all processors): 00:00:44
 
 

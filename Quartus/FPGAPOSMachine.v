@@ -16,7 +16,7 @@ module FPGAPOSMachine(clk, sw, hsync, vsync, vga_clock, red, green, blue, blank,
     wire [7:0] red_wire, green_wire, blue_wire;
 
 	vgasync vgasync(.clk(clk), .hsync(hsync), .vsync(vsync), .video_on(video_on), .p_tick(vga_clock), .x(x), .y(y));
-    imageloader imload(.clk(vga_clock), .x(x), .y(y), .r(red_wire), .g(green_wire), .b(blue_wire))
+    imageloader imload(.clk(vga_clock), .x(x), .y(y), .r(red_wire), .g(green_wire), .b(blue_wire));
 
 	// Register for 8-bit RGB
     reg [7:0] red_reg;

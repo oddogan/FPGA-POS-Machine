@@ -4,6 +4,7 @@ module imageloader(clk, x, y, r, g, b);
 	
     localparam image_width = 48;
     localparam image_height = 48;
+	 integer index = 0;
 
     // Coordinates in the display
     input [9:0] x, y;
@@ -11,18 +12,19 @@ module imageloader(clk, x, y, r, g, b);
     // The RGB values in the corresponding pixel
     output reg [7:0] r, g, b;
 
-    reg [7:0] data [0:image_height-1][0:image_width-1][0:2];
+    reg [7:0] data [0:3*(image_width*image_height-1)];
 
     initial
         $readmemh("bitmap.txt", data);
 
     always @(posedge clk)
     begin
+			index = (y * image_width + x) * 3;
         if (y < image_height && x < image_width)
         begin
-            r = data[y][x][0];
-            g = data[y][x][1];
-            b = data[y][x][2]; 
+            r = data[index];
+            g = data[index+1];
+            b = data[index+2]; 
         end
         else
         begin
