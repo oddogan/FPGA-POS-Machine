@@ -1,4 +1,4 @@
-module imageloader(clk, x, y, r, g, b);
+module imageloader(clk, x, y, red, green, blue);
 
 	input clk;
 	
@@ -10,9 +10,9 @@ module imageloader(clk, x, y, r, g, b);
     input [9:0] x, y;
 
     // The RGB values in the corresponding pixel
-    output reg [7:0] r, g, b;
-
-    reg [7:0] data [0:3*(image_width*image_height-1)];
+    reg [7:0] r, g, b;
+	 output [7:0] red, green, blue;
+    reg [7:0] data [0:3*(image_width*image_height)-1];
 
     initial
         $readmemh("bitmap.txt", data);
@@ -34,5 +34,8 @@ module imageloader(clk, x, y, r, g, b);
         end
     end
 
-
+	assign red = r;
+	assign green = g;
+	assign blue = b;
+	
 endmodule
