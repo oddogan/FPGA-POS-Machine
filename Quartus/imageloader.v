@@ -22,15 +22,15 @@ module imageloader(clk, x, y, red, green, blue);
 			index = (y * image_width + x) * 3;
         if (y < image_height && x < image_width)
         begin
-            r = data[index];
-            g = data[index+1];
-            b = data[index+2]; 
+            r <= data[index];
+            g <= data[index+1];
+            b <= data[index+2]; 
         end
         else
         begin
-            r = 8'b0;
-            g = 8'b0;
-            b = 8'b0;
+            r <= 8'b0;
+            g <= 8'b0;
+            b <= 8'b0;
         end
     end
 

@@ -1,6 +1,6 @@
 Analysis & Synthesis report for FPGAPOSMachine
-Sat Jun 19 19:33:30 2021
-Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
+Sat Jun 19 19:50:05 2021
+Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
 ---------------------
@@ -13,52 +13,55 @@ Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
   5. Analysis & Synthesis Source Files Read
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
-  8. General Register Statistics
-  9. Elapsed Time Per Partition
- 10. Analysis & Synthesis Messages
+  8. Logic Cells Representing Combinational Loops
+  9. General Register Statistics
+ 10. Post-Synthesis Netlist Statistics for Top Partition
+ 11. Elapsed Time Per Partition
+ 12. Analysis & Synthesis Messages
 
 
 
 ----------------
 ; Legal Notice ;
 ----------------
-Copyright (C) 1991-2013 Altera Corporation
-Your use of Altera Corporation's design tools, logic functions 
-and other software and tools, and its AMPP partner logic 
+Copyright (C) 2020  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
 functions, and any output files from any of the foregoing 
 (including device programming or simulation files), and any 
 associated documentation or information are expressly subject 
-to the terms and conditions of the Altera Program License 
-Subscription Agreement, Altera MegaCore Function License 
-Agreement, or other applicable license agreement, including, 
-without limitation, that your use is for the sole purpose of 
-programming logic devices manufactured by Altera and sold by 
-Altera or its authorized distributors.  Please refer to the 
-applicable agreement for further details.
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
 
 
 
-+------------------------------------------------------------------------------+
-; Analysis & Synthesis Summary                                                 ;
-+---------------------------------+--------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Sat Jun 19 19:33:30 2021      ;
-; Quartus II 64-Bit Version       ; 13.1.0 Build 162 10/23/2013 SJ Web Edition ;
-; Revision Name                   ; FPGAPOSMachine                             ;
-; Top-level Entity Name           ; FPGAPOSMachine                             ;
-; Family                          ; Cyclone V                                  ;
-; Logic utilization (in ALMs)     ; N/A                                        ;
-; Total registers                 ; 71                                         ;
-; Total pins                      ; 38                                         ;
-; Total virtual pins              ; 0                                          ;
-; Total block memory bits         ; 0                                          ;
-; Total DSP Blocks                ; 0                                          ;
-; Total HSSI RX PCSs              ; 0                                          ;
-; Total HSSI PMA RX Deserializers ; 0                                          ;
-; Total HSSI TX PCSs              ; 0                                          ;
-; Total HSSI TX Channels          ; 0                                          ;
-; Total PLLs                      ; 0                                          ;
-; Total DLLs                      ; 0                                          ;
-+---------------------------------+--------------------------------------------+
++-------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                  ;
++---------------------------------+---------------------------------------------+
+; Analysis & Synthesis Status     ; Successful - Sat Jun 19 19:50:05 2021       ;
+; Quartus Prime Version           ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
+; Revision Name                   ; FPGAPOSMachine                              ;
+; Top-level Entity Name           ; FPGAPOSMachine                              ;
+; Family                          ; Cyclone V                                   ;
+; Logic utilization (in ALMs)     ; N/A                                         ;
+; Total registers                 ; 71                                          ;
+; Total pins                      ; 38                                          ;
+; Total virtual pins              ; 0                                           ;
+; Total block memory bits         ; 0                                           ;
+; Total DSP Blocks                ; 0                                           ;
+; Total HSSI RX PCSs              ; 0                                           ;
+; Total HSSI PMA RX Deserializers ; 0                                           ;
+; Total HSSI TX PCSs              ; 0                                           ;
+; Total HSSI PMA TX Serializers   ; 0                                           ;
+; Total PLLs                      ; 0                                           ;
+; Total DLLs                      ; 0                                           ;
++---------------------------------+---------------------------------------------+
 
 
 +---------------------------------------------------------------------------------------------------------------------------+
@@ -70,13 +73,13 @@ applicable agreement for further details.
 ; Top-level entity name                                                           ; FPGAPOSMachine     ; FPGAPOSMachine     ;
 ; Family name                                                                     ; Cyclone V          ; Cyclone V          ;
 ; Use smart compilation                                                           ; Off                ; Off                ;
-; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation      ; On                 ; On                 ;
+; Enable parallel Assembler and Timing Analyzer during compilation                ; On                 ; On                 ;
 ; Enable compact report table                                                     ; Off                ; Off                ;
 ; Restructure Multiplexers                                                        ; Auto               ; Auto               ;
 ; MLAB Add Timing Constraints For Mixed-Port Feed-Through Mode Setting Don't Care ; Off                ; Off                ;
 ; Create Debugging Nodes for IP Cores                                             ; Off                ; Off                ;
 ; Preserve fewer node names                                                       ; On                 ; On                 ;
-; Disable OpenCore Plus hardware evaluation                                       ; Off                ; Off                ;
+; Intel FPGA IP Evaluation Mode                                                   ; Enable             ; Enable             ;
 ; Verilog Version                                                                 ; Verilog_2001       ; Verilog_2001       ;
 ; VHDL Version                                                                    ; VHDL_1993          ; VHDL_1993          ;
 ; State Machine Processing                                                        ; Auto               ; Auto               ;
@@ -127,7 +130,7 @@ applicable agreement for further details.
 ; Report Connectivity Checks                                                      ; On                 ; On                 ;
 ; Ignore Maximum Fan-Out Assignments                                              ; Off                ; Off                ;
 ; Synchronization Register Chain Length                                           ; 3                  ; 3                  ;
-; PowerPlay Power Optimization                                                    ; Normal compilation ; Normal compilation ;
+; Power Optimization During Synthesis                                             ; Normal compilation ; Normal compilation ;
 ; HDL message level                                                               ; Level2             ; Level2             ;
 ; Suppress Register Optimization Related Messages                                 ; Off                ; Off                ;
 ; Number of Removed Registers Reported in Synthesis Report                        ; 5000               ; 5000               ;
@@ -143,8 +146,8 @@ applicable agreement for further details.
 ; Analysis & Synthesis Message Level                                              ; Medium             ; Medium             ;
 ; Disable Register Merging Across Hierarchies                                     ; Auto               ; Auto               ;
 ; Resource Aware Inference For Block RAM                                          ; On                 ; On                 ;
-; Synthesis Seed                                                                  ; 1                  ; 1                  ;
 ; Automatic Parallel Synthesis                                                    ; On                 ; On                 ;
+; Partial Reconfiguration Bitstream ID                                            ; Off                ; Off                ;
 +---------------------------------------------------------------------------------+--------------------+--------------------+
 
 
@@ -153,18 +156,22 @@ applicable agreement for further details.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
-; Number detected on machine ; 12          ;
-; Maximum allowed            ; 6           ;
+; Number detected on machine ; 16          ;
+; Maximum allowed            ; 16          ;
 ;                            ;             ;
-; Average used               ; 3.00        ;
-; Maximum used               ; 6           ;
+; Average used               ; 2.14        ;
+; Maximum used               ; 16          ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processors 2-4         ;  60.0%      ;
-;     Processor 5            ;  20.0%      ;
-;     Processor 6            ; < 0.1%      ;
-;     Processors 7-12        ;   0.0%      ;
+;     Processor 2            ;  32.6%      ;
+;     Processor 3            ;  32.6%      ;
+;     Processor 4            ;  32.6%      ;
+;     Processor 5            ;  15.8%      ;
+;     Processor 6            ;   0.0%      ;
+;     Processor 7            ;   0.0%      ;
+;     Processor 8            ;   0.0%      ;
+;     Processors 9-16        ;   0.0%      ;
 +----------------------------+-------------+
 
 
@@ -173,10 +180,10 @@ applicable agreement for further details.
 +----------------------------------+-----------------+------------------------+---------------------------------------------------------------------------+---------+
 ; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                                              ; Library ;
 +----------------------------------+-----------------+------------------------+---------------------------------------------------------------------------+---------+
-; FPGAPOSMachine.v                 ; yes             ; User Verilog HDL File  ; C:/Users/menes/Documents/GitHub/FPGA-POS-Machine/Quartus/FPGAPOSMachine.v ;         ;
-; vgasync.v                        ; yes             ; User Verilog HDL File  ; C:/Users/menes/Documents/GitHub/FPGA-POS-Machine/Quartus/vgasync.v        ;         ;
-; imageloader.v                    ; yes             ; User Verilog HDL File  ; C:/Users/menes/Documents/GitHub/FPGA-POS-Machine/Quartus/imageloader.v    ;         ;
-; bitmap.txt                       ; yes             ; Auto-Found File        ; C:/Users/menes/Documents/GitHub/FPGA-POS-Machine/Quartus/bitmap.txt       ;         ;
+; FPGAPOSMachine.v                 ; yes             ; User Verilog HDL File  ; C:/Users/onatd/Desktop/Projects/FPGA-POS-Machine/Quartus/FPGAPOSMachine.v ;         ;
+; vgasync.v                        ; yes             ; User Verilog HDL File  ; C:/Users/onatd/Desktop/Projects/FPGA-POS-Machine/Quartus/vgasync.v        ;         ;
+; imageloader.v                    ; yes             ; User Verilog HDL File  ; C:/Users/onatd/Desktop/Projects/FPGA-POS-Machine/Quartus/imageloader.v    ;         ;
+; bitmap.txt                       ; yes             ; Auto-Found File        ; C:/Users/onatd/Desktop/Projects/FPGA-POS-Machine/Quartus/bitmap.txt       ;         ;
 +----------------------------------+-----------------+------------------------+---------------------------------------------------------------------------+---------+
 
 
@@ -187,34 +194,47 @@ applicable agreement for further details.
 +---------------------------------------------+--------------------------------+
 ; Estimate of Logic utilization (ALMs needed) ; 2638                           ;
 ;                                             ;                                ;
-; Combinational ALUT usage for logic          ; 2862                           ;
+; Combinational ALUT usage for logic          ; 2863                           ;
 ;     -- 7 input functions                    ; 470                            ;
-;     -- 6 input functions                    ; 1941                           ;
-;     -- 5 input functions                    ; 153                            ;
-;     -- 4 input functions                    ; 168                            ;
-;     -- <=3 input functions                  ; 130                            ;
+;     -- 6 input functions                    ; 1939                           ;
+;     -- 5 input functions                    ; 151                            ;
+;     -- 4 input functions                    ; 170                            ;
+;     -- <=3 input functions                  ; 133                            ;
 ;                                             ;                                ;
 ; Dedicated logic registers                   ; 71                             ;
 ;                                             ;                                ;
 ; I/O pins                                    ; 38                             ;
+;                                             ;                                ;
 ; Total DSP Blocks                            ; 0                              ;
+;                                             ;                                ;
 ; Maximum fan-out node                        ; vgasync:vgasync|h_count_reg[0] ;
-; Maximum fan-out                             ; 1645                           ;
-; Total fan-out                               ; 16944                          ;
+; Maximum fan-out                             ; 1647                           ;
+; Total fan-out                               ; 16937                          ;
 ; Average fan-out                             ; 5.63                           ;
 +---------------------------------------------+--------------------------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                      ;
-+----------------------------+-------------------+--------------+-------------------+------------+------+--------------+------------------------------------+--------------+
-; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                ; Library Name ;
-+----------------------------+-------------------+--------------+-------------------+------------+------+--------------+------------------------------------+--------------+
-; |FPGAPOSMachine            ; 2862 (24)         ; 71 (24)      ; 0                 ; 0          ; 38   ; 0            ; |FPGAPOSMachine                    ; work         ;
-;    |imageloader:imload|    ; 2808 (2808)       ; 24 (24)      ; 0                 ; 0          ; 0    ; 0            ; |FPGAPOSMachine|imageloader:imload ; work         ;
-;    |vgasync:vgasync|       ; 30 (30)           ; 23 (23)      ; 0                 ; 0          ; 0    ; 0            ; |FPGAPOSMachine|vgasync:vgasync    ; work         ;
-+----------------------------+-------------------+--------------+-------------------+------------+------+--------------+------------------------------------+--------------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                      ;
++----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+------------------------------------+----------------+--------------+
+; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                ; Entity Name    ; Library Name ;
++----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+------------------------------------+----------------+--------------+
+; |FPGAPOSMachine            ; 2863 (25)           ; 71 (24)                   ; 0                 ; 0          ; 38   ; 0            ; |FPGAPOSMachine                    ; FPGAPOSMachine ; work         ;
+;    |imageloader:imload|    ; 2808 (2808)         ; 24 (24)                   ; 0                 ; 0          ; 0    ; 0            ; |FPGAPOSMachine|imageloader:imload ; imageloader    ; work         ;
+;    |vgasync:vgasync|       ; 30 (30)             ; 23 (23)                   ; 0                 ; 0          ; 0    ; 0            ; |FPGAPOSMachine|vgasync:vgasync    ; vgasync        ; work         ;
++----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+------------------------------------+----------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++------------------------------------------------------------+
+; Logic Cells Representing Combinational Loops               ;
++--------------------------------------------------------+---+
+; Logic Cell Name                                        ;   ;
++--------------------------------------------------------+---+
+; _~0                                                    ;   ;
+; Number of logic cells representing combinational loops ; 1 ;
++--------------------------------------------------------+---+
+Note: All cells listed above may not be present at the end of synthesis due to various synthesis optimizations.
 
 
 +------------------------------------------------------+
@@ -232,12 +252,44 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 
 
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; arriav_ff             ; 71                          ;
+;     ENA SCLR          ; 20                          ;
+;     plain             ; 51                          ;
+; arriav_lcell_comb     ; 2865                        ;
+;     arith             ; 56                          ;
+;         1 data inputs ; 43                          ;
+;         2 data inputs ; 13                          ;
+;     extend            ; 470                         ;
+;         7 data inputs ; 470                         ;
+;     normal            ; 2330                        ;
+;         0 data inputs ; 1                           ;
+;         1 data inputs ; 3                           ;
+;         2 data inputs ; 10                          ;
+;         3 data inputs ; 56                          ;
+;         4 data inputs ; 170                         ;
+;         5 data inputs ; 151                         ;
+;         6 data inputs ; 1939                        ;
+;     shared            ; 9                           ;
+;         2 data inputs ; 4                           ;
+;         3 data inputs ; 5                           ;
+; boundary_port         ; 38                          ;
+;                       ;                             ;
+; Max LUT depth         ; 9.30                        ;
+; Average LUT depth     ; 7.39                        ;
++-----------------------+-----------------------------+
+
+
 +-------------------------------+
 ; Elapsed Time Per Partition    ;
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:09     ;
+; Top            ; 00:00:11     ;
 +----------------+--------------+
 
 
@@ -245,49 +297,52 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Analysis & Synthesis Messages ;
 +-------------------------------+
 Info: *******************************************************************
-Info: Running Quartus II 64-Bit Analysis & Synthesis
-    Info: Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
-    Info: Processing started: Sat Jun 19 19:33:19 2021
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+    Info: Processing started: Sat Jun 19 19:49:39 2021
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off FPGAPOSMachine -c FPGAPOSMachine
-Info (11104): Parallel Compilation has detected 12 hyper-threaded processors. However, the extra hyper-threaded processors will not be used by default. Parallel Compilation will use 6 of the 6 physical processors detected instead.
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 16 of the 16 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file fpgaposmachine.v
-    Info (12023): Found entity 1: FPGAPOSMachine
+    Info (12023): Found entity 1: FPGAPOSMachine File: C:/Users/onatd/Desktop/Projects/FPGA-POS-Machine/Quartus/FPGAPOSMachine.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file vgasync.v
-    Info (12023): Found entity 1: vgasync
+    Info (12023): Found entity 1: vgasync File: C:/Users/onatd/Desktop/Projects/FPGA-POS-Machine/Quartus/vgasync.v Line: 1
 Warning (12019): Can't analyze file -- file vgatest.v is missing
 Warning (12019): Can't analyze file -- file clkgenerator.v is missing
 Info (12021): Found 1 design units, including 1 entities, in source file imageloader.v
-    Info (12023): Found entity 1: imageloader
+    Info (12023): Found entity 1: imageloader File: C:/Users/onatd/Desktop/Projects/FPGA-POS-Machine/Quartus/imageloader.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file imageloader_tb.v
-    Info (12023): Found entity 1: imageloader_tb
+    Info (12023): Found entity 1: imageloader_tb File: C:/Users/onatd/Desktop/Projects/FPGA-POS-Machine/Quartus/imageloader_tb.v Line: 1
 Info (12127): Elaborating entity "FPGAPOSMachine" for the top level hierarchy
-Info (12128): Elaborating entity "vgasync" for hierarchy "vgasync:vgasync"
-Warning (10230): Verilog HDL assignment warning at vgasync.v(51): truncated value with size 32 to match size of target (10)
-Warning (10230): Verilog HDL assignment warning at vgasync.v(52): truncated value with size 32 to match size of target (10)
-Info (12128): Elaborating entity "imageloader" for hierarchy "imageloader:imload"
+Warning (10755): Verilog HDL warning at FPGAPOSMachine.v(12): assignments to clck create a combinational loop File: C:/Users/onatd/Desktop/Projects/FPGA-POS-Machine/Quartus/FPGAPOSMachine.v Line: 12
+Info (12128): Elaborating entity "vgasync" for hierarchy "vgasync:vgasync" File: C:/Users/onatd/Desktop/Projects/FPGA-POS-Machine/Quartus/FPGAPOSMachine.v Line: 24
+Warning (10230): Verilog HDL assignment warning at vgasync.v(51): truncated value with size 32 to match size of target (10) File: C:/Users/onatd/Desktop/Projects/FPGA-POS-Machine/Quartus/vgasync.v Line: 51
+Warning (10230): Verilog HDL assignment warning at vgasync.v(52): truncated value with size 32 to match size of target (10) File: C:/Users/onatd/Desktop/Projects/FPGA-POS-Machine/Quartus/vgasync.v Line: 52
+Info (12128): Elaborating entity "imageloader" for hierarchy "imageloader:imload" File: C:/Users/onatd/Desktop/Projects/FPGA-POS-Machine/Quartus/FPGAPOSMachine.v Line: 25
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "blank" is stuck at VCC
-    Warning (13410): Pin "sync" is stuck at VCC
+    Warning (13410): Pin "blank" is stuck at VCC File: C:/Users/onatd/Desktop/Projects/FPGA-POS-Machine/Quartus/FPGAPOSMachine.v Line: 7
+    Warning (13410): Pin "sync" is stuck at VCC File: C:/Users/onatd/Desktop/Projects/FPGA-POS-Machine/Quartus/FPGAPOSMachine.v Line: 7
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 8 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "sw[0]"
-    Warning (15610): No output dependent on input pin "sw[1]"
-    Warning (15610): No output dependent on input pin "sw[2]"
-    Warning (15610): No output dependent on input pin "sw[3]"
-    Warning (15610): No output dependent on input pin "sw[4]"
-    Warning (15610): No output dependent on input pin "sw[5]"
-    Warning (15610): No output dependent on input pin "sw[6]"
-    Warning (15610): No output dependent on input pin "sw[7]"
-Info (21057): Implemented 2924 device resources after synthesis - the final resource count might be different
+Warning (21074): Design contains 9 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "clk" File: C:/Users/onatd/Desktop/Projects/FPGA-POS-Machine/Quartus/FPGAPOSMachine.v Line: 3
+    Warning (15610): No output dependent on input pin "sw[0]" File: C:/Users/onatd/Desktop/Projects/FPGA-POS-Machine/Quartus/FPGAPOSMachine.v Line: 4
+    Warning (15610): No output dependent on input pin "sw[1]" File: C:/Users/onatd/Desktop/Projects/FPGA-POS-Machine/Quartus/FPGAPOSMachine.v Line: 4
+    Warning (15610): No output dependent on input pin "sw[2]" File: C:/Users/onatd/Desktop/Projects/FPGA-POS-Machine/Quartus/FPGAPOSMachine.v Line: 4
+    Warning (15610): No output dependent on input pin "sw[3]" File: C:/Users/onatd/Desktop/Projects/FPGA-POS-Machine/Quartus/FPGAPOSMachine.v Line: 4
+    Warning (15610): No output dependent on input pin "sw[4]" File: C:/Users/onatd/Desktop/Projects/FPGA-POS-Machine/Quartus/FPGAPOSMachine.v Line: 4
+    Warning (15610): No output dependent on input pin "sw[5]" File: C:/Users/onatd/Desktop/Projects/FPGA-POS-Machine/Quartus/FPGAPOSMachine.v Line: 4
+    Warning (15610): No output dependent on input pin "sw[6]" File: C:/Users/onatd/Desktop/Projects/FPGA-POS-Machine/Quartus/FPGAPOSMachine.v Line: 4
+    Warning (15610): No output dependent on input pin "sw[7]" File: C:/Users/onatd/Desktop/Projects/FPGA-POS-Machine/Quartus/FPGAPOSMachine.v Line: 4
+Info (21057): Implemented 2925 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 9 input pins
     Info (21059): Implemented 29 output pins
-    Info (21061): Implemented 2886 logic cells
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 16 warnings
-    Info: Peak virtual memory: 4750 megabytes
-    Info: Processing ended: Sat Jun 19 19:33:30 2021
-    Info: Elapsed time: 00:00:11
-    Info: Total CPU time (on all processors): 00:00:23
+    Info (21061): Implemented 2887 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 19 warnings
+    Info: Peak virtual memory: 4932 megabytes
+    Info: Processing ended: Sat Jun 19 19:50:05 2021
+    Info: Elapsed time: 00:00:26
+    Info: Total CPU time (on all processors): 00:00:45
 
 

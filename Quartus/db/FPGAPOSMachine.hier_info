@@ -1,5 +1,5 @@
 |FPGAPOSMachine
-clk => clk.IN1
+clk => ~NO_FANOUT~
 sw[0] => ~NO_FANOUT~
 sw[1] => ~NO_FANOUT~
 sw[2] => ~NO_FANOUT~

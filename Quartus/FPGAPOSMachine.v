@@ -5,7 +5,7 @@ module FPGAPOSMachine(clk, sw, hsync, vsync, vga_clock, red, green, blue, blank,
 	output hsync, vsync, vga_clock;
 	output [7:0] red, green, blue;
 	output reg blank, sync;
-
+	
 	always begin
 	blank <= 1;
 	sync <= 1;
@@ -18,23 +18,10 @@ module FPGAPOSMachine(clk, sw, hsync, vsync, vga_clock, red, green, blue, blank,
 	vgasync vgasync(.clk(clk), .hsync(hsync), .vsync(vsync), .video_on(video_on), .p_tick(vga_clock), .x(x), .y(y));
     imageloader imload(.clk(vga_clock), .x(x), .y(y), .red(red_wire), .green(green_wire), .blue(blue_wire));
 
-	// Register for 8-bit RGB
-    reg [7:0] red_reg;
-    reg [7:0] green_reg;
-    reg [7:0] blue_reg;
-
-	// RGB Buffer
-    always @(posedge vga_clock)
-	 begin
-            red_reg <= red_wire;
-            green_reg <= green_wire;
-            blue_reg <= blue_wire;
-	end
-
     // Output
-    assign red = video_on ? red_reg : 8'b0;
-    assign green = video_on ? green_reg : 8'b0;
-    assign blue = video_on ? blue_reg : 8'b0;
+    assign red = video_on ? red_wire : 8'b0;
+    assign green = video_on ? green_wire : 8'b0;
+    assign blue = video_on ? blue_wire : 8'b0;
 
 
 endmodule
