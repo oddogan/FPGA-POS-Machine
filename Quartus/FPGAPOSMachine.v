@@ -8,9 +8,9 @@ module FPGAPOSMachine(clk, reset, sw, hsync, vsync, vga_clock, red, green, blue,
 
     reg rst = 0;
 	
-	initial begin
-	blank <= 0;
-	sync <= 0;
+	always begin
+	blank <= 1;
+	sync <= 1;
 	end
 	
 	wire video_on;
@@ -26,7 +26,7 @@ module FPGAPOSMachine(clk, reset, sw, hsync, vsync, vga_clock, red, green, blue,
 	// RGB Buffer
     always @(posedge vga_clock, posedge rst)
 	 begin
-        if (reset)
+        if (rst)
             begin
                 red_reg <= 0;
                 green_reg <= 0;
@@ -34,9 +34,9 @@ module FPGAPOSMachine(clk, reset, sw, hsync, vsync, vga_clock, red, green, blue,
             end
         else
             begin
-                red_reg <= sw;
-                green_reg <= sw;
-                blue_reg <= sw;
+                red_reg <= {sw[5:4],6'b000000};
+                green_reg <= {sw[3:2],6'b000000};
+                blue_reg <= {sw[1:0],6'b000000};
             end
 	end
     // Output
