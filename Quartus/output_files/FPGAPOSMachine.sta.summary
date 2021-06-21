@@ -3,99 +3,99 @@ TimeQuest Timing Analyzer Summary
 ------------------------------------------------------------
 
 Type  : Slow 1100mV 85C Model Setup 'vgasync:vgasync|pixel_reg'
-Slack : -16.163
-TNS   : -601.431
+Slack : -18.248
+TNS   : -787.254
 
 Type  : Slow 1100mV 85C Model Setup 'clk'
-Slack : 0.161
+Slack : 0.479
 TNS   : 0.000
 
 Type  : Slow 1100mV 85C Model Hold 'clk'
-Slack : -1.739
-TNS   : -1.739
+Slack : -2.170
+TNS   : -2.170
 
 Type  : Slow 1100mV 85C Model Hold 'vgasync:vgasync|pixel_reg'
-Slack : -0.473
-TNS   : -5.167
+Slack : -0.687
+TNS   : -5.960
 
 Type  : Slow 1100mV 85C Model Minimum Pulse Width 'vgasync:vgasync|pixel_reg'
 Slack : -2.225
-TNS   : -58.435
+TNS   : -85.513
 
 Type  : Slow 1100mV 85C Model Minimum Pulse Width 'clk'
-Slack : -0.673
-TNS   : -1.103
+Slack : -0.842
+TNS   : -1.450
 
 Type  : Slow 1100mV 0C Model Setup 'vgasync:vgasync|pixel_reg'
-Slack : -16.472
-TNS   : -608.621
+Slack : -18.632
+TNS   : -787.036
 
 Type  : Slow 1100mV 0C Model Setup 'clk'
-Slack : -0.039
-TNS   : -0.039
+Slack : 0.294
+TNS   : 0.000
 
 Type  : Slow 1100mV 0C Model Hold 'clk'
-Slack : -1.533
-TNS   : -1.533
+Slack : -1.890
+TNS   : -1.890
 
 Type  : Slow 1100mV 0C Model Hold 'vgasync:vgasync|pixel_reg'
-Slack : -0.349
-TNS   : -3.837
+Slack : -0.555
+TNS   : -4.944
 
 Type  : Slow 1100mV 0C Model Minimum Pulse Width 'vgasync:vgasync|pixel_reg'
 Slack : -2.225
-TNS   : -59.379
+TNS   : -85.010
 
 Type  : Slow 1100mV 0C Model Minimum Pulse Width 'clk'
-Slack : -0.705
-TNS   : -1.200
+Slack : -0.902
+TNS   : -1.594
 
 Type  : Fast 1100mV 85C Model Setup 'vgasync:vgasync|pixel_reg'
-Slack : -9.039
-TNS   : -354.427
+Slack : -10.871
+TNS   : -467.433
 
 Type  : Fast 1100mV 85C Model Setup 'clk'
-Slack : -0.212
-TNS   : -0.212
+Slack : 0.021
+TNS   : 0.000
 
 Type  : Fast 1100mV 85C Model Hold 'clk'
-Slack : -0.771
-TNS   : -0.771
+Slack : -1.065
+TNS   : -1.065
 
 Type  : Fast 1100mV 85C Model Hold 'vgasync:vgasync|pixel_reg'
-Slack : -0.191
-TNS   : -2.199
+Slack : -0.385
+TNS   : -3.220
 
 Type  : Fast 1100mV 85C Model Minimum Pulse Width 'vgasync:vgasync|pixel_reg'
 Slack : -1.702
-TNS   : -23.289
+TNS   : -43.690
 
 Type  : Fast 1100mV 85C Model Minimum Pulse Width 'clk'
-Slack : -0.651
-TNS   : -0.951
+Slack : -0.783
+TNS   : -1.218
 
 Type  : Fast 1100mV 0C Model Setup 'vgasync:vgasync|pixel_reg'
-Slack : -8.468
-TNS   : -328.975
+Slack : -10.168
+TNS   : -432.862
 
 Type  : Fast 1100mV 0C Model Setup 'clk'
-Slack : -0.205
-TNS   : -0.205
+Slack : 0.006
+TNS   : 0.000
 
 Type  : Fast 1100mV 0C Model Hold 'clk'
-Slack : -0.726
-TNS   : -0.726
+Slack : -0.970
+TNS   : -0.970
 
 Type  : Fast 1100mV 0C Model Hold 'vgasync:vgasync|pixel_reg'
-Slack : -0.165
-TNS   : -1.850
+Slack : -0.317
+TNS   : -2.670
 
 Type  : Fast 1100mV 0C Model Minimum Pulse Width 'vgasync:vgasync|pixel_reg'
 Slack : -1.702
-TNS   : -22.331
+TNS   : -42.549
 
 Type  : Fast 1100mV 0C Model Minimum Pulse Width 'clk'
-Slack : -0.641
-TNS   : -0.941
+Slack : -0.763
+TNS   : -1.184
 
 ------------------------------------------------------------

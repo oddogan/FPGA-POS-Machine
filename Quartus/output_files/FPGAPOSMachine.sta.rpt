@@ -1,5 +1,5 @@
 TimeQuest Timing Analyzer report for FPGAPOSMachine
-Mon Jun 21 01:18:53 2021
+Mon Jun 21 10:30:29 2021
 Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
 
 
@@ -95,15 +95,24 @@ applicable agreement for further details.
 +--------------------+----------------------------------------------------+
 
 
-Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
-+-------------------------------------+
-; Parallel Compilation                ;
-+----------------------------+--------+
-; Processors                 ; Number ;
-+----------------------------+--------+
-; Number detected on machine ; 8      ;
-; Maximum allowed            ; 1      ;
-+----------------------------+--------+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 12          ;
+; Maximum allowed            ; 11          ;
+;                            ;             ;
+; Average used               ; 6.64        ;
+; Maximum used               ; 11          ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processors 2-3         ;  64.3%      ;
+;     Processor 4            ;  60.7%      ;
+;     Processors 5-11        ;  53.6%      ;
+;     Processor 12           ;   0.0%      ;
++----------------------------+-------------+
 
 
 +----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -121,7 +130,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +-----------+-----------------+---------------------------+------+
 ; Fmax      ; Restricted Fmax ; Clock Name                ; Note ;
 +-----------+-----------------+---------------------------+------+
-; 58.26 MHz ; 58.26 MHz       ; vgasync:vgasync|pixel_reg ;      ;
+; 51.95 MHz ; 51.95 MHz       ; vgasync:vgasync|pixel_reg ;      ;
 +-----------+-----------------+---------------------------+------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
@@ -137,8 +146,8 @@ HTML report is unavailable in plain text report export.
 +---------------------------+---------+---------------+
 ; Clock                     ; Slack   ; End Point TNS ;
 +---------------------------+---------+---------------+
-; vgasync:vgasync|pixel_reg ; -16.163 ; -601.431      ;
-; clk                       ; 0.161   ; 0.000         ;
+; vgasync:vgasync|pixel_reg ; -18.248 ; -787.254      ;
+; clk                       ; 0.479   ; 0.000         ;
 +---------------------------+---------+---------------+
 
 
@@ -147,8 +156,8 @@ HTML report is unavailable in plain text report export.
 +---------------------------+--------+---------------+
 ; Clock                     ; Slack  ; End Point TNS ;
 +---------------------------+--------+---------------+
-; clk                       ; -1.739 ; -1.739        ;
-; vgasync:vgasync|pixel_reg ; -0.473 ; -5.167        ;
+; clk                       ; -2.170 ; -2.170        ;
+; vgasync:vgasync|pixel_reg ; -0.687 ; -5.960        ;
 +---------------------------+--------+---------------+
 
 
@@ -169,8 +178,8 @@ No paths to report.
 +---------------------------+--------+---------------+
 ; Clock                     ; Slack  ; End Point TNS ;
 +---------------------------+--------+---------------+
-; vgasync:vgasync|pixel_reg ; -2.225 ; -58.435       ;
-; clk                       ; -0.673 ; -1.103        ;
+; vgasync:vgasync|pixel_reg ; -2.225 ; -85.513       ;
+; clk                       ; -0.842 ; -1.450        ;
 +---------------------------+--------+---------------+
 
 
@@ -179,37 +188,37 @@ No paths to report.
 +-----------+---------------------------+--------+--------+------------+---------------------------+
 ; Data Port ; Clock Port                ; Rise   ; Fall   ; Clock Edge ; Clock Reference           ;
 +-----------+---------------------------+--------+--------+------------+---------------------------+
-; vga_clock ; vgasync:vgasync|pixel_reg ;        ; 6.304  ; Rise       ; vgasync:vgasync|pixel_reg ;
-; blue[*]   ; vgasync:vgasync|pixel_reg ; 12.961 ; 12.900 ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  blue[0]  ; vgasync:vgasync|pixel_reg ; 12.428 ; 12.614 ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  blue[1]  ; vgasync:vgasync|pixel_reg ; 11.922 ; 11.309 ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  blue[2]  ; vgasync:vgasync|pixel_reg ; 12.940 ; 12.731 ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  blue[3]  ; vgasync:vgasync|pixel_reg ; 12.200 ; 11.712 ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  blue[4]  ; vgasync:vgasync|pixel_reg ; 12.467 ; 12.140 ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  blue[5]  ; vgasync:vgasync|pixel_reg ; 12.961 ; 12.900 ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  blue[6]  ; vgasync:vgasync|pixel_reg ; 12.164 ; 11.543 ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  blue[7]  ; vgasync:vgasync|pixel_reg ; 12.324 ; 12.052 ; Fall       ; vgasync:vgasync|pixel_reg ;
-; green[*]  ; vgasync:vgasync|pixel_reg ; 13.512 ; 14.052 ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  green[0] ; vgasync:vgasync|pixel_reg ; 13.512 ; 13.447 ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  green[1] ; vgasync:vgasync|pixel_reg ; 12.520 ; 11.907 ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  green[2] ; vgasync:vgasync|pixel_reg ; 11.948 ; 11.135 ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  green[3] ; vgasync:vgasync|pixel_reg ; 13.073 ; 12.711 ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  green[4] ; vgasync:vgasync|pixel_reg ; 12.364 ; 11.730 ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  green[5] ; vgasync:vgasync|pixel_reg ; 12.941 ; 12.576 ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  green[6] ; vgasync:vgasync|pixel_reg ; 13.029 ; 14.052 ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  green[7] ; vgasync:vgasync|pixel_reg ; 12.807 ; 12.536 ; Fall       ; vgasync:vgasync|pixel_reg ;
-; hsync     ; vgasync:vgasync|pixel_reg ; 9.723  ; 11.105 ; Fall       ; vgasync:vgasync|pixel_reg ;
-; red[*]    ; vgasync:vgasync|pixel_reg ; 12.787 ; 12.809 ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  red[0]   ; vgasync:vgasync|pixel_reg ; 11.938 ; 11.763 ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  red[1]   ; vgasync:vgasync|pixel_reg ; 11.930 ; 11.500 ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  red[2]   ; vgasync:vgasync|pixel_reg ; 12.025 ; 11.375 ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  red[3]   ; vgasync:vgasync|pixel_reg ; 12.669 ; 12.503 ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  red[4]   ; vgasync:vgasync|pixel_reg ; 12.022 ; 11.441 ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  red[5]   ; vgasync:vgasync|pixel_reg ; 12.732 ; 12.591 ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  red[6]   ; vgasync:vgasync|pixel_reg ; 12.787 ; 12.485 ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  red[7]   ; vgasync:vgasync|pixel_reg ; 12.041 ; 12.809 ; Fall       ; vgasync:vgasync|pixel_reg ;
-; vga_clock ; vgasync:vgasync|pixel_reg ; 7.176  ;        ; Fall       ; vgasync:vgasync|pixel_reg ;
-; vsync     ; vgasync:vgasync|pixel_reg ; 9.874  ; 11.500 ; Fall       ; vgasync:vgasync|pixel_reg ;
+; vga_clock ; vgasync:vgasync|pixel_reg ;        ; 7.143  ; Rise       ; vgasync:vgasync|pixel_reg ;
+; blue[*]   ; vgasync:vgasync|pixel_reg ; 15.174 ; 14.352 ; Fall       ; vgasync:vgasync|pixel_reg ;
+;  blue[0]  ; vgasync:vgasync|pixel_reg ; 13.971 ; 12.702 ; Fall       ; vgasync:vgasync|pixel_reg ;
+;  blue[1]  ; vgasync:vgasync|pixel_reg ; 14.162 ; 12.834 ; Fall       ; vgasync:vgasync|pixel_reg ;
+;  blue[2]  ; vgasync:vgasync|pixel_reg ; 15.174 ; 14.352 ; Fall       ; vgasync:vgasync|pixel_reg ;
+;  blue[3]  ; vgasync:vgasync|pixel_reg ; 14.014 ; 12.834 ; Fall       ; vgasync:vgasync|pixel_reg ;
+;  blue[4]  ; vgasync:vgasync|pixel_reg ; 14.097 ; 12.718 ; Fall       ; vgasync:vgasync|pixel_reg ;
+;  blue[5]  ; vgasync:vgasync|pixel_reg ; 13.715 ; 12.513 ; Fall       ; vgasync:vgasync|pixel_reg ;
+;  blue[6]  ; vgasync:vgasync|pixel_reg ; 14.290 ; 13.074 ; Fall       ; vgasync:vgasync|pixel_reg ;
+;  blue[7]  ; vgasync:vgasync|pixel_reg ; 13.883 ; 12.507 ; Fall       ; vgasync:vgasync|pixel_reg ;
+; green[*]  ; vgasync:vgasync|pixel_reg ; 16.023 ; 16.902 ; Fall       ; vgasync:vgasync|pixel_reg ;
+;  green[0] ; vgasync:vgasync|pixel_reg ; 14.693 ; 16.902 ; Fall       ; vgasync:vgasync|pixel_reg ;
+;  green[1] ; vgasync:vgasync|pixel_reg ; 16.023 ; 16.253 ; Fall       ; vgasync:vgasync|pixel_reg ;
+;  green[2] ; vgasync:vgasync|pixel_reg ; 13.924 ; 14.652 ; Fall       ; vgasync:vgasync|pixel_reg ;
+;  green[3] ; vgasync:vgasync|pixel_reg ; 14.678 ; 16.045 ; Fall       ; vgasync:vgasync|pixel_reg ;
+;  green[4] ; vgasync:vgasync|pixel_reg ; 14.204 ; 14.403 ; Fall       ; vgasync:vgasync|pixel_reg ;
+;  green[5] ; vgasync:vgasync|pixel_reg ; 14.562 ; 16.325 ; Fall       ; vgasync:vgasync|pixel_reg ;
+;  green[6] ; vgasync:vgasync|pixel_reg ; 13.930 ; 15.220 ; Fall       ; vgasync:vgasync|pixel_reg ;
+;  green[7] ; vgasync:vgasync|pixel_reg ; 14.276 ; 14.696 ; Fall       ; vgasync:vgasync|pixel_reg ;
+; hsync     ; vgasync:vgasync|pixel_reg ; 9.822  ; 11.243 ; Fall       ; vgasync:vgasync|pixel_reg ;
+; red[*]    ; vgasync:vgasync|pixel_reg ; 14.958 ; 15.631 ; Fall       ; vgasync:vgasync|pixel_reg ;
+;  red[0]   ; vgasync:vgasync|pixel_reg ; 14.316 ; 14.148 ; Fall       ; vgasync:vgasync|pixel_reg ;
+;  red[1]   ; vgasync:vgasync|pixel_reg ; 13.962 ; 14.662 ; Fall       ; vgasync:vgasync|pixel_reg ;
+;  red[2]   ; vgasync:vgasync|pixel_reg ; 14.958 ; 14.873 ; Fall       ; vgasync:vgasync|pixel_reg ;
+;  red[3]   ; vgasync:vgasync|pixel_reg ; 13.765 ; 13.232 ; Fall       ; vgasync:vgasync|pixel_reg ;
+;  red[4]   ; vgasync:vgasync|pixel_reg ; 14.814 ; 13.844 ; Fall       ; vgasync:vgasync|pixel_reg ;
+;  red[5]   ; vgasync:vgasync|pixel_reg ; 13.684 ; 13.897 ; Fall       ; vgasync:vgasync|pixel_reg ;
+;  red[6]   ; vgasync:vgasync|pixel_reg ; 13.970 ; 13.741 ; Fall       ; vgasync:vgasync|pixel_reg ;
+;  red[7]   ; vgasync:vgasync|pixel_reg ; 14.728 ; 15.631 ; Fall       ; vgasync:vgasync|pixel_reg ;
+; vga_clock ; vgasync:vgasync|pixel_reg ; 8.435  ;        ; Fall       ; vgasync:vgasync|pixel_reg ;
+; vsync     ; vgasync:vgasync|pixel_reg ; 10.652 ; 12.864 ; Fall       ; vgasync:vgasync|pixel_reg ;
 +-----------+---------------------------+--------+--------+------------+---------------------------+
 
 
@@ -218,37 +227,37 @@ No paths to report.
 +-----------+---------------------------+-------+--------+------------+---------------------------+
 ; Data Port ; Clock Port                ; Rise  ; Fall   ; Clock Edge ; Clock Reference           ;
 +-----------+---------------------------+-------+--------+------------+---------------------------+
-; vga_clock ; vgasync:vgasync|pixel_reg ;       ; 5.821  ; Rise       ; vgasync:vgasync|pixel_reg ;
-; blue[*]   ; vgasync:vgasync|pixel_reg ; 7.735 ; 8.132  ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  blue[0]  ; vgasync:vgasync|pixel_reg ; 8.597 ; 9.079  ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  blue[1]  ; vgasync:vgasync|pixel_reg ; 7.735 ; 8.132  ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  blue[2]  ; vgasync:vgasync|pixel_reg ; 8.941 ; 9.354  ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  blue[3]  ; vgasync:vgasync|pixel_reg ; 8.736 ; 8.524  ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  blue[4]  ; vgasync:vgasync|pixel_reg ; 8.701 ; 8.866  ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  blue[5]  ; vgasync:vgasync|pixel_reg ; 9.110 ; 9.555  ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  blue[6]  ; vgasync:vgasync|pixel_reg ; 8.536 ; 8.304  ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  blue[7]  ; vgasync:vgasync|pixel_reg ; 8.703 ; 8.800  ; Fall       ; vgasync:vgasync|pixel_reg ;
-; green[*]  ; vgasync:vgasync|pixel_reg ; 8.457 ; 8.015  ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  green[0] ; vgasync:vgasync|pixel_reg ; 9.899 ; 9.888  ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  green[1] ; vgasync:vgasync|pixel_reg ; 8.457 ; 8.661  ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  green[2] ; vgasync:vgasync|pixel_reg ; 8.543 ; 8.015  ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  green[3] ; vgasync:vgasync|pixel_reg ; 9.432 ; 9.364  ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  green[4] ; vgasync:vgasync|pixel_reg ; 8.755 ; 8.536  ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  green[5] ; vgasync:vgasync|pixel_reg ; 9.395 ; 9.273  ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  green[6] ; vgasync:vgasync|pixel_reg ; 9.456 ; 10.652 ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  green[7] ; vgasync:vgasync|pixel_reg ; 9.109 ; 9.235  ; Fall       ; vgasync:vgasync|pixel_reg ;
-; hsync     ; vgasync:vgasync|pixel_reg ; 8.611 ; 9.845  ; Fall       ; vgasync:vgasync|pixel_reg ;
-; red[*]    ; vgasync:vgasync|pixel_reg ; 7.978 ; 8.186  ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  red[0]   ; vgasync:vgasync|pixel_reg ; 7.978 ; 8.358  ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  red[1]   ; vgasync:vgasync|pixel_reg ; 8.523 ; 8.192  ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  red[2]   ; vgasync:vgasync|pixel_reg ; 8.071 ; 8.186  ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  red[3]   ; vgasync:vgasync|pixel_reg ; 8.902 ; 9.152  ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  red[4]   ; vgasync:vgasync|pixel_reg ; 8.036 ; 8.270  ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  red[5]   ; vgasync:vgasync|pixel_reg ; 9.265 ; 9.229  ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  red[6]   ; vgasync:vgasync|pixel_reg ; 9.273 ; 9.177  ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  red[7]   ; vgasync:vgasync|pixel_reg ; 8.732 ; 9.671  ; Fall       ; vgasync:vgasync|pixel_reg ;
-; vga_clock ; vgasync:vgasync|pixel_reg ; 6.518 ;        ; Fall       ; vgasync:vgasync|pixel_reg ;
-; vsync     ; vgasync:vgasync|pixel_reg ; 8.712 ; 10.095 ; Fall       ; vgasync:vgasync|pixel_reg ;
+; vga_clock ; vgasync:vgasync|pixel_reg ;       ; 6.587  ; Rise       ; vgasync:vgasync|pixel_reg ;
+; blue[*]   ; vgasync:vgasync|pixel_reg ; 8.497 ; 8.769  ; Fall       ; vgasync:vgasync|pixel_reg ;
+;  blue[0]  ; vgasync:vgasync|pixel_reg ; 8.976 ; 8.915  ; Fall       ; vgasync:vgasync|pixel_reg ;
+;  blue[1]  ; vgasync:vgasync|pixel_reg ; 8.739 ; 8.966  ; Fall       ; vgasync:vgasync|pixel_reg ;
+;  blue[2]  ; vgasync:vgasync|pixel_reg ; 9.516 ; 10.575 ; Fall       ; vgasync:vgasync|pixel_reg ;
+;  blue[3]  ; vgasync:vgasync|pixel_reg ; 8.981 ; 9.492  ; Fall       ; vgasync:vgasync|pixel_reg ;
+;  blue[4]  ; vgasync:vgasync|pixel_reg ; 8.671 ; 8.888  ; Fall       ; vgasync:vgasync|pixel_reg ;
+;  blue[5]  ; vgasync:vgasync|pixel_reg ; 8.911 ; 8.869  ; Fall       ; vgasync:vgasync|pixel_reg ;
+;  blue[6]  ; vgasync:vgasync|pixel_reg ; 8.866 ; 9.236  ; Fall       ; vgasync:vgasync|pixel_reg ;
+;  blue[7]  ; vgasync:vgasync|pixel_reg ; 8.497 ; 8.769  ; Fall       ; vgasync:vgasync|pixel_reg ;
+; green[*]  ; vgasync:vgasync|pixel_reg ; 8.905 ; 8.854  ; Fall       ; vgasync:vgasync|pixel_reg ;
+;  green[0] ; vgasync:vgasync|pixel_reg ; 9.216 ; 9.562  ; Fall       ; vgasync:vgasync|pixel_reg ;
+;  green[1] ; vgasync:vgasync|pixel_reg ; 9.294 ; 9.695  ; Fall       ; vgasync:vgasync|pixel_reg ;
+;  green[2] ; vgasync:vgasync|pixel_reg ; 8.905 ; 8.854  ; Fall       ; vgasync:vgasync|pixel_reg ;
+;  green[3] ; vgasync:vgasync|pixel_reg ; 9.199 ; 9.543  ; Fall       ; vgasync:vgasync|pixel_reg ;
+;  green[4] ; vgasync:vgasync|pixel_reg ; 9.134 ; 9.399  ; Fall       ; vgasync:vgasync|pixel_reg ;
+;  green[5] ; vgasync:vgasync|pixel_reg ; 9.715 ; 9.772  ; Fall       ; vgasync:vgasync|pixel_reg ;
+;  green[6] ; vgasync:vgasync|pixel_reg ; 9.182 ; 9.305  ; Fall       ; vgasync:vgasync|pixel_reg ;
+;  green[7] ; vgasync:vgasync|pixel_reg ; 9.232 ; 9.282  ; Fall       ; vgasync:vgasync|pixel_reg ;
+; hsync     ; vgasync:vgasync|pixel_reg ; 8.723 ; 9.995  ; Fall       ; vgasync:vgasync|pixel_reg ;
+; red[*]    ; vgasync:vgasync|pixel_reg ; 8.736 ; 8.676  ; Fall       ; vgasync:vgasync|pixel_reg ;
+;  red[0]   ; vgasync:vgasync|pixel_reg ; 9.068 ; 10.512 ; Fall       ; vgasync:vgasync|pixel_reg ;
+;  red[1]   ; vgasync:vgasync|pixel_reg ; 9.188 ; 9.450  ; Fall       ; vgasync:vgasync|pixel_reg ;
+;  red[2]   ; vgasync:vgasync|pixel_reg ; 9.435 ; 10.028 ; Fall       ; vgasync:vgasync|pixel_reg ;
+;  red[3]   ; vgasync:vgasync|pixel_reg ; 8.736 ; 8.676  ; Fall       ; vgasync:vgasync|pixel_reg ;
+;  red[4]   ; vgasync:vgasync|pixel_reg ; 8.894 ; 9.251  ; Fall       ; vgasync:vgasync|pixel_reg ;
+;  red[5]   ; vgasync:vgasync|pixel_reg ; 8.939 ; 8.955  ; Fall       ; vgasync:vgasync|pixel_reg ;
+;  red[6]   ; vgasync:vgasync|pixel_reg ; 9.193 ; 9.081  ; Fall       ; vgasync:vgasync|pixel_reg ;
+;  red[7]   ; vgasync:vgasync|pixel_reg ; 9.237 ; 9.742  ; Fall       ; vgasync:vgasync|pixel_reg ;
+; vga_clock ; vgasync:vgasync|pixel_reg ; 7.632 ;        ; Fall       ; vgasync:vgasync|pixel_reg ;
+; vsync     ; vgasync:vgasync|pixel_reg ; 9.463 ; 11.357 ; Fall       ; vgasync:vgasync|pixel_reg ;
 +-----------+---------------------------+-------+--------+------------+---------------------------+
 
 
@@ -263,7 +272,7 @@ No synchronizer chains to report.
 +-----------+-----------------+---------------------------+------+
 ; Fmax      ; Restricted Fmax ; Clock Name                ; Note ;
 +-----------+-----------------+---------------------------+------+
-; 57.23 MHz ; 57.23 MHz       ; vgasync:vgasync|pixel_reg ;      ;
+; 50.94 MHz ; 50.94 MHz       ; vgasync:vgasync|pixel_reg ;      ;
 +-----------+-----------------+---------------------------+------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
@@ -273,8 +282,8 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +---------------------------+---------+---------------+
 ; Clock                     ; Slack   ; End Point TNS ;
 +---------------------------+---------+---------------+
-; vgasync:vgasync|pixel_reg ; -16.472 ; -608.621      ;
-; clk                       ; -0.039  ; -0.039        ;
+; vgasync:vgasync|pixel_reg ; -18.632 ; -787.036      ;
+; clk                       ; 0.294   ; 0.000         ;
 +---------------------------+---------+---------------+
 
 
@@ -283,8 +292,8 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +---------------------------+--------+---------------+
 ; Clock                     ; Slack  ; End Point TNS ;
 +---------------------------+--------+---------------+
-; clk                       ; -1.533 ; -1.533        ;
-; vgasync:vgasync|pixel_reg ; -0.349 ; -3.837        ;
+; clk                       ; -1.890 ; -1.890        ;
+; vgasync:vgasync|pixel_reg ; -0.555 ; -4.944        ;
 +---------------------------+--------+---------------+
 
 
@@ -305,8 +314,8 @@ No paths to report.
 +---------------------------+--------+---------------+
 ; Clock                     ; Slack  ; End Point TNS ;
 +---------------------------+--------+---------------+
-; vgasync:vgasync|pixel_reg ; -2.225 ; -59.379       ;
-; clk                       ; -0.705 ; -1.200        ;
+; vgasync:vgasync|pixel_reg ; -2.225 ; -85.010       ;
+; clk                       ; -0.902 ; -1.594        ;
 +---------------------------+--------+---------------+
 
 
@@ -315,37 +324,37 @@ No paths to report.
 +-----------+---------------------------+--------+--------+------------+---------------------------+
 ; Data Port ; Clock Port                ; Rise   ; Fall   ; Clock Edge ; Clock Reference           ;
 +-----------+---------------------------+--------+--------+------------+---------------------------+
-; vga_clock ; vgasync:vgasync|pixel_reg ;        ; 5.956  ; Rise       ; vgasync:vgasync|pixel_reg ;
-; blue[*]   ; vgasync:vgasync|pixel_reg ; 12.869 ; 12.829 ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  blue[0]  ; vgasync:vgasync|pixel_reg ; 11.981 ; 12.217 ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  blue[1]  ; vgasync:vgasync|pixel_reg ; 11.687 ; 11.076 ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  blue[2]  ; vgasync:vgasync|pixel_reg ; 12.774 ; 12.602 ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  blue[3]  ; vgasync:vgasync|pixel_reg ; 11.993 ; 11.506 ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  blue[4]  ; vgasync:vgasync|pixel_reg ; 12.272 ; 12.015 ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  blue[5]  ; vgasync:vgasync|pixel_reg ; 12.869 ; 12.829 ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  blue[6]  ; vgasync:vgasync|pixel_reg ; 11.947 ; 11.336 ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  blue[7]  ; vgasync:vgasync|pixel_reg ; 12.177 ; 11.925 ; Fall       ; vgasync:vgasync|pixel_reg ;
-; green[*]  ; vgasync:vgasync|pixel_reg ; 13.264 ; 13.897 ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  green[0] ; vgasync:vgasync|pixel_reg ; 13.264 ; 13.335 ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  green[1] ; vgasync:vgasync|pixel_reg ; 12.231 ; 11.661 ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  green[2] ; vgasync:vgasync|pixel_reg ; 11.671 ; 10.865 ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  green[3] ; vgasync:vgasync|pixel_reg ; 12.832 ; 12.566 ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  green[4] ; vgasync:vgasync|pixel_reg ; 12.094 ; 11.488 ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  green[5] ; vgasync:vgasync|pixel_reg ; 12.697 ; 12.430 ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  green[6] ; vgasync:vgasync|pixel_reg ; 12.846 ; 13.897 ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  green[7] ; vgasync:vgasync|pixel_reg ; 12.594 ; 12.412 ; Fall       ; vgasync:vgasync|pixel_reg ;
-; hsync     ; vgasync:vgasync|pixel_reg ; 9.470  ; 10.980 ; Fall       ; vgasync:vgasync|pixel_reg ;
-; red[*]    ; vgasync:vgasync|pixel_reg ; 12.571 ; 12.640 ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  red[0]   ; vgasync:vgasync|pixel_reg ; 11.494 ; 11.326 ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  red[1]   ; vgasync:vgasync|pixel_reg ; 11.724 ; 11.236 ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  red[2]   ; vgasync:vgasync|pixel_reg ; 11.731 ; 11.143 ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  red[3]   ; vgasync:vgasync|pixel_reg ; 12.533 ; 12.389 ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  red[4]   ; vgasync:vgasync|pixel_reg ; 11.792 ; 11.222 ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  red[5]   ; vgasync:vgasync|pixel_reg ; 12.564 ; 12.462 ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  red[6]   ; vgasync:vgasync|pixel_reg ; 12.571 ; 12.349 ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  red[7]   ; vgasync:vgasync|pixel_reg ; 11.824 ; 12.640 ; Fall       ; vgasync:vgasync|pixel_reg ;
-; vga_clock ; vgasync:vgasync|pixel_reg ; 6.898  ;        ; Fall       ; vgasync:vgasync|pixel_reg ;
-; vsync     ; vgasync:vgasync|pixel_reg ; 9.710  ; 11.407 ; Fall       ; vgasync:vgasync|pixel_reg ;
+; vga_clock ; vgasync:vgasync|pixel_reg ;        ; 6.918  ; Rise       ; vgasync:vgasync|pixel_reg ;
+; blue[*]   ; vgasync:vgasync|pixel_reg ; 15.092 ; 14.256 ; Fall       ; vgasync:vgasync|pixel_reg ;
+;  blue[0]  ; vgasync:vgasync|pixel_reg ; 13.769 ; 12.501 ; Fall       ; vgasync:vgasync|pixel_reg ;
+;  blue[1]  ; vgasync:vgasync|pixel_reg ; 13.966 ; 12.649 ; Fall       ; vgasync:vgasync|pixel_reg ;
+;  blue[2]  ; vgasync:vgasync|pixel_reg ; 15.092 ; 14.256 ; Fall       ; vgasync:vgasync|pixel_reg ;
+;  blue[3]  ; vgasync:vgasync|pixel_reg ; 13.879 ; 12.670 ; Fall       ; vgasync:vgasync|pixel_reg ;
+;  blue[4]  ; vgasync:vgasync|pixel_reg ; 13.892 ; 12.518 ; Fall       ; vgasync:vgasync|pixel_reg ;
+;  blue[5]  ; vgasync:vgasync|pixel_reg ; 13.530 ; 12.294 ; Fall       ; vgasync:vgasync|pixel_reg ;
+;  blue[6]  ; vgasync:vgasync|pixel_reg ; 14.154 ; 12.930 ; Fall       ; vgasync:vgasync|pixel_reg ;
+;  blue[7]  ; vgasync:vgasync|pixel_reg ; 13.749 ; 12.352 ; Fall       ; vgasync:vgasync|pixel_reg ;
+; green[*]  ; vgasync:vgasync|pixel_reg ; 15.865 ; 16.830 ; Fall       ; vgasync:vgasync|pixel_reg ;
+;  green[0] ; vgasync:vgasync|pixel_reg ; 14.511 ; 16.830 ; Fall       ; vgasync:vgasync|pixel_reg ;
+;  green[1] ; vgasync:vgasync|pixel_reg ; 15.865 ; 16.018 ; Fall       ; vgasync:vgasync|pixel_reg ;
+;  green[2] ; vgasync:vgasync|pixel_reg ; 13.661 ; 14.529 ; Fall       ; vgasync:vgasync|pixel_reg ;
+;  green[3] ; vgasync:vgasync|pixel_reg ; 14.474 ; 15.863 ; Fall       ; vgasync:vgasync|pixel_reg ;
+;  green[4] ; vgasync:vgasync|pixel_reg ; 13.949 ; 14.197 ; Fall       ; vgasync:vgasync|pixel_reg ;
+;  green[5] ; vgasync:vgasync|pixel_reg ; 14.358 ; 16.181 ; Fall       ; vgasync:vgasync|pixel_reg ;
+;  green[6] ; vgasync:vgasync|pixel_reg ; 13.706 ; 14.966 ; Fall       ; vgasync:vgasync|pixel_reg ;
+;  green[7] ; vgasync:vgasync|pixel_reg ; 14.031 ; 14.601 ; Fall       ; vgasync:vgasync|pixel_reg ;
+; hsync     ; vgasync:vgasync|pixel_reg ; 9.506  ; 11.037 ; Fall       ; vgasync:vgasync|pixel_reg ;
+; red[*]    ; vgasync:vgasync|pixel_reg ; 14.880 ; 15.500 ; Fall       ; vgasync:vgasync|pixel_reg ;
+;  red[0]   ; vgasync:vgasync|pixel_reg ; 14.083 ; 13.991 ; Fall       ; vgasync:vgasync|pixel_reg ;
+;  red[1]   ; vgasync:vgasync|pixel_reg ; 13.806 ; 14.569 ; Fall       ; vgasync:vgasync|pixel_reg ;
+;  red[2]   ; vgasync:vgasync|pixel_reg ; 14.880 ; 14.813 ; Fall       ; vgasync:vgasync|pixel_reg ;
+;  red[3]   ; vgasync:vgasync|pixel_reg ; 13.515 ; 12.991 ; Fall       ; vgasync:vgasync|pixel_reg ;
+;  red[4]   ; vgasync:vgasync|pixel_reg ; 14.616 ; 13.729 ; Fall       ; vgasync:vgasync|pixel_reg ;
+;  red[5]   ; vgasync:vgasync|pixel_reg ; 13.467 ; 13.701 ; Fall       ; vgasync:vgasync|pixel_reg ;
+;  red[6]   ; vgasync:vgasync|pixel_reg ; 13.754 ; 13.602 ; Fall       ; vgasync:vgasync|pixel_reg ;
+;  red[7]   ; vgasync:vgasync|pixel_reg ; 14.624 ; 15.500 ; Fall       ; vgasync:vgasync|pixel_reg ;
+; vga_clock ; vgasync:vgasync|pixel_reg ; 8.274  ;        ; Fall       ; vgasync:vgasync|pixel_reg ;
+; vsync     ; vgasync:vgasync|pixel_reg ; 10.557 ; 12.805 ; Fall       ; vgasync:vgasync|pixel_reg ;
 +-----------+---------------------------+--------+--------+------------+---------------------------+
 
 
@@ -354,37 +363,37 @@ No paths to report.
 +-----------+---------------------------+-------+--------+------------+---------------------------+
 ; Data Port ; Clock Port                ; Rise  ; Fall   ; Clock Edge ; Clock Reference           ;
 +-----------+---------------------------+-------+--------+------------+---------------------------+
-; vga_clock ; vgasync:vgasync|pixel_reg ;       ; 5.495  ; Rise       ; vgasync:vgasync|pixel_reg ;
-; blue[*]   ; vgasync:vgasync|pixel_reg ; 7.453 ; 7.875  ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  blue[0]  ; vgasync:vgasync|pixel_reg ; 8.203 ; 8.734  ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  blue[1]  ; vgasync:vgasync|pixel_reg ; 7.453 ; 7.875  ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  blue[2]  ; vgasync:vgasync|pixel_reg ; 8.750 ; 9.180  ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  blue[3]  ; vgasync:vgasync|pixel_reg ; 8.477 ; 8.282  ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  blue[4]  ; vgasync:vgasync|pixel_reg ; 8.447 ; 8.692  ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  blue[5]  ; vgasync:vgasync|pixel_reg ; 8.988 ; 9.427  ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  blue[6]  ; vgasync:vgasync|pixel_reg ; 8.310 ; 8.067  ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  blue[7]  ; vgasync:vgasync|pixel_reg ; 8.582 ; 8.627  ; Fall       ; vgasync:vgasync|pixel_reg ;
-; green[*]  ; vgasync:vgasync|pixel_reg ; 8.071 ; 7.709  ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  green[0] ; vgasync:vgasync|pixel_reg ; 9.665 ; 9.715  ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  green[1] ; vgasync:vgasync|pixel_reg ; 8.071 ; 8.382  ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  green[2] ; vgasync:vgasync|pixel_reg ; 8.236 ; 7.709  ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  green[3] ; vgasync:vgasync|pixel_reg ; 9.183 ; 9.181  ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  green[4] ; vgasync:vgasync|pixel_reg ; 8.507 ; 8.270  ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  green[5] ; vgasync:vgasync|pixel_reg ; 9.167 ; 9.077  ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  green[6] ; vgasync:vgasync|pixel_reg ; 9.305 ; 10.497 ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  green[7] ; vgasync:vgasync|pixel_reg ; 8.860 ; 9.060  ; Fall       ; vgasync:vgasync|pixel_reg ;
-; hsync     ; vgasync:vgasync|pixel_reg ; 8.414 ; 9.732  ; Fall       ; vgasync:vgasync|pixel_reg ;
-; red[*]    ; vgasync:vgasync|pixel_reg ; 7.583 ; 7.909  ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  red[0]   ; vgasync:vgasync|pixel_reg ; 7.583 ; 7.958  ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  red[1]   ; vgasync:vgasync|pixel_reg ; 8.285 ; 7.941  ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  red[2]   ; vgasync:vgasync|pixel_reg ; 7.725 ; 7.909  ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  red[3]   ; vgasync:vgasync|pixel_reg ; 8.673 ; 8.994  ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  red[4]   ; vgasync:vgasync|pixel_reg ; 7.690 ; 8.027  ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  red[5]   ; vgasync:vgasync|pixel_reg ; 9.062 ; 9.069  ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  red[6]   ; vgasync:vgasync|pixel_reg ; 9.071 ; 8.998  ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  red[7]   ; vgasync:vgasync|pixel_reg ; 8.555 ; 9.487  ; Fall       ; vgasync:vgasync|pixel_reg ;
-; vga_clock ; vgasync:vgasync|pixel_reg ; 6.239 ;        ; Fall       ; vgasync:vgasync|pixel_reg ;
-; vsync     ; vgasync:vgasync|pixel_reg ; 8.593 ; 10.026 ; Fall       ; vgasync:vgasync|pixel_reg ;
+; vga_clock ; vgasync:vgasync|pixel_reg ;       ; 6.365  ; Rise       ; vgasync:vgasync|pixel_reg ;
+; blue[*]   ; vgasync:vgasync|pixel_reg ; 8.200 ; 8.525  ; Fall       ; vgasync:vgasync|pixel_reg ;
+;  blue[0]  ; vgasync:vgasync|pixel_reg ; 8.662 ; 8.733  ; Fall       ; vgasync:vgasync|pixel_reg ;
+;  blue[1]  ; vgasync:vgasync|pixel_reg ; 8.390 ; 8.672  ; Fall       ; vgasync:vgasync|pixel_reg ;
+;  blue[2]  ; vgasync:vgasync|pixel_reg ; 9.389 ; 10.475 ; Fall       ; vgasync:vgasync|pixel_reg ;
+;  blue[3]  ; vgasync:vgasync|pixel_reg ; 8.711 ; 9.279  ; Fall       ; vgasync:vgasync|pixel_reg ;
+;  blue[4]  ; vgasync:vgasync|pixel_reg ; 8.313 ; 8.619  ; Fall       ; vgasync:vgasync|pixel_reg ;
+;  blue[5]  ; vgasync:vgasync|pixel_reg ; 8.609 ; 8.669  ; Fall       ; vgasync:vgasync|pixel_reg ;
+;  blue[6]  ; vgasync:vgasync|pixel_reg ; 8.568 ; 9.025  ; Fall       ; vgasync:vgasync|pixel_reg ;
+;  blue[7]  ; vgasync:vgasync|pixel_reg ; 8.200 ; 8.525  ; Fall       ; vgasync:vgasync|pixel_reg ;
+; green[*]  ; vgasync:vgasync|pixel_reg ; 8.584 ; 8.576  ; Fall       ; vgasync:vgasync|pixel_reg ;
+;  green[0] ; vgasync:vgasync|pixel_reg ; 8.878 ; 9.309  ; Fall       ; vgasync:vgasync|pixel_reg ;
+;  green[1] ; vgasync:vgasync|pixel_reg ; 8.982 ; 9.451  ; Fall       ; vgasync:vgasync|pixel_reg ;
+;  green[2] ; vgasync:vgasync|pixel_reg ; 8.584 ; 8.576  ; Fall       ; vgasync:vgasync|pixel_reg ;
+;  green[3] ; vgasync:vgasync|pixel_reg ; 8.843 ; 9.257  ; Fall       ; vgasync:vgasync|pixel_reg ;
+;  green[4] ; vgasync:vgasync|pixel_reg ; 8.759 ; 9.118  ; Fall       ; vgasync:vgasync|pixel_reg ;
+;  green[5] ; vgasync:vgasync|pixel_reg ; 9.422 ; 9.625  ; Fall       ; vgasync:vgasync|pixel_reg ;
+;  green[6] ; vgasync:vgasync|pixel_reg ; 8.871 ; 9.117  ; Fall       ; vgasync:vgasync|pixel_reg ;
+;  green[7] ; vgasync:vgasync|pixel_reg ; 8.933 ; 9.037  ; Fall       ; vgasync:vgasync|pixel_reg ;
+; hsync     ; vgasync:vgasync|pixel_reg ; 8.471 ; 9.800  ; Fall       ; vgasync:vgasync|pixel_reg ;
+; red[*]    ; vgasync:vgasync|pixel_reg ; 8.437 ; 8.409  ; Fall       ; vgasync:vgasync|pixel_reg ;
+;  red[0]   ; vgasync:vgasync|pixel_reg ; 8.845 ; 10.422 ; Fall       ; vgasync:vgasync|pixel_reg ;
+;  red[1]   ; vgasync:vgasync|pixel_reg ; 8.937 ; 9.257  ; Fall       ; vgasync:vgasync|pixel_reg ;
+;  red[2]   ; vgasync:vgasync|pixel_reg ; 9.186 ; 9.852  ; Fall       ; vgasync:vgasync|pixel_reg ;
+;  red[3]   ; vgasync:vgasync|pixel_reg ; 8.437 ; 8.409  ; Fall       ; vgasync:vgasync|pixel_reg ;
+;  red[4]   ; vgasync:vgasync|pixel_reg ; 8.618 ; 9.046  ; Fall       ; vgasync:vgasync|pixel_reg ;
+;  red[5]   ; vgasync:vgasync|pixel_reg ; 8.632 ; 8.760  ; Fall       ; vgasync:vgasync|pixel_reg ;
+;  red[6]   ; vgasync:vgasync|pixel_reg ; 8.887 ; 8.884  ; Fall       ; vgasync:vgasync|pixel_reg ;
+;  red[7]   ; vgasync:vgasync|pixel_reg ; 8.970 ; 9.533  ; Fall       ; vgasync:vgasync|pixel_reg ;
+; vga_clock ; vgasync:vgasync|pixel_reg ; 7.472 ;        ; Fall       ; vgasync:vgasync|pixel_reg ;
+; vsync     ; vgasync:vgasync|pixel_reg ; 9.399 ; 11.285 ; Fall       ; vgasync:vgasync|pixel_reg ;
 +-----------+---------------------------+-------+--------+------------+---------------------------+
 
 
@@ -394,14 +403,14 @@ No paths to report.
 No synchronizer chains to report.
 
 
-+----------------------------------------------------+
-; Fast 1100mV 85C Model Setup Summary                ;
-+---------------------------+--------+---------------+
-; Clock                     ; Slack  ; End Point TNS ;
-+---------------------------+--------+---------------+
-; vgasync:vgasync|pixel_reg ; -9.039 ; -354.427      ;
-; clk                       ; -0.212 ; -0.212        ;
-+---------------------------+--------+---------------+
++-----------------------------------------------------+
+; Fast 1100mV 85C Model Setup Summary                 ;
++---------------------------+---------+---------------+
+; Clock                     ; Slack   ; End Point TNS ;
++---------------------------+---------+---------------+
+; vgasync:vgasync|pixel_reg ; -10.871 ; -467.433      ;
+; clk                       ; 0.021   ; 0.000         ;
++---------------------------+---------+---------------+
 
 
 +----------------------------------------------------+
@@ -409,8 +418,8 @@ No synchronizer chains to report.
 +---------------------------+--------+---------------+
 ; Clock                     ; Slack  ; End Point TNS ;
 +---------------------------+--------+---------------+
-; clk                       ; -0.771 ; -0.771        ;
-; vgasync:vgasync|pixel_reg ; -0.191 ; -2.199        ;
+; clk                       ; -1.065 ; -1.065        ;
+; vgasync:vgasync|pixel_reg ; -0.385 ; -3.220        ;
 +---------------------------+--------+---------------+
 
 
@@ -431,48 +440,48 @@ No paths to report.
 +---------------------------+--------+---------------+
 ; Clock                     ; Slack  ; End Point TNS ;
 +---------------------------+--------+---------------+
-; vgasync:vgasync|pixel_reg ; -1.702 ; -23.289       ;
-; clk                       ; -0.651 ; -0.951        ;
+; vgasync:vgasync|pixel_reg ; -1.702 ; -43.690       ;
+; clk                       ; -0.783 ; -1.218        ;
 +---------------------------+--------+---------------+
 
 
-+------------------------------------------------------------------------------------------------+
-; Clock to Output Times                                                                          ;
-+-----------+---------------------------+-------+-------+------------+---------------------------+
-; Data Port ; Clock Port                ; Rise  ; Fall  ; Clock Edge ; Clock Reference           ;
-+-----------+---------------------------+-------+-------+------------+---------------------------+
-; vga_clock ; vgasync:vgasync|pixel_reg ;       ; 3.947 ; Rise       ; vgasync:vgasync|pixel_reg ;
-; blue[*]   ; vgasync:vgasync|pixel_reg ; 8.857 ; 8.825 ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  blue[0]  ; vgasync:vgasync|pixel_reg ; 7.917 ; 8.443 ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  blue[1]  ; vgasync:vgasync|pixel_reg ; 7.957 ; 7.405 ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  blue[2]  ; vgasync:vgasync|pixel_reg ; 8.769 ; 8.620 ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  blue[3]  ; vgasync:vgasync|pixel_reg ; 8.168 ; 7.725 ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  blue[4]  ; vgasync:vgasync|pixel_reg ; 8.409 ; 8.208 ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  blue[5]  ; vgasync:vgasync|pixel_reg ; 8.857 ; 8.825 ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  blue[6]  ; vgasync:vgasync|pixel_reg ; 8.183 ; 7.628 ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  blue[7]  ; vgasync:vgasync|pixel_reg ; 8.391 ; 8.142 ; Fall       ; vgasync:vgasync|pixel_reg ;
-; green[*]  ; vgasync:vgasync|pixel_reg ; 9.087 ; 9.893 ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  green[0] ; vgasync:vgasync|pixel_reg ; 9.087 ; 9.400 ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  green[1] ; vgasync:vgasync|pixel_reg ; 8.350 ; 7.879 ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  green[2] ; vgasync:vgasync|pixel_reg ; 7.973 ; 7.450 ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  green[3] ; vgasync:vgasync|pixel_reg ; 8.781 ; 8.597 ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  green[4] ; vgasync:vgasync|pixel_reg ; 8.198 ; 7.681 ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  green[5] ; vgasync:vgasync|pixel_reg ; 8.662 ; 8.471 ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  green[6] ; vgasync:vgasync|pixel_reg ; 8.608 ; 9.893 ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  green[7] ; vgasync:vgasync|pixel_reg ; 8.634 ; 8.471 ; Fall       ; vgasync:vgasync|pixel_reg ;
-; hsync     ; vgasync:vgasync|pixel_reg ; 6.350 ; 7.662 ; Fall       ; vgasync:vgasync|pixel_reg ;
-; red[*]    ; vgasync:vgasync|pixel_reg ; 8.642 ; 8.965 ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  red[0]   ; vgasync:vgasync|pixel_reg ; 7.595 ; 7.704 ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  red[1]   ; vgasync:vgasync|pixel_reg ; 8.041 ; 7.878 ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  red[2]   ; vgasync:vgasync|pixel_reg ; 8.027 ; 7.501 ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  red[3]   ; vgasync:vgasync|pixel_reg ; 8.642 ; 8.487 ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  red[4]   ; vgasync:vgasync|pixel_reg ; 8.028 ; 7.501 ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  red[5]   ; vgasync:vgasync|pixel_reg ; 8.636 ; 8.518 ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  red[6]   ; vgasync:vgasync|pixel_reg ; 8.596 ; 8.424 ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  red[7]   ; vgasync:vgasync|pixel_reg ; 7.972 ; 8.965 ; Fall       ; vgasync:vgasync|pixel_reg ;
-; vga_clock ; vgasync:vgasync|pixel_reg ; 4.728 ;       ; Fall       ; vgasync:vgasync|pixel_reg ;
-; vsync     ; vgasync:vgasync|pixel_reg ; 6.576 ; 8.103 ; Fall       ; vgasync:vgasync|pixel_reg ;
-+-----------+---------------------------+-------+-------+------------+---------------------------+
++--------------------------------------------------------------------------------------------------+
+; Clock to Output Times                                                                            ;
++-----------+---------------------------+--------+--------+------------+---------------------------+
+; Data Port ; Clock Port                ; Rise   ; Fall   ; Clock Edge ; Clock Reference           ;
++-----------+---------------------------+--------+--------+------------+---------------------------+
+; vga_clock ; vgasync:vgasync|pixel_reg ;        ; 4.644  ; Rise       ; vgasync:vgasync|pixel_reg ;
+; blue[*]   ; vgasync:vgasync|pixel_reg ; 10.374 ; 9.613  ; Fall       ; vgasync:vgasync|pixel_reg ;
+;  blue[0]  ; vgasync:vgasync|pixel_reg ; 9.480  ; 8.476  ; Fall       ; vgasync:vgasync|pixel_reg ;
+;  blue[1]  ; vgasync:vgasync|pixel_reg ; 9.572  ; 8.767  ; Fall       ; vgasync:vgasync|pixel_reg ;
+;  blue[2]  ; vgasync:vgasync|pixel_reg ; 10.374 ; 9.613  ; Fall       ; vgasync:vgasync|pixel_reg ;
+;  blue[3]  ; vgasync:vgasync|pixel_reg ; 9.655  ; 8.570  ; Fall       ; vgasync:vgasync|pixel_reg ;
+;  blue[4]  ; vgasync:vgasync|pixel_reg ; 9.463  ; 8.226  ; Fall       ; vgasync:vgasync|pixel_reg ;
+;  blue[5]  ; vgasync:vgasync|pixel_reg ; 9.278  ; 8.152  ; Fall       ; vgasync:vgasync|pixel_reg ;
+;  blue[6]  ; vgasync:vgasync|pixel_reg ; 9.716  ; 8.609  ; Fall       ; vgasync:vgasync|pixel_reg ;
+;  blue[7]  ; vgasync:vgasync|pixel_reg ; 9.456  ; 8.599  ; Fall       ; vgasync:vgasync|pixel_reg ;
+; green[*]  ; vgasync:vgasync|pixel_reg ; 10.849 ; 11.904 ; Fall       ; vgasync:vgasync|pixel_reg ;
+;  green[0] ; vgasync:vgasync|pixel_reg ; 9.932  ; 11.904 ; Fall       ; vgasync:vgasync|pixel_reg ;
+;  green[1] ; vgasync:vgasync|pixel_reg ; 10.849 ; 11.188 ; Fall       ; vgasync:vgasync|pixel_reg ;
+;  green[2] ; vgasync:vgasync|pixel_reg ; 9.437  ; 10.143 ; Fall       ; vgasync:vgasync|pixel_reg ;
+;  green[3] ; vgasync:vgasync|pixel_reg ; 9.830  ; 10.995 ; Fall       ; vgasync:vgasync|pixel_reg ;
+;  green[4] ; vgasync:vgasync|pixel_reg ; 9.672  ; 9.822  ; Fall       ; vgasync:vgasync|pixel_reg ;
+;  green[5] ; vgasync:vgasync|pixel_reg ; 9.927  ; 11.243 ; Fall       ; vgasync:vgasync|pixel_reg ;
+;  green[6] ; vgasync:vgasync|pixel_reg ; 9.478  ; 10.317 ; Fall       ; vgasync:vgasync|pixel_reg ;
+;  green[7] ; vgasync:vgasync|pixel_reg ; 9.705  ; 10.182 ; Fall       ; vgasync:vgasync|pixel_reg ;
+; hsync     ; vgasync:vgasync|pixel_reg ; 6.386  ; 7.730  ; Fall       ; vgasync:vgasync|pixel_reg ;
+; red[*]    ; vgasync:vgasync|pixel_reg ; 10.215 ; 10.874 ; Fall       ; vgasync:vgasync|pixel_reg ;
+;  red[0]   ; vgasync:vgasync|pixel_reg ; 9.626  ; 9.412  ; Fall       ; vgasync:vgasync|pixel_reg ;
+;  red[1]   ; vgasync:vgasync|pixel_reg ; 9.578  ; 10.315 ; Fall       ; vgasync:vgasync|pixel_reg ;
+;  red[2]   ; vgasync:vgasync|pixel_reg ; 10.215 ; 10.317 ; Fall       ; vgasync:vgasync|pixel_reg ;
+;  red[3]   ; vgasync:vgasync|pixel_reg ; 9.349  ; 8.857  ; Fall       ; vgasync:vgasync|pixel_reg ;
+;  red[4]   ; vgasync:vgasync|pixel_reg ; 10.130 ; 9.504  ; Fall       ; vgasync:vgasync|pixel_reg ;
+;  red[5]   ; vgasync:vgasync|pixel_reg ; 9.348  ; 9.617  ; Fall       ; vgasync:vgasync|pixel_reg ;
+;  red[6]   ; vgasync:vgasync|pixel_reg ; 9.502  ; 9.409  ; Fall       ; vgasync:vgasync|pixel_reg ;
+;  red[7]   ; vgasync:vgasync|pixel_reg ; 10.030 ; 10.874 ; Fall       ; vgasync:vgasync|pixel_reg ;
+; vga_clock ; vgasync:vgasync|pixel_reg ; 5.804  ;        ; Fall       ; vgasync:vgasync|pixel_reg ;
+; vsync     ; vgasync:vgasync|pixel_reg ; 7.144  ; 9.207  ; Fall       ; vgasync:vgasync|pixel_reg ;
++-----------+---------------------------+--------+--------+------------+---------------------------+
 
 
 +------------------------------------------------------------------------------------------------+
@@ -480,37 +489,37 @@ No paths to report.
 +-----------+---------------------------+-------+-------+------------+---------------------------+
 ; Data Port ; Clock Port                ; Rise  ; Fall  ; Clock Edge ; Clock Reference           ;
 +-----------+---------------------------+-------+-------+------------+---------------------------+
-; vga_clock ; vgasync:vgasync|pixel_reg ;       ; 3.694 ; Rise       ; vgasync:vgasync|pixel_reg ;
-; blue[*]   ; vgasync:vgasync|pixel_reg ; 5.018 ; 5.232 ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  blue[0]  ; vgasync:vgasync|pixel_reg ; 5.445 ; 5.905 ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  blue[1]  ; vgasync:vgasync|pixel_reg ; 5.018 ; 5.232 ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  blue[2]  ; vgasync:vgasync|pixel_reg ; 5.946 ; 6.285 ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  blue[3]  ; vgasync:vgasync|pixel_reg ; 5.697 ; 5.539 ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  blue[4]  ; vgasync:vgasync|pixel_reg ; 5.668 ; 5.948 ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  blue[5]  ; vgasync:vgasync|pixel_reg ; 6.102 ; 6.506 ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  blue[6]  ; vgasync:vgasync|pixel_reg ; 5.637 ; 5.395 ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  blue[7]  ; vgasync:vgasync|pixel_reg ; 5.845 ; 5.893 ; Fall       ; vgasync:vgasync|pixel_reg ;
-; green[*]  ; vgasync:vgasync|pixel_reg ; 5.407 ; 5.144 ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  green[0] ; vgasync:vgasync|pixel_reg ; 6.610 ; 6.667 ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  green[1] ; vgasync:vgasync|pixel_reg ; 5.407 ; 5.646 ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  green[2] ; vgasync:vgasync|pixel_reg ; 5.585 ; 5.144 ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  green[3] ; vgasync:vgasync|pixel_reg ; 6.189 ; 6.286 ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  green[4] ; vgasync:vgasync|pixel_reg ; 5.714 ; 5.499 ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  green[5] ; vgasync:vgasync|pixel_reg ; 6.192 ; 6.198 ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  green[6] ; vgasync:vgasync|pixel_reg ; 6.321 ; 7.428 ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  green[7] ; vgasync:vgasync|pixel_reg ; 5.941 ; 6.196 ; Fall       ; vgasync:vgasync|pixel_reg ;
-; hsync     ; vgasync:vgasync|pixel_reg ; 5.711 ; 6.903 ; Fall       ; vgasync:vgasync|pixel_reg ;
-; red[*]    ; vgasync:vgasync|pixel_reg ; 5.066 ; 5.302 ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  red[0]   ; vgasync:vgasync|pixel_reg ; 5.066 ; 5.377 ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  red[1]   ; vgasync:vgasync|pixel_reg ; 5.639 ; 5.351 ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  red[2]   ; vgasync:vgasync|pixel_reg ; 5.216 ; 5.302 ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  red[3]   ; vgasync:vgasync|pixel_reg ; 5.886 ; 6.166 ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  red[4]   ; vgasync:vgasync|pixel_reg ; 5.144 ; 5.322 ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  red[5]   ; vgasync:vgasync|pixel_reg ; 6.188 ; 6.198 ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  red[6]   ; vgasync:vgasync|pixel_reg ; 6.178 ; 6.147 ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  red[7]   ; vgasync:vgasync|pixel_reg ; 5.819 ; 6.683 ; Fall       ; vgasync:vgasync|pixel_reg ;
-; vga_clock ; vgasync:vgasync|pixel_reg ; 4.344 ;       ; Fall       ; vgasync:vgasync|pixel_reg ;
-; vsync     ; vgasync:vgasync|pixel_reg ; 5.886 ; 7.218 ; Fall       ; vgasync:vgasync|pixel_reg ;
+; vga_clock ; vgasync:vgasync|pixel_reg ;       ; 4.336 ; Rise       ; vgasync:vgasync|pixel_reg ;
+; blue[*]   ; vgasync:vgasync|pixel_reg ; 5.487 ; 5.798 ; Fall       ; vgasync:vgasync|pixel_reg ;
+;  blue[0]  ; vgasync:vgasync|pixel_reg ; 5.666 ; 5.864 ; Fall       ; vgasync:vgasync|pixel_reg ;
+;  blue[1]  ; vgasync:vgasync|pixel_reg ; 5.592 ; 5.871 ; Fall       ; vgasync:vgasync|pixel_reg ;
+;  blue[2]  ; vgasync:vgasync|pixel_reg ; 6.369 ; 7.161 ; Fall       ; vgasync:vgasync|pixel_reg ;
+;  blue[3]  ; vgasync:vgasync|pixel_reg ; 5.820 ; 6.324 ; Fall       ; vgasync:vgasync|pixel_reg ;
+;  blue[4]  ; vgasync:vgasync|pixel_reg ; 5.487 ; 5.798 ; Fall       ; vgasync:vgasync|pixel_reg ;
+;  blue[5]  ; vgasync:vgasync|pixel_reg ; 5.628 ; 5.842 ; Fall       ; vgasync:vgasync|pixel_reg ;
+;  blue[6]  ; vgasync:vgasync|pixel_reg ; 5.734 ; 6.163 ; Fall       ; vgasync:vgasync|pixel_reg ;
+;  blue[7]  ; vgasync:vgasync|pixel_reg ; 5.491 ; 5.813 ; Fall       ; vgasync:vgasync|pixel_reg ;
+; green[*]  ; vgasync:vgasync|pixel_reg ; 5.599 ; 5.836 ; Fall       ; vgasync:vgasync|pixel_reg ;
+;  green[0] ; vgasync:vgasync|pixel_reg ; 5.916 ; 6.351 ; Fall       ; vgasync:vgasync|pixel_reg ;
+;  green[1] ; vgasync:vgasync|pixel_reg ; 6.007 ; 6.500 ; Fall       ; vgasync:vgasync|pixel_reg ;
+;  green[2] ; vgasync:vgasync|pixel_reg ; 5.599 ; 5.836 ; Fall       ; vgasync:vgasync|pixel_reg ;
+;  green[3] ; vgasync:vgasync|pixel_reg ; 5.824 ; 6.253 ; Fall       ; vgasync:vgasync|pixel_reg ;
+;  green[4] ; vgasync:vgasync|pixel_reg ; 5.818 ; 6.125 ; Fall       ; vgasync:vgasync|pixel_reg ;
+;  green[5] ; vgasync:vgasync|pixel_reg ; 6.172 ; 6.547 ; Fall       ; vgasync:vgasync|pixel_reg ;
+;  green[6] ; vgasync:vgasync|pixel_reg ; 5.793 ; 6.099 ; Fall       ; vgasync:vgasync|pixel_reg ;
+;  green[7] ; vgasync:vgasync|pixel_reg ; 5.865 ; 6.214 ; Fall       ; vgasync:vgasync|pixel_reg ;
+; hsync     ; vgasync:vgasync|pixel_reg ; 5.761 ; 6.983 ; Fall       ; vgasync:vgasync|pixel_reg ;
+; red[*]    ; vgasync:vgasync|pixel_reg ; 5.512 ; 5.734 ; Fall       ; vgasync:vgasync|pixel_reg ;
+;  red[0]   ; vgasync:vgasync|pixel_reg ; 5.957 ; 7.216 ; Fall       ; vgasync:vgasync|pixel_reg ;
+;  red[1]   ; vgasync:vgasync|pixel_reg ; 5.863 ; 6.289 ; Fall       ; vgasync:vgasync|pixel_reg ;
+;  red[2]   ; vgasync:vgasync|pixel_reg ; 6.162 ; 6.804 ; Fall       ; vgasync:vgasync|pixel_reg ;
+;  red[3]   ; vgasync:vgasync|pixel_reg ; 5.512 ; 5.734 ; Fall       ; vgasync:vgasync|pixel_reg ;
+;  red[4]   ; vgasync:vgasync|pixel_reg ; 5.659 ; 6.053 ; Fall       ; vgasync:vgasync|pixel_reg ;
+;  red[5]   ; vgasync:vgasync|pixel_reg ; 5.654 ; 5.880 ; Fall       ; vgasync:vgasync|pixel_reg ;
+;  red[6]   ; vgasync:vgasync|pixel_reg ; 5.791 ; 5.977 ; Fall       ; vgasync:vgasync|pixel_reg ;
+;  red[7]   ; vgasync:vgasync|pixel_reg ; 5.999 ; 6.561 ; Fall       ; vgasync:vgasync|pixel_reg ;
+; vga_clock ; vgasync:vgasync|pixel_reg ; 5.307 ;       ; Fall       ; vgasync:vgasync|pixel_reg ;
+; vsync     ; vgasync:vgasync|pixel_reg ; 6.443 ; 8.252 ; Fall       ; vgasync:vgasync|pixel_reg ;
 +-----------+---------------------------+-------+-------+------------+---------------------------+
 
 
@@ -520,14 +529,14 @@ No paths to report.
 No synchronizer chains to report.
 
 
-+----------------------------------------------------+
-; Fast 1100mV 0C Model Setup Summary                 ;
-+---------------------------+--------+---------------+
-; Clock                     ; Slack  ; End Point TNS ;
-+---------------------------+--------+---------------+
-; vgasync:vgasync|pixel_reg ; -8.468 ; -328.975      ;
-; clk                       ; -0.205 ; -0.205        ;
-+---------------------------+--------+---------------+
++-----------------------------------------------------+
+; Fast 1100mV 0C Model Setup Summary                  ;
++---------------------------+---------+---------------+
+; Clock                     ; Slack   ; End Point TNS ;
++---------------------------+---------+---------------+
+; vgasync:vgasync|pixel_reg ; -10.168 ; -432.862      ;
+; clk                       ; 0.006   ; 0.000         ;
++---------------------------+---------+---------------+
 
 
 +----------------------------------------------------+
@@ -535,8 +544,8 @@ No synchronizer chains to report.
 +---------------------------+--------+---------------+
 ; Clock                     ; Slack  ; End Point TNS ;
 +---------------------------+--------+---------------+
-; clk                       ; -0.726 ; -0.726        ;
-; vgasync:vgasync|pixel_reg ; -0.165 ; -1.850        ;
+; clk                       ; -0.970 ; -0.970        ;
+; vgasync:vgasync|pixel_reg ; -0.317 ; -2.670        ;
 +---------------------------+--------+---------------+
 
 
@@ -557,48 +566,48 @@ No paths to report.
 +---------------------------+--------+---------------+
 ; Clock                     ; Slack  ; End Point TNS ;
 +---------------------------+--------+---------------+
-; vgasync:vgasync|pixel_reg ; -1.702 ; -22.331       ;
-; clk                       ; -0.641 ; -0.941        ;
+; vgasync:vgasync|pixel_reg ; -1.702 ; -42.549       ;
+; clk                       ; -0.763 ; -1.184        ;
 +---------------------------+--------+---------------+
 
 
-+------------------------------------------------------------------------------------------------+
-; Clock to Output Times                                                                          ;
-+-----------+---------------------------+-------+-------+------------+---------------------------+
-; Data Port ; Clock Port                ; Rise  ; Fall  ; Clock Edge ; Clock Reference           ;
-+-----------+---------------------------+-------+-------+------------+---------------------------+
-; vga_clock ; vgasync:vgasync|pixel_reg ;       ; 3.618 ; Rise       ; vgasync:vgasync|pixel_reg ;
-; blue[*]   ; vgasync:vgasync|pixel_reg ; 8.298 ; 8.289 ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  blue[0]  ; vgasync:vgasync|pixel_reg ; 7.255 ; 7.711 ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  blue[1]  ; vgasync:vgasync|pixel_reg ; 7.344 ; 6.887 ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  blue[2]  ; vgasync:vgasync|pixel_reg ; 8.173 ; 8.069 ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  blue[3]  ; vgasync:vgasync|pixel_reg ; 7.563 ; 7.194 ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  blue[4]  ; vgasync:vgasync|pixel_reg ; 7.844 ; 7.689 ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  blue[5]  ; vgasync:vgasync|pixel_reg ; 8.298 ; 8.289 ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  blue[6]  ; vgasync:vgasync|pixel_reg ; 7.573 ; 7.114 ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  blue[7]  ; vgasync:vgasync|pixel_reg ; 7.835 ; 7.629 ; Fall       ; vgasync:vgasync|pixel_reg ;
-; green[*]  ; vgasync:vgasync|pixel_reg ; 8.465 ; 9.180 ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  green[0] ; vgasync:vgasync|pixel_reg ; 8.465 ; 8.697 ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  green[1] ; vgasync:vgasync|pixel_reg ; 7.668 ; 7.322 ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  green[2] ; vgasync:vgasync|pixel_reg ; 7.322 ; 6.825 ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  green[3] ; vgasync:vgasync|pixel_reg ; 8.168 ; 8.044 ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  green[4] ; vgasync:vgasync|pixel_reg ; 7.546 ; 7.136 ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  green[5] ; vgasync:vgasync|pixel_reg ; 8.053 ; 7.924 ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  green[6] ; vgasync:vgasync|pixel_reg ; 8.101 ; 9.180 ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  green[7] ; vgasync:vgasync|pixel_reg ; 8.047 ; 7.925 ; Fall       ; vgasync:vgasync|pixel_reg ;
-; hsync     ; vgasync:vgasync|pixel_reg ; 5.981 ; 7.086 ; Fall       ; vgasync:vgasync|pixel_reg ;
-; red[*]    ; vgasync:vgasync|pixel_reg ; 8.077 ; 8.311 ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  red[0]   ; vgasync:vgasync|pixel_reg ; 6.930 ; 6.985 ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  red[1]   ; vgasync:vgasync|pixel_reg ; 7.432 ; 7.253 ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  red[2]   ; vgasync:vgasync|pixel_reg ; 7.399 ; 6.979 ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  red[3]   ; vgasync:vgasync|pixel_reg ; 8.077 ; 7.956 ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  red[4]   ; vgasync:vgasync|pixel_reg ; 7.452 ; 6.997 ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  red[5]   ; vgasync:vgasync|pixel_reg ; 8.060 ; 7.970 ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  red[6]   ; vgasync:vgasync|pixel_reg ; 8.004 ; 7.884 ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  red[7]   ; vgasync:vgasync|pixel_reg ; 7.481 ; 8.311 ; Fall       ; vgasync:vgasync|pixel_reg ;
-; vga_clock ; vgasync:vgasync|pixel_reg ; 4.273 ;       ; Fall       ; vgasync:vgasync|pixel_reg ;
-; vsync     ; vgasync:vgasync|pixel_reg ; 6.227 ; 7.522 ; Fall       ; vgasync:vgasync|pixel_reg ;
-+-----------+---------------------------+-------+-------+------------+---------------------------+
++--------------------------------------------------------------------------------------------------+
+; Clock to Output Times                                                                            ;
++-----------+---------------------------+--------+--------+------------+---------------------------+
+; Data Port ; Clock Port                ; Rise   ; Fall   ; Clock Edge ; Clock Reference           ;
++-----------+---------------------------+--------+--------+------------+---------------------------+
+; vga_clock ; vgasync:vgasync|pixel_reg ;        ; 4.377  ; Rise       ; vgasync:vgasync|pixel_reg ;
+; blue[*]   ; vgasync:vgasync|pixel_reg ; 9.717  ; 9.071  ; Fall       ; vgasync:vgasync|pixel_reg ;
+;  blue[0]  ; vgasync:vgasync|pixel_reg ; 8.843  ; 7.839  ; Fall       ; vgasync:vgasync|pixel_reg ;
+;  blue[1]  ; vgasync:vgasync|pixel_reg ; 8.881  ; 8.108  ; Fall       ; vgasync:vgasync|pixel_reg ;
+;  blue[2]  ; vgasync:vgasync|pixel_reg ; 9.717  ; 9.071  ; Fall       ; vgasync:vgasync|pixel_reg ;
+;  blue[3]  ; vgasync:vgasync|pixel_reg ; 9.025  ; 8.086  ; Fall       ; vgasync:vgasync|pixel_reg ;
+;  blue[4]  ; vgasync:vgasync|pixel_reg ; 8.762  ; 7.732  ; Fall       ; vgasync:vgasync|pixel_reg ;
+;  blue[5]  ; vgasync:vgasync|pixel_reg ; 8.615  ; 7.657  ; Fall       ; vgasync:vgasync|pixel_reg ;
+;  blue[6]  ; vgasync:vgasync|pixel_reg ; 9.077  ; 8.121  ; Fall       ; vgasync:vgasync|pixel_reg ;
+;  blue[7]  ; vgasync:vgasync|pixel_reg ; 8.822  ; 7.950  ; Fall       ; vgasync:vgasync|pixel_reg ;
+; green[*]  ; vgasync:vgasync|pixel_reg ; 10.133 ; 11.053 ; Fall       ; vgasync:vgasync|pixel_reg ;
+;  green[0] ; vgasync:vgasync|pixel_reg ; 9.248  ; 11.053 ; Fall       ; vgasync:vgasync|pixel_reg ;
+;  green[1] ; vgasync:vgasync|pixel_reg ; 10.133 ; 10.312 ; Fall       ; vgasync:vgasync|pixel_reg ;
+;  green[2] ; vgasync:vgasync|pixel_reg ; 8.733  ; 9.363  ; Fall       ; vgasync:vgasync|pixel_reg ;
+;  green[3] ; vgasync:vgasync|pixel_reg ; 9.109  ; 10.185 ; Fall       ; vgasync:vgasync|pixel_reg ;
+;  green[4] ; vgasync:vgasync|pixel_reg ; 8.956  ; 9.054  ; Fall       ; vgasync:vgasync|pixel_reg ;
+;  green[5] ; vgasync:vgasync|pixel_reg ; 9.231  ; 10.377 ; Fall       ; vgasync:vgasync|pixel_reg ;
+;  green[6] ; vgasync:vgasync|pixel_reg ; 8.771  ; 9.452  ; Fall       ; vgasync:vgasync|pixel_reg ;
+;  green[7] ; vgasync:vgasync|pixel_reg ; 9.020  ; 9.415  ; Fall       ; vgasync:vgasync|pixel_reg ;
+; hsync     ; vgasync:vgasync|pixel_reg ; 6.008  ; 7.135  ; Fall       ; vgasync:vgasync|pixel_reg ;
+; red[*]    ; vgasync:vgasync|pixel_reg ; 9.576  ; 10.050 ; Fall       ; vgasync:vgasync|pixel_reg ;
+;  red[0]   ; vgasync:vgasync|pixel_reg ; 9.025  ; 8.819  ; Fall       ; vgasync:vgasync|pixel_reg ;
+;  red[1]   ; vgasync:vgasync|pixel_reg ; 8.931  ; 9.581  ; Fall       ; vgasync:vgasync|pixel_reg ;
+;  red[2]   ; vgasync:vgasync|pixel_reg ; 9.576  ; 9.544  ; Fall       ; vgasync:vgasync|pixel_reg ;
+;  red[3]   ; vgasync:vgasync|pixel_reg ; 8.665  ; 8.101  ; Fall       ; vgasync:vgasync|pixel_reg ;
+;  red[4]   ; vgasync:vgasync|pixel_reg ; 9.491  ; 8.823  ; Fall       ; vgasync:vgasync|pixel_reg ;
+;  red[5]   ; vgasync:vgasync|pixel_reg ; 8.667  ; 8.861  ; Fall       ; vgasync:vgasync|pixel_reg ;
+;  red[6]   ; vgasync:vgasync|pixel_reg ; 8.796  ; 8.713  ; Fall       ; vgasync:vgasync|pixel_reg ;
+;  red[7]   ; vgasync:vgasync|pixel_reg ; 9.380  ; 10.050 ; Fall       ; vgasync:vgasync|pixel_reg ;
+; vga_clock ; vgasync:vgasync|pixel_reg ; 5.338  ;        ; Fall       ; vgasync:vgasync|pixel_reg ;
+; vsync     ; vgasync:vgasync|pixel_reg ; 6.855  ; 8.602  ; Fall       ; vgasync:vgasync|pixel_reg ;
++-----------+---------------------------+--------+--------+------------+---------------------------+
 
 
 +------------------------------------------------------------------------------------------------+
@@ -606,37 +615,37 @@ No paths to report.
 +-----------+---------------------------+-------+-------+------------+---------------------------+
 ; Data Port ; Clock Port                ; Rise  ; Fall  ; Clock Edge ; Clock Reference           ;
 +-----------+---------------------------+-------+-------+------------+---------------------------+
-; vga_clock ; vgasync:vgasync|pixel_reg ;       ; 3.387 ; Rise       ; vgasync:vgasync|pixel_reg ;
-; blue[*]   ; vgasync:vgasync|pixel_reg ; 4.610 ; 4.849 ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  blue[0]  ; vgasync:vgasync|pixel_reg ; 5.005 ; 5.397 ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  blue[1]  ; vgasync:vgasync|pixel_reg ; 4.610 ; 4.849 ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  blue[2]  ; vgasync:vgasync|pixel_reg ; 5.584 ; 5.870 ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  blue[3]  ; vgasync:vgasync|pixel_reg ; 5.268 ; 5.137 ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  blue[4]  ; vgasync:vgasync|pixel_reg ; 5.310 ; 5.555 ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  blue[5]  ; vgasync:vgasync|pixel_reg ; 5.757 ; 6.101 ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  blue[6]  ; vgasync:vgasync|pixel_reg ; 5.257 ; 5.011 ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  blue[7]  ; vgasync:vgasync|pixel_reg ; 5.530 ; 5.506 ; Fall       ; vgasync:vgasync|pixel_reg ;
-; green[*]  ; vgasync:vgasync|pixel_reg ; 4.936 ; 4.746 ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  green[0] ; vgasync:vgasync|pixel_reg ; 6.166 ; 6.226 ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  green[1] ; vgasync:vgasync|pixel_reg ; 4.936 ; 5.225 ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  green[2] ; vgasync:vgasync|pixel_reg ; 5.106 ; 4.746 ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  green[3] ; vgasync:vgasync|pixel_reg ; 5.754 ; 5.872 ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  green[4] ; vgasync:vgasync|pixel_reg ; 5.292 ; 5.088 ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  green[5] ; vgasync:vgasync|pixel_reg ; 5.800 ; 5.777 ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  green[6] ; vgasync:vgasync|pixel_reg ; 5.991 ; 6.901 ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  green[7] ; vgasync:vgasync|pixel_reg ; 5.570 ; 5.781 ; Fall       ; vgasync:vgasync|pixel_reg ;
-; hsync     ; vgasync:vgasync|pixel_reg ; 5.389 ; 6.367 ; Fall       ; vgasync:vgasync|pixel_reg ;
-; red[*]    ; vgasync:vgasync|pixel_reg ; 4.625 ; 4.864 ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  red[0]   ; vgasync:vgasync|pixel_reg ; 4.625 ; 4.864 ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  red[1]   ; vgasync:vgasync|pixel_reg ; 5.207 ; 4.969 ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  red[2]   ; vgasync:vgasync|pixel_reg ; 4.806 ; 4.908 ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  red[3]   ; vgasync:vgasync|pixel_reg ; 5.528 ; 5.767 ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  red[4]   ; vgasync:vgasync|pixel_reg ; 4.773 ; 4.950 ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  red[5]   ; vgasync:vgasync|pixel_reg ; 5.803 ; 5.795 ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  red[6]   ; vgasync:vgasync|pixel_reg ; 5.762 ; 5.740 ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  red[7]   ; vgasync:vgasync|pixel_reg ; 5.500 ; 6.201 ; Fall       ; vgasync:vgasync|pixel_reg ;
-; vga_clock ; vgasync:vgasync|pixel_reg ; 3.918 ;       ; Fall       ; vgasync:vgasync|pixel_reg ;
-; vsync     ; vgasync:vgasync|pixel_reg ; 5.577 ; 6.692 ; Fall       ; vgasync:vgasync|pixel_reg ;
+; vga_clock ; vgasync:vgasync|pixel_reg ;       ; 4.083 ; Rise       ; vgasync:vgasync|pixel_reg ;
+; blue[*]   ; vgasync:vgasync|pixel_reg ; 4.987 ; 5.262 ; Fall       ; vgasync:vgasync|pixel_reg ;
+;  blue[0]  ; vgasync:vgasync|pixel_reg ; 5.225 ; 5.463 ; Fall       ; vgasync:vgasync|pixel_reg ;
+;  blue[1]  ; vgasync:vgasync|pixel_reg ; 5.099 ; 5.334 ; Fall       ; vgasync:vgasync|pixel_reg ;
+;  blue[2]  ; vgasync:vgasync|pixel_reg ; 5.984 ; 6.575 ; Fall       ; vgasync:vgasync|pixel_reg ;
+;  blue[3]  ; vgasync:vgasync|pixel_reg ; 5.376 ; 5.776 ; Fall       ; vgasync:vgasync|pixel_reg ;
+;  blue[4]  ; vgasync:vgasync|pixel_reg ; 4.987 ; 5.262 ; Fall       ; vgasync:vgasync|pixel_reg ;
+;  blue[5]  ; vgasync:vgasync|pixel_reg ; 5.151 ; 5.435 ; Fall       ; vgasync:vgasync|pixel_reg ;
+;  blue[6]  ; vgasync:vgasync|pixel_reg ; 5.287 ; 5.634 ; Fall       ; vgasync:vgasync|pixel_reg ;
+;  blue[7]  ; vgasync:vgasync|pixel_reg ; 5.049 ; 5.303 ; Fall       ; vgasync:vgasync|pixel_reg ;
+; green[*]  ; vgasync:vgasync|pixel_reg ; 5.108 ; 5.339 ; Fall       ; vgasync:vgasync|pixel_reg ;
+;  green[0] ; vgasync:vgasync|pixel_reg ; 5.431 ; 5.792 ; Fall       ; vgasync:vgasync|pixel_reg ;
+;  green[1] ; vgasync:vgasync|pixel_reg ; 5.538 ; 5.957 ; Fall       ; vgasync:vgasync|pixel_reg ;
+;  green[2] ; vgasync:vgasync|pixel_reg ; 5.108 ; 5.339 ; Fall       ; vgasync:vgasync|pixel_reg ;
+;  green[3] ; vgasync:vgasync|pixel_reg ; 5.305 ; 5.683 ; Fall       ; vgasync:vgasync|pixel_reg ;
+;  green[4] ; vgasync:vgasync|pixel_reg ; 5.296 ; 5.566 ; Fall       ; vgasync:vgasync|pixel_reg ;
+;  green[5] ; vgasync:vgasync|pixel_reg ; 5.676 ; 6.106 ; Fall       ; vgasync:vgasync|pixel_reg ;
+;  green[6] ; vgasync:vgasync|pixel_reg ; 5.286 ; 5.549 ; Fall       ; vgasync:vgasync|pixel_reg ;
+;  green[7] ; vgasync:vgasync|pixel_reg ; 5.392 ; 5.709 ; Fall       ; vgasync:vgasync|pixel_reg ;
+; hsync     ; vgasync:vgasync|pixel_reg ; 5.433 ; 6.424 ; Fall       ; vgasync:vgasync|pixel_reg ;
+; red[*]    ; vgasync:vgasync|pixel_reg ; 5.042 ; 5.250 ; Fall       ; vgasync:vgasync|pixel_reg ;
+;  red[0]   ; vgasync:vgasync|pixel_reg ; 5.638 ; 6.729 ; Fall       ; vgasync:vgasync|pixel_reg ;
+;  red[1]   ; vgasync:vgasync|pixel_reg ; 5.414 ; 5.766 ; Fall       ; vgasync:vgasync|pixel_reg ;
+;  red[2]   ; vgasync:vgasync|pixel_reg ; 5.717 ; 6.234 ; Fall       ; vgasync:vgasync|pixel_reg ;
+;  red[3]   ; vgasync:vgasync|pixel_reg ; 5.042 ; 5.250 ; Fall       ; vgasync:vgasync|pixel_reg ;
+;  red[4]   ; vgasync:vgasync|pixel_reg ; 5.267 ; 5.564 ; Fall       ; vgasync:vgasync|pixel_reg ;
+;  red[5]   ; vgasync:vgasync|pixel_reg ; 5.174 ; 5.384 ; Fall       ; vgasync:vgasync|pixel_reg ;
+;  red[6]   ; vgasync:vgasync|pixel_reg ; 5.286 ; 5.547 ; Fall       ; vgasync:vgasync|pixel_reg ;
+;  red[7]   ; vgasync:vgasync|pixel_reg ; 5.543 ; 6.013 ; Fall       ; vgasync:vgasync|pixel_reg ;
+; vga_clock ; vgasync:vgasync|pixel_reg ; 4.880 ;       ; Fall       ; vgasync:vgasync|pixel_reg ;
+; vsync     ; vgasync:vgasync|pixel_reg ; 6.186 ; 7.685 ; Fall       ; vgasync:vgasync|pixel_reg ;
 +-----------+---------------------------+-------+-------+------------+---------------------------+
 
 
@@ -651,12 +660,12 @@ No synchronizer chains to report.
 +----------------------------+----------+--------+----------+---------+---------------------+
 ; Clock                      ; Setup    ; Hold   ; Recovery ; Removal ; Minimum Pulse Width ;
 +----------------------------+----------+--------+----------+---------+---------------------+
-; Worst-case Slack           ; -16.472  ; -1.739 ; N/A      ; N/A     ; -2.225              ;
-;  clk                       ; -0.212   ; -1.739 ; N/A      ; N/A     ; -0.705              ;
-;  vgasync:vgasync|pixel_reg ; -16.472  ; -0.473 ; N/A      ; N/A     ; -2.225              ;
-; Design-wide TNS            ; -608.66  ; -6.906 ; 0.0      ; 0.0     ; -60.579             ;
-;  clk                       ; -0.212   ; -1.739 ; N/A      ; N/A     ; -1.200              ;
-;  vgasync:vgasync|pixel_reg ; -608.621 ; -5.167 ; N/A      ; N/A     ; -59.379             ;
+; Worst-case Slack           ; -18.632  ; -2.170 ; N/A      ; N/A     ; -2.225              ;
+;  clk                       ; 0.006    ; -2.170 ; N/A      ; N/A     ; -0.902              ;
+;  vgasync:vgasync|pixel_reg ; -18.632  ; -0.687 ; N/A      ; N/A     ; -2.225              ;
+; Design-wide TNS            ; -787.254 ; -8.13  ; 0.0      ; 0.0     ; -86.963             ;
+;  clk                       ; 0.000    ; -2.170 ; N/A      ; N/A     ; -1.594              ;
+;  vgasync:vgasync|pixel_reg ; -787.254 ; -5.960 ; N/A      ; N/A     ; -85.513             ;
 +----------------------------+----------+--------+----------+---------+---------------------+
 
 
@@ -665,37 +674,37 @@ No synchronizer chains to report.
 +-----------+---------------------------+--------+--------+------------+---------------------------+
 ; Data Port ; Clock Port                ; Rise   ; Fall   ; Clock Edge ; Clock Reference           ;
 +-----------+---------------------------+--------+--------+------------+---------------------------+
-; vga_clock ; vgasync:vgasync|pixel_reg ;        ; 6.304  ; Rise       ; vgasync:vgasync|pixel_reg ;
-; blue[*]   ; vgasync:vgasync|pixel_reg ; 12.961 ; 12.900 ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  blue[0]  ; vgasync:vgasync|pixel_reg ; 12.428 ; 12.614 ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  blue[1]  ; vgasync:vgasync|pixel_reg ; 11.922 ; 11.309 ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  blue[2]  ; vgasync:vgasync|pixel_reg ; 12.940 ; 12.731 ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  blue[3]  ; vgasync:vgasync|pixel_reg ; 12.200 ; 11.712 ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  blue[4]  ; vgasync:vgasync|pixel_reg ; 12.467 ; 12.140 ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  blue[5]  ; vgasync:vgasync|pixel_reg ; 12.961 ; 12.900 ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  blue[6]  ; vgasync:vgasync|pixel_reg ; 12.164 ; 11.543 ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  blue[7]  ; vgasync:vgasync|pixel_reg ; 12.324 ; 12.052 ; Fall       ; vgasync:vgasync|pixel_reg ;
-; green[*]  ; vgasync:vgasync|pixel_reg ; 13.512 ; 14.052 ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  green[0] ; vgasync:vgasync|pixel_reg ; 13.512 ; 13.447 ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  green[1] ; vgasync:vgasync|pixel_reg ; 12.520 ; 11.907 ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  green[2] ; vgasync:vgasync|pixel_reg ; 11.948 ; 11.135 ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  green[3] ; vgasync:vgasync|pixel_reg ; 13.073 ; 12.711 ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  green[4] ; vgasync:vgasync|pixel_reg ; 12.364 ; 11.730 ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  green[5] ; vgasync:vgasync|pixel_reg ; 12.941 ; 12.576 ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  green[6] ; vgasync:vgasync|pixel_reg ; 13.029 ; 14.052 ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  green[7] ; vgasync:vgasync|pixel_reg ; 12.807 ; 12.536 ; Fall       ; vgasync:vgasync|pixel_reg ;
-; hsync     ; vgasync:vgasync|pixel_reg ; 9.723  ; 11.105 ; Fall       ; vgasync:vgasync|pixel_reg ;
-; red[*]    ; vgasync:vgasync|pixel_reg ; 12.787 ; 12.809 ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  red[0]   ; vgasync:vgasync|pixel_reg ; 11.938 ; 11.763 ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  red[1]   ; vgasync:vgasync|pixel_reg ; 11.930 ; 11.500 ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  red[2]   ; vgasync:vgasync|pixel_reg ; 12.025 ; 11.375 ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  red[3]   ; vgasync:vgasync|pixel_reg ; 12.669 ; 12.503 ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  red[4]   ; vgasync:vgasync|pixel_reg ; 12.022 ; 11.441 ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  red[5]   ; vgasync:vgasync|pixel_reg ; 12.732 ; 12.591 ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  red[6]   ; vgasync:vgasync|pixel_reg ; 12.787 ; 12.485 ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  red[7]   ; vgasync:vgasync|pixel_reg ; 12.041 ; 12.809 ; Fall       ; vgasync:vgasync|pixel_reg ;
-; vga_clock ; vgasync:vgasync|pixel_reg ; 7.176  ;        ; Fall       ; vgasync:vgasync|pixel_reg ;
-; vsync     ; vgasync:vgasync|pixel_reg ; 9.874  ; 11.500 ; Fall       ; vgasync:vgasync|pixel_reg ;
+; vga_clock ; vgasync:vgasync|pixel_reg ;        ; 7.143  ; Rise       ; vgasync:vgasync|pixel_reg ;
+; blue[*]   ; vgasync:vgasync|pixel_reg ; 15.174 ; 14.352 ; Fall       ; vgasync:vgasync|pixel_reg ;
+;  blue[0]  ; vgasync:vgasync|pixel_reg ; 13.971 ; 12.702 ; Fall       ; vgasync:vgasync|pixel_reg ;
+;  blue[1]  ; vgasync:vgasync|pixel_reg ; 14.162 ; 12.834 ; Fall       ; vgasync:vgasync|pixel_reg ;
+;  blue[2]  ; vgasync:vgasync|pixel_reg ; 15.174 ; 14.352 ; Fall       ; vgasync:vgasync|pixel_reg ;
+;  blue[3]  ; vgasync:vgasync|pixel_reg ; 14.014 ; 12.834 ; Fall       ; vgasync:vgasync|pixel_reg ;
+;  blue[4]  ; vgasync:vgasync|pixel_reg ; 14.097 ; 12.718 ; Fall       ; vgasync:vgasync|pixel_reg ;
+;  blue[5]  ; vgasync:vgasync|pixel_reg ; 13.715 ; 12.513 ; Fall       ; vgasync:vgasync|pixel_reg ;
+;  blue[6]  ; vgasync:vgasync|pixel_reg ; 14.290 ; 13.074 ; Fall       ; vgasync:vgasync|pixel_reg ;
+;  blue[7]  ; vgasync:vgasync|pixel_reg ; 13.883 ; 12.507 ; Fall       ; vgasync:vgasync|pixel_reg ;
+; green[*]  ; vgasync:vgasync|pixel_reg ; 16.023 ; 16.902 ; Fall       ; vgasync:vgasync|pixel_reg ;
+;  green[0] ; vgasync:vgasync|pixel_reg ; 14.693 ; 16.902 ; Fall       ; vgasync:vgasync|pixel_reg ;
+;  green[1] ; vgasync:vgasync|pixel_reg ; 16.023 ; 16.253 ; Fall       ; vgasync:vgasync|pixel_reg ;
+;  green[2] ; vgasync:vgasync|pixel_reg ; 13.924 ; 14.652 ; Fall       ; vgasync:vgasync|pixel_reg ;
+;  green[3] ; vgasync:vgasync|pixel_reg ; 14.678 ; 16.045 ; Fall       ; vgasync:vgasync|pixel_reg ;
+;  green[4] ; vgasync:vgasync|pixel_reg ; 14.204 ; 14.403 ; Fall       ; vgasync:vgasync|pixel_reg ;
+;  green[5] ; vgasync:vgasync|pixel_reg ; 14.562 ; 16.325 ; Fall       ; vgasync:vgasync|pixel_reg ;
+;  green[6] ; vgasync:vgasync|pixel_reg ; 13.930 ; 15.220 ; Fall       ; vgasync:vgasync|pixel_reg ;
+;  green[7] ; vgasync:vgasync|pixel_reg ; 14.276 ; 14.696 ; Fall       ; vgasync:vgasync|pixel_reg ;
+; hsync     ; vgasync:vgasync|pixel_reg ; 9.822  ; 11.243 ; Fall       ; vgasync:vgasync|pixel_reg ;
+; red[*]    ; vgasync:vgasync|pixel_reg ; 14.958 ; 15.631 ; Fall       ; vgasync:vgasync|pixel_reg ;
+;  red[0]   ; vgasync:vgasync|pixel_reg ; 14.316 ; 14.148 ; Fall       ; vgasync:vgasync|pixel_reg ;
+;  red[1]   ; vgasync:vgasync|pixel_reg ; 13.962 ; 14.662 ; Fall       ; vgasync:vgasync|pixel_reg ;
+;  red[2]   ; vgasync:vgasync|pixel_reg ; 14.958 ; 14.873 ; Fall       ; vgasync:vgasync|pixel_reg ;
+;  red[3]   ; vgasync:vgasync|pixel_reg ; 13.765 ; 13.232 ; Fall       ; vgasync:vgasync|pixel_reg ;
+;  red[4]   ; vgasync:vgasync|pixel_reg ; 14.814 ; 13.844 ; Fall       ; vgasync:vgasync|pixel_reg ;
+;  red[5]   ; vgasync:vgasync|pixel_reg ; 13.684 ; 13.897 ; Fall       ; vgasync:vgasync|pixel_reg ;
+;  red[6]   ; vgasync:vgasync|pixel_reg ; 13.970 ; 13.741 ; Fall       ; vgasync:vgasync|pixel_reg ;
+;  red[7]   ; vgasync:vgasync|pixel_reg ; 14.728 ; 15.631 ; Fall       ; vgasync:vgasync|pixel_reg ;
+; vga_clock ; vgasync:vgasync|pixel_reg ; 8.435  ;        ; Fall       ; vgasync:vgasync|pixel_reg ;
+; vsync     ; vgasync:vgasync|pixel_reg ; 10.652 ; 12.864 ; Fall       ; vgasync:vgasync|pixel_reg ;
 +-----------+---------------------------+--------+--------+------------+---------------------------+
 
 
@@ -704,37 +713,37 @@ No synchronizer chains to report.
 +-----------+---------------------------+-------+-------+------------+---------------------------+
 ; Data Port ; Clock Port                ; Rise  ; Fall  ; Clock Edge ; Clock Reference           ;
 +-----------+---------------------------+-------+-------+------------+---------------------------+
-; vga_clock ; vgasync:vgasync|pixel_reg ;       ; 3.387 ; Rise       ; vgasync:vgasync|pixel_reg ;
-; blue[*]   ; vgasync:vgasync|pixel_reg ; 4.610 ; 4.849 ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  blue[0]  ; vgasync:vgasync|pixel_reg ; 5.005 ; 5.397 ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  blue[1]  ; vgasync:vgasync|pixel_reg ; 4.610 ; 4.849 ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  blue[2]  ; vgasync:vgasync|pixel_reg ; 5.584 ; 5.870 ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  blue[3]  ; vgasync:vgasync|pixel_reg ; 5.268 ; 5.137 ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  blue[4]  ; vgasync:vgasync|pixel_reg ; 5.310 ; 5.555 ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  blue[5]  ; vgasync:vgasync|pixel_reg ; 5.757 ; 6.101 ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  blue[6]  ; vgasync:vgasync|pixel_reg ; 5.257 ; 5.011 ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  blue[7]  ; vgasync:vgasync|pixel_reg ; 5.530 ; 5.506 ; Fall       ; vgasync:vgasync|pixel_reg ;
-; green[*]  ; vgasync:vgasync|pixel_reg ; 4.936 ; 4.746 ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  green[0] ; vgasync:vgasync|pixel_reg ; 6.166 ; 6.226 ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  green[1] ; vgasync:vgasync|pixel_reg ; 4.936 ; 5.225 ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  green[2] ; vgasync:vgasync|pixel_reg ; 5.106 ; 4.746 ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  green[3] ; vgasync:vgasync|pixel_reg ; 5.754 ; 5.872 ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  green[4] ; vgasync:vgasync|pixel_reg ; 5.292 ; 5.088 ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  green[5] ; vgasync:vgasync|pixel_reg ; 5.800 ; 5.777 ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  green[6] ; vgasync:vgasync|pixel_reg ; 5.991 ; 6.901 ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  green[7] ; vgasync:vgasync|pixel_reg ; 5.570 ; 5.781 ; Fall       ; vgasync:vgasync|pixel_reg ;
-; hsync     ; vgasync:vgasync|pixel_reg ; 5.389 ; 6.367 ; Fall       ; vgasync:vgasync|pixel_reg ;
-; red[*]    ; vgasync:vgasync|pixel_reg ; 4.625 ; 4.864 ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  red[0]   ; vgasync:vgasync|pixel_reg ; 4.625 ; 4.864 ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  red[1]   ; vgasync:vgasync|pixel_reg ; 5.207 ; 4.969 ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  red[2]   ; vgasync:vgasync|pixel_reg ; 4.806 ; 4.908 ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  red[3]   ; vgasync:vgasync|pixel_reg ; 5.528 ; 5.767 ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  red[4]   ; vgasync:vgasync|pixel_reg ; 4.773 ; 4.950 ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  red[5]   ; vgasync:vgasync|pixel_reg ; 5.803 ; 5.795 ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  red[6]   ; vgasync:vgasync|pixel_reg ; 5.762 ; 5.740 ; Fall       ; vgasync:vgasync|pixel_reg ;
-;  red[7]   ; vgasync:vgasync|pixel_reg ; 5.500 ; 6.201 ; Fall       ; vgasync:vgasync|pixel_reg ;
-; vga_clock ; vgasync:vgasync|pixel_reg ; 3.918 ;       ; Fall       ; vgasync:vgasync|pixel_reg ;
-; vsync     ; vgasync:vgasync|pixel_reg ; 5.577 ; 6.692 ; Fall       ; vgasync:vgasync|pixel_reg ;
+; vga_clock ; vgasync:vgasync|pixel_reg ;       ; 4.083 ; Rise       ; vgasync:vgasync|pixel_reg ;
+; blue[*]   ; vgasync:vgasync|pixel_reg ; 4.987 ; 5.262 ; Fall       ; vgasync:vgasync|pixel_reg ;
+;  blue[0]  ; vgasync:vgasync|pixel_reg ; 5.225 ; 5.463 ; Fall       ; vgasync:vgasync|pixel_reg ;
+;  blue[1]  ; vgasync:vgasync|pixel_reg ; 5.099 ; 5.334 ; Fall       ; vgasync:vgasync|pixel_reg ;
+;  blue[2]  ; vgasync:vgasync|pixel_reg ; 5.984 ; 6.575 ; Fall       ; vgasync:vgasync|pixel_reg ;
+;  blue[3]  ; vgasync:vgasync|pixel_reg ; 5.376 ; 5.776 ; Fall       ; vgasync:vgasync|pixel_reg ;
+;  blue[4]  ; vgasync:vgasync|pixel_reg ; 4.987 ; 5.262 ; Fall       ; vgasync:vgasync|pixel_reg ;
+;  blue[5]  ; vgasync:vgasync|pixel_reg ; 5.151 ; 5.435 ; Fall       ; vgasync:vgasync|pixel_reg ;
+;  blue[6]  ; vgasync:vgasync|pixel_reg ; 5.287 ; 5.634 ; Fall       ; vgasync:vgasync|pixel_reg ;
+;  blue[7]  ; vgasync:vgasync|pixel_reg ; 5.049 ; 5.303 ; Fall       ; vgasync:vgasync|pixel_reg ;
+; green[*]  ; vgasync:vgasync|pixel_reg ; 5.108 ; 5.339 ; Fall       ; vgasync:vgasync|pixel_reg ;
+;  green[0] ; vgasync:vgasync|pixel_reg ; 5.431 ; 5.792 ; Fall       ; vgasync:vgasync|pixel_reg ;
+;  green[1] ; vgasync:vgasync|pixel_reg ; 5.538 ; 5.957 ; Fall       ; vgasync:vgasync|pixel_reg ;
+;  green[2] ; vgasync:vgasync|pixel_reg ; 5.108 ; 5.339 ; Fall       ; vgasync:vgasync|pixel_reg ;
+;  green[3] ; vgasync:vgasync|pixel_reg ; 5.305 ; 5.683 ; Fall       ; vgasync:vgasync|pixel_reg ;
+;  green[4] ; vgasync:vgasync|pixel_reg ; 5.296 ; 5.566 ; Fall       ; vgasync:vgasync|pixel_reg ;
+;  green[5] ; vgasync:vgasync|pixel_reg ; 5.676 ; 6.106 ; Fall       ; vgasync:vgasync|pixel_reg ;
+;  green[6] ; vgasync:vgasync|pixel_reg ; 5.286 ; 5.549 ; Fall       ; vgasync:vgasync|pixel_reg ;
+;  green[7] ; vgasync:vgasync|pixel_reg ; 5.392 ; 5.709 ; Fall       ; vgasync:vgasync|pixel_reg ;
+; hsync     ; vgasync:vgasync|pixel_reg ; 5.433 ; 6.424 ; Fall       ; vgasync:vgasync|pixel_reg ;
+; red[*]    ; vgasync:vgasync|pixel_reg ; 5.042 ; 5.250 ; Fall       ; vgasync:vgasync|pixel_reg ;
+;  red[0]   ; vgasync:vgasync|pixel_reg ; 5.638 ; 6.729 ; Fall       ; vgasync:vgasync|pixel_reg ;
+;  red[1]   ; vgasync:vgasync|pixel_reg ; 5.414 ; 5.766 ; Fall       ; vgasync:vgasync|pixel_reg ;
+;  red[2]   ; vgasync:vgasync|pixel_reg ; 5.717 ; 6.234 ; Fall       ; vgasync:vgasync|pixel_reg ;
+;  red[3]   ; vgasync:vgasync|pixel_reg ; 5.042 ; 5.250 ; Fall       ; vgasync:vgasync|pixel_reg ;
+;  red[4]   ; vgasync:vgasync|pixel_reg ; 5.267 ; 5.564 ; Fall       ; vgasync:vgasync|pixel_reg ;
+;  red[5]   ; vgasync:vgasync|pixel_reg ; 5.174 ; 5.384 ; Fall       ; vgasync:vgasync|pixel_reg ;
+;  red[6]   ; vgasync:vgasync|pixel_reg ; 5.286 ; 5.547 ; Fall       ; vgasync:vgasync|pixel_reg ;
+;  red[7]   ; vgasync:vgasync|pixel_reg ; 5.543 ; 6.013 ; Fall       ; vgasync:vgasync|pixel_reg ;
+; vga_clock ; vgasync:vgasync|pixel_reg ; 4.880 ;       ; Fall       ; vgasync:vgasync|pixel_reg ;
+; vsync     ; vgasync:vgasync|pixel_reg ; 6.186 ; 7.685 ; Fall       ; vgasync:vgasync|pixel_reg ;
 +-----------+---------------------------+-------+-------+------------+---------------------------+
 
 
@@ -940,25 +949,25 @@ No synchronizer chains to report.
 +-----------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
 
 
-+----------------------------------------------------------------------------------------------------+
-; Setup Transfers                                                                                    ;
-+---------------------------+---------------------------+----------+----------+----------+-----------+
-; From Clock                ; To Clock                  ; RR Paths ; FR Paths ; RF Paths ; FF Paths  ;
-+---------------------------+---------------------------+----------+----------+----------+-----------+
-; vgasync:vgasync|pixel_reg ; clk                       ; 1        ; 1        ; 0        ; 0         ;
-; vgasync:vgasync|pixel_reg ; vgasync:vgasync|pixel_reg ; 0        ; 0        ; 11       ; 117346629 ;
-+---------------------------+---------------------------+----------+----------+----------+-----------+
++-----------------------------------------------------------------------------------------------------+
+; Setup Transfers                                                                                     ;
++---------------------------+---------------------------+----------+----------+----------+------------+
+; From Clock                ; To Clock                  ; RR Paths ; FR Paths ; RF Paths ; FF Paths   ;
++---------------------------+---------------------------+----------+----------+----------+------------+
+; vgasync:vgasync|pixel_reg ; clk                       ; 1        ; 1        ; 0        ; 0          ;
+; vgasync:vgasync|pixel_reg ; vgasync:vgasync|pixel_reg ; 0        ; 0        ; 10       ; 1174495603 ;
++---------------------------+---------------------------+----------+----------+----------+------------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
 
-+----------------------------------------------------------------------------------------------------+
-; Hold Transfers                                                                                     ;
-+---------------------------+---------------------------+----------+----------+----------+-----------+
-; From Clock                ; To Clock                  ; RR Paths ; FR Paths ; RF Paths ; FF Paths  ;
-+---------------------------+---------------------------+----------+----------+----------+-----------+
-; vgasync:vgasync|pixel_reg ; clk                       ; 1        ; 1        ; 0        ; 0         ;
-; vgasync:vgasync|pixel_reg ; vgasync:vgasync|pixel_reg ; 0        ; 0        ; 11       ; 117346629 ;
-+---------------------------+---------------------------+----------+----------+----------+-----------+
++-----------------------------------------------------------------------------------------------------+
+; Hold Transfers                                                                                      ;
++---------------------------+---------------------------+----------+----------+----------+------------+
+; From Clock                ; To Clock                  ; RR Paths ; FR Paths ; RF Paths ; FF Paths   ;
++---------------------------+---------------------------+----------+----------+----------+------------+
+; vgasync:vgasync|pixel_reg ; clk                       ; 1        ; 1        ; 0        ; 0          ;
+; vgasync:vgasync|pixel_reg ; vgasync:vgasync|pixel_reg ; 0        ; 0        ; 10       ; 1174495603 ;
++---------------------------+---------------------------+----------+----------+----------+------------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
 
@@ -994,10 +1003,11 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit TimeQuest Timing Analyzer
     Info: Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
-    Info: Processing started: Mon Jun 21 01:18:25 2021
+    Info: Processing started: Mon Jun 21 10:29:57 2021
 Info: Command: quartus_sta FPGAPOSMachine -c FPGAPOSMachine
 Info: qsta_default_script.tcl version: #1
-Warning (20028): Parallel compilation is not licensed and has been disabled
+Info (20032): Parallel compilation is enabled and will use up to 11 processors
+Warning (20031): Parallel compilation is enabled for 11 processors, but there are only 6 processors in the system. Runtime may increase due to over usage of the processor space.
 Info (21077): Low junction temperature is 0 degrees C
 Info (21077): High junction temperature is 85 degrees C
 Critical Warning (332012): Synopsys Design Constraints File file not found: 'FPGAPOSMachine.sdc'. A Synopsys Design Constraints File is required by the TimeQuest Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
@@ -1011,23 +1021,23 @@ Info: Found TIMEQUEST_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
 Info: Analyzing Slow 1100mV 85C Model
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the TimeQuest Timing Analyzer.
-Info (332146): Worst-case setup slack is -16.163
+Info (332146): Worst-case setup slack is -18.248
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):   -16.163            -601.431 vgasync:vgasync|pixel_reg 
-    Info (332119):     0.161               0.000 clk 
-Info (332146): Worst-case hold slack is -1.739
+    Info (332119):   -18.248            -787.254 vgasync:vgasync|pixel_reg 
+    Info (332119):     0.479               0.000 clk 
+Info (332146): Worst-case hold slack is -2.170
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -1.739              -1.739 clk 
-    Info (332119):    -0.473              -5.167 vgasync:vgasync|pixel_reg 
+    Info (332119):    -2.170              -2.170 clk 
+    Info (332119):    -0.687              -5.960 vgasync:vgasync|pixel_reg 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
 Info (332146): Worst-case minimum pulse width slack is -2.225
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -2.225             -58.435 vgasync:vgasync|pixel_reg 
-    Info (332119):    -0.673              -1.103 clk 
+    Info (332119):    -2.225             -85.513 vgasync:vgasync|pixel_reg 
+    Info (332119):    -0.842              -1.450 clk 
 Info: Analyzing Slow 1100mV 0C Model
 Info (334003): Started post-fitting delay annotation
 Warning (334000): Timing characteristics of device 5CSEMA5F31C6 are preliminary
@@ -1035,23 +1045,23 @@ Info (334004): Delay annotation completed successfully
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in TimeQuest to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the TimeQuest Timing Analyzer.
-Info (332146): Worst-case setup slack is -16.472
+Info (332146): Worst-case setup slack is -18.632
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):   -16.472            -608.621 vgasync:vgasync|pixel_reg 
-    Info (332119):    -0.039              -0.039 clk 
-Info (332146): Worst-case hold slack is -1.533
+    Info (332119):   -18.632            -787.036 vgasync:vgasync|pixel_reg 
+    Info (332119):     0.294               0.000 clk 
+Info (332146): Worst-case hold slack is -1.890
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -1.533              -1.533 clk 
-    Info (332119):    -0.349              -3.837 vgasync:vgasync|pixel_reg 
+    Info (332119):    -1.890              -1.890 clk 
+    Info (332119):    -0.555              -4.944 vgasync:vgasync|pixel_reg 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
 Info (332146): Worst-case minimum pulse width slack is -2.225
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -2.225             -59.379 vgasync:vgasync|pixel_reg 
-    Info (332119):    -0.705              -1.200 clk 
+    Info (332119):    -2.225             -85.010 vgasync:vgasync|pixel_reg 
+    Info (332119):    -0.902              -1.594 clk 
 Info: Analyzing Fast 1100mV 85C Model
 Info (334003): Started post-fitting delay annotation
 Warning (334000): Timing characteristics of device 5CSEMA5F31C6 are preliminary
@@ -1059,50 +1069,50 @@ Info (334004): Delay annotation completed successfully
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in TimeQuest to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the TimeQuest Timing Analyzer.
-Info (332146): Worst-case setup slack is -9.039
+Info (332146): Worst-case setup slack is -10.871
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -9.039            -354.427 vgasync:vgasync|pixel_reg 
-    Info (332119):    -0.212              -0.212 clk 
-Info (332146): Worst-case hold slack is -0.771
+    Info (332119):   -10.871            -467.433 vgasync:vgasync|pixel_reg 
+    Info (332119):     0.021               0.000 clk 
+Info (332146): Worst-case hold slack is -1.065
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.771              -0.771 clk 
-    Info (332119):    -0.191              -2.199 vgasync:vgasync|pixel_reg 
+    Info (332119):    -1.065              -1.065 clk 
+    Info (332119):    -0.385              -3.220 vgasync:vgasync|pixel_reg 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
 Info (332146): Worst-case minimum pulse width slack is -1.702
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -1.702             -23.289 vgasync:vgasync|pixel_reg 
-    Info (332119):    -0.651              -0.951 clk 
+    Info (332119):    -1.702             -43.690 vgasync:vgasync|pixel_reg 
+    Info (332119):    -0.783              -1.218 clk 
 Info: Analyzing Fast 1100mV 0C Model
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in TimeQuest to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the TimeQuest Timing Analyzer.
-Info (332146): Worst-case setup slack is -8.468
+Info (332146): Worst-case setup slack is -10.168
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -8.468            -328.975 vgasync:vgasync|pixel_reg 
-    Info (332119):    -0.205              -0.205 clk 
-Info (332146): Worst-case hold slack is -0.726
+    Info (332119):   -10.168            -432.862 vgasync:vgasync|pixel_reg 
+    Info (332119):     0.006               0.000 clk 
+Info (332146): Worst-case hold slack is -0.970
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.726              -0.726 clk 
-    Info (332119):    -0.165              -1.850 vgasync:vgasync|pixel_reg 
+    Info (332119):    -0.970              -0.970 clk 
+    Info (332119):    -0.317              -2.670 vgasync:vgasync|pixel_reg 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
 Info (332146): Worst-case minimum pulse width slack is -1.702
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -1.702             -22.331 vgasync:vgasync|pixel_reg 
-    Info (332119):    -0.641              -0.941 clk 
+    Info (332119):    -1.702             -42.549 vgasync:vgasync|pixel_reg 
+    Info (332119):    -0.763              -1.184 clk 
 Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
 Info: Quartus II 64-Bit TimeQuest Timing Analyzer was successful. 0 errors, 8 warnings
-    Info: Peak virtual memory: 5020 megabytes
-    Info: Processing ended: Mon Jun 21 01:18:53 2021
-    Info: Elapsed time: 00:00:28
-    Info: Total CPU time (on all processors): 00:00:28
+    Info: Peak virtual memory: 5569 megabytes
+    Info: Processing ended: Mon Jun 21 10:30:29 2021
+    Info: Elapsed time: 00:00:32
+    Info: Total CPU time (on all processors): 00:02:49
 
 
