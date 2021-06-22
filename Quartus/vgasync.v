@@ -5,18 +5,18 @@ module vgasync(clk, hsync, vsync, video_on, p_tick, x, y);
 	output wire [9:0] x, y;
 	
 	// Constant declarations for VGA sync parameters
-	localparam H_DISPLAY = 640; // Horizontal Display Area
-	localparam H_BACK_PORCH = 48; // Horizontal Back Porch
-	localparam H_FRONT_PORCH = 16; // Horizontal Front Porch
-	localparam H_SYNC_PULSE = 96; // Horizontal Sync Pulse
+	localparam H_DISPLAY = 'd640; // Horizontal Display Area
+	localparam H_BACK_PORCH = 'd48; // Horizontal Back Porch
+	localparam H_FRONT_PORCH = 'd16; // Horizontal Front Porch
+	localparam H_SYNC_PULSE = 'd96; // Horizontal Sync Pulse
 	localparam H_MAX = H_DISPLAY + H_BACK_PORCH + H_FRONT_PORCH + H_SYNC_PULSE - 1;
 	localparam START_H_SYNC_PULSE = H_DISPLAY + H_FRONT_PORCH - 1;
 	localparam END_H_SYNC_PULSE = H_DISPLAY + H_FRONT_PORCH + H_SYNC_PULSE - 2;
 
-	localparam V_DISPLAY = 480; // Horizontal Display Area
-	localparam V_BACK_PORCH = 33; // Horizontal Back Porch
-	localparam V_FRONT_PORCH = 10; // Horizontal Front Porch
-	localparam V_SYNC_PULSE = 2; // Horizontal Sync Pulse
+	localparam V_DISPLAY = 'd480; // Horizontal Display Area
+	localparam V_BACK_PORCH = 'd33; // Horizontal Back Porch
+	localparam V_FRONT_PORCH = 'd10; // Horizontal Front Porch
+	localparam V_SYNC_PULSE = 'd2; // Horizontal Sync Pulse
 	localparam V_MAX = V_DISPLAY + V_BACK_PORCH + V_FRONT_PORCH + V_SYNC_PULSE - 1;
 	localparam START_V_SYNC_PULSE = V_DISPLAY + V_FRONT_PORCH;
 	localparam END_V_SYNC_PULSE = V_DISPLAY + V_FRONT_PORCH + V_SYNC_PULSE - 1;

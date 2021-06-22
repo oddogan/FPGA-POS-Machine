@@ -1,5 +1,5 @@
 Assembler report for FPGAPOSMachine
-Mon Jun 21 10:29:56 2021
+Tue Jun 22 03:29:26 2021
 Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
 
 
@@ -37,7 +37,7 @@ applicable agreement for further details.
 +---------------------------------------------------------------+
 ; Assembler Summary                                             ;
 +-----------------------+---------------------------------------+
-; Assembler Status      ; Successful - Mon Jun 21 10:29:56 2021 ;
+; Assembler Status      ; Successful - Tue Jun 22 03:29:26 2021 ;
 ; Revision Name         ; FPGAPOSMachine                        ;
 ; Top-level Entity Name ; FPGAPOSMachine                        ;
 ; Family                ; Cyclone V                             ;
@@ -50,8 +50,7 @@ applicable agreement for further details.
 +-----------------------------------------------------------------------------+----------+---------------+
 ; Option                                                                      ; Setting  ; Default Value ;
 +-----------------------------------------------------------------------------+----------+---------------+
-; Maximum processors allowed for parallel compilation                         ; 11       ;               ;
-; Use smart compilation                                                       ; Off      ; Off           ;
+; Use smart compilation                                                       ; On       ; Off           ;
 ; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation  ; On       ; On            ;
 ; Enable compact report table                                                 ; Off      ; Off           ;
 ; Generate compressed bitstreams                                              ; On       ; On            ;
@@ -93,8 +92,8 @@ applicable agreement for further details.
 ; Option         ; Setting                                                                                           ;
 +----------------+---------------------------------------------------------------------------------------------------+
 ; Device         ; 5CSEMA5F31C6                                                                                      ;
-; JTAG usercode  ; 0x03F9CE3E                                                                                        ;
-; Checksum       ; 0x03F9CE3E                                                                                        ;
+; JTAG usercode  ; 0x01AB267E                                                                                        ;
+; Checksum       ; 0x01AB267E                                                                                        ;
 +----------------+---------------------------------------------------------------------------------------------------+
 
 
@@ -104,13 +103,13 @@ applicable agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Assembler
     Info: Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
-    Info: Processing started: Mon Jun 21 10:29:37 2021
+    Info: Processing started: Tue Jun 22 03:29:14 2021
 Info: Command: quartus_asm --read_settings_files=off --write_settings_files=off FPGAPOSMachine -c FPGAPOSMachine
 Info (115030): Assembler is generating device programming files
 Info: Quartus II 64-Bit Assembler was successful. 0 errors, 0 warnings
-    Info: Peak virtual memory: 5011 megabytes
-    Info: Processing ended: Mon Jun 21 10:29:56 2021
-    Info: Elapsed time: 00:00:19
-    Info: Total CPU time (on all processors): 00:00:19
+    Info: Peak virtual memory: 4837 megabytes
+    Info: Processing ended: Tue Jun 22 03:29:26 2021
+    Info: Elapsed time: 00:00:12
+    Info: Total CPU time (on all processors): 00:00:12
 
 
